@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" width="1200" height="150" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<style>.b{fill:#121c2e;stroke:#59ddbe;stroke-width:2}.t{fill:#e6edf3;font-size:20px;font-weight:600}.l{stroke:#59ddbe;stroke-width:3;stroke-dasharray:8 8;animation:dash 1.6s linear infinite}@keyframes dash{to{stroke-dashoffset:-32}}.p{fill:#59ddbe;animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}</style>
+<rect width="1200" height="150" fill="#0b1220"/>
+<rect class="b" x="20" y="45" width="112" height="60" rx="14"/><text class="t" x="76" y="82" text-anchor="middle">Scope</text>
+<line class="l" x1="136" y1="75" x2="145" y2="75"/><circle class="p" cx="147" cy="75" r="5" style="animation-delay:0.00s"/>
+<rect class="b" x="151" y="45" width="112" height="60" rx="14"/><text class="t" x="207" y="82" text-anchor="middle">Risk</text>
+<line class="l" x1="267" y1="75" x2="276" y2="75"/><circle class="p" cx="278" cy="75" r="5" style="animation-delay:0.25s"/>
+<rect class="b" x="282" y="45" width="112" height="60" rx="14"/><text class="t" x="338" y="82" text-anchor="middle">SoA</text>
+<line class="l" x1="398" y1="75" x2="407" y2="75"/><circle class="p" cx="409" cy="75" r="5" style="animation-delay:0.50s"/>
+<rect class="b" x="413" y="45" width="112" height="60" rx="14"/><text class="t" x="469" y="82" text-anchor="middle">Policies</text>
+<line class="l" x1="529" y1="75" x2="538" y2="75"/><circle class="p" cx="540" cy="75" r="5" style="animation-delay:0.75s"/>
+<rect class="b" x="544" y="45" width="112" height="60" rx="14"/><text class="t" x="600" y="82" text-anchor="middle">Procedures</text>
+<line class="l" x1="660" y1="75" x2="669" y2="75"/><circle class="p" cx="671" cy="75" r="5" style="animation-delay:1.00s"/>
+<rect class="b" x="675" y="45" width="112" height="60" rx="14"/><text class="t" x="731" y="82" text-anchor="middle">Registers</text>
+<line class="l" x1="791" y1="75" x2="800" y2="75"/><circle class="p" cx="802" cy="75" r="5" style="animation-delay:1.25s"/>
+<rect class="b" x="806" y="45" width="112" height="60" rx="14"/><text class="t" x="862" y="82" text-anchor="middle">Evidence</text>
+<line class="l" x1="922" y1="75" x2="931" y2="75"/><circle class="p" cx="933" cy="75" r="5" style="animation-delay:1.50s"/>
+<rect class="b" x="937" y="45" width="112" height="60" rx="14"/><text class="t" x="993" y="82" text-anchor="middle">Audit</text>
+<line class="l" x1="1053" y1="75" x2="1062" y2="75"/><circle class="p" cx="1064" cy="75" r="5" style="animation-delay:1.75s"/>
+<rect class="b" x="1068" y="45" width="112" height="60" rx="14"/><text class="t" x="1124" y="82" text-anchor="middle">Review</text>
+<text x="600" y="135" text-anchor="middle" fill="#acbace" font-size="15">The improvement loop: review feeds scope and risk, and the cycle repeats every year</text></svg>

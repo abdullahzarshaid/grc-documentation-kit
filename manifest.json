@@ -1,0 +1,1004 @@
+{
+ "AI-GDE-01": {
+  "title": "Guide: AI Governance Frameworks Mapped to the Kit",
+  "type": "guide",
+  "framework": "ai",
+  "file": "src/ai/ai-gde-01-ai-governance-map.md"
+ },
+ "AI-POL-01": {
+  "title": "Acceptable Use of AI Tools Policy",
+  "type": "policy",
+  "framework": "ai",
+  "file": "src/ai/ai-pol-01-acceptable-use-of-ai-tools-policy.md"
+ },
+ "AI-POL-02": {
+  "title": "AI System Development, Procurement and Deployment Policy",
+  "type": "policy",
+  "framework": "ai",
+  "file": "src/ai/ai-pol-02-ai-system-development-and-deployment-policy.md"
+ },
+ "AI-PRO-01": {
+  "title": "AI Risk Assessment Procedure",
+  "type": "procedure",
+  "framework": "ai",
+  "file": "src/ai/ai-pro-01-ai-risk-assessment-procedure.md"
+ },
+ "AI-PRO-02": {
+  "title": "AI Vendor and Model Due Diligence Procedure",
+  "type": "procedure",
+  "framework": "ai",
+  "file": "src/ai/ai-pro-02-ai-vendor-and-model-due-diligence-procedure.md"
+ },
+ "AI-PRO-03": {
+  "title": "AI Incident and Model Failure Handling Procedure",
+  "type": "procedure",
+  "framework": "ai",
+  "file": "src/ai/ai-pro-03-ai-incident-handling-procedure.md"
+ },
+ "AI-TPL-01": {
+  "title": "AI Vendor and Model Questionnaire",
+  "type": "template",
+  "framework": "ai",
+  "file": "src/ai/ai-tpl-01-ai-vendor-questionnaire.md"
+ },
+ "GOV-CHK-01": {
+  "title": "Onboarding and offboarding security checklist",
+  "type": "checklist",
+  "framework": "cross",
+  "file": "src/cross/gov-chk-01-onboarding-and-offboarding-checklist.md"
+ },
+ "GOV-CHK-02": {
+  "title": "Secure Configuration Baseline Checklist (Server, Workstation, Cloud Account)",
+  "type": "checklist",
+  "framework": "cross",
+  "file": "src/cross/gov-chk-02-secure-configuration-baseline-checklist.md"
+ },
+ "GOV-CHK-03": {
+  "title": "Pre-audit readiness checklist",
+  "type": "checklist",
+  "framework": "cross",
+  "file": "src/cross/gov-chk-03-pre-audit-readiness-checklist.md"
+ },
+ "GOV-POL-01": {
+  "title": "Information security and privacy governance framework",
+  "type": "policy",
+  "framework": "cross",
+  "file": "src/cross/gov-pol-01-governance-framework.md"
+ },
+ "GOV-POL-02": {
+  "title": "Acceptable use policy",
+  "type": "policy",
+  "framework": "cross",
+  "file": "src/cross/gov-pol-02-acceptable-use-policy.md"
+ },
+ "GOV-POL-03": {
+  "title": "Information security policy",
+  "type": "policy",
+  "framework": "cross",
+  "file": "src/cross/gov-pol-03-information-security-policy.md"
+ },
+ "GOV-POL-04": {
+  "title": "Clear desk and clear screen policy",
+  "type": "policy",
+  "framework": "cross",
+  "file": "src/cross/gov-pol-04-clear-desk-and-clear-screen-policy.md"
+ },
+ "GOV-POL-05": {
+  "title": "Remote and mobile working policy",
+  "type": "policy",
+  "framework": "cross",
+  "file": "src/cross/gov-pol-05-remote-working-policy.md"
+ },
+ "GOV-POL-06": {
+  "title": "Authentication, password and multi-factor policy",
+  "type": "policy",
+  "framework": "cross",
+  "file": "src/cross/gov-pol-06-authentication-and-password-policy.md"
+ },
+ "GOV-PRO-01": {
+  "title": "Document Control Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-01-document-control-procedure.md"
+ },
+ "GOV-PRO-02": {
+  "title": "Internal audit procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-02-internal-audit-procedure.md"
+ },
+ "GOV-PRO-03": {
+  "title": "Management review procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-03-management-review-procedure.md"
+ },
+ "GOV-PRO-04": {
+  "title": "Nonconformity and corrective action procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-04-nonconformity-and-corrective-action-procedure.md"
+ },
+ "GOV-PRO-05": {
+  "title": "Risk assessment and treatment methodology",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-05-risk-assessment-and-treatment-methodology.md"
+ },
+ "GOV-PRO-06": {
+  "title": "Supplier and Third Party Security Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-06-supplier-security-procedure.md"
+ },
+ "GOV-PRO-07": {
+  "title": "Information Security Incident Management Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-07-incident-management-procedure.md"
+ },
+ "GOV-PRO-08": {
+  "title": "Security and privacy awareness and training procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-08-security-awareness-and-training-procedure.md"
+ },
+ "GOV-PRO-09": {
+  "title": "Change Management Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-09-change-management-procedure.md"
+ },
+ "GOV-PRO-10": {
+  "title": "Access management procedure (joiners, movers, leavers, privileged access, reviews)",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-10-access-management-procedure.md"
+ },
+ "GOV-PRO-11": {
+  "title": "Vulnerability and Patch Management Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-11-vulnerability-and-patch-management-procedure.md"
+ },
+ "GOV-PRO-12": {
+  "title": "Backup and Restore Testing Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-12-backup-and-restore-procedure.md"
+ },
+ "GOV-PRO-13": {
+  "title": "Business Continuity and ICT Readiness Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-13-business-continuity-and-ict-readiness-procedure.md"
+ },
+ "GOV-PRO-14": {
+  "title": "Logging, Monitoring and Alert Handling Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-14-logging-and-monitoring-procedure.md"
+ },
+ "GOV-PRO-15": {
+  "title": "Secure Development Lifecycle Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-15-secure-development-lifecycle-procedure.md"
+ },
+ "GOV-PRO-16": {
+  "title": "Asset management, classification and handling procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-16-asset-management-and-classification-procedure.md"
+ },
+ "GOV-PRO-17": {
+  "title": "Physical and environmental security procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-17-physical-and-environmental-security-procedure.md"
+ },
+ "GOV-PRO-18": {
+  "title": "Human resources security procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-18-human-resources-security-procedure.md"
+ },
+ "GOV-PRO-19": {
+  "title": "Capacity and Availability Management Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-19-capacity-and-availability-management-procedure.md"
+ },
+ "GOV-PRO-20": {
+  "title": "Cryptography and Key Management Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-20-cryptography-and-key-management-procedure.md"
+ },
+ "GOV-PRO-21": {
+  "title": "Network Security and Remote Access Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-21-network-security-and-remote-access-procedure.md"
+ },
+ "GOV-PRO-22": {
+  "title": "Endpoint and Mobile Device Security Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-22-endpoint-and-mobile-device-procedure.md"
+ },
+ "GOV-PRO-23": {
+  "title": "Information Transfer and Data Loss Prevention Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-23-information-transfer-and-data-loss-prevention-procedure.md"
+ },
+ "GOV-PRO-24": {
+  "title": "Exception and risk acceptance procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-24-exception-and-risk-acceptance-procedure.md"
+ },
+ "GOV-PRO-25": {
+  "title": "Legal, regulatory and contractual compliance procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-25-compliance-obligations-procedure.md"
+ },
+ "GOV-PRO-26": {
+  "title": "Cloud Services Security Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-26-cloud-services-security-procedure.md"
+ },
+ "GOV-PRO-27": {
+  "title": "Threat Intelligence and Vulnerability Disclosure Handling Procedure",
+  "type": "procedure",
+  "framework": "cross",
+  "file": "src/cross/gov-pro-27-threat-intelligence-and-vulnerability-disclosure-procedure.md"
+ },
+ "GOV-STM-01": {
+  "title": "Top management commitment statement",
+  "type": "statement",
+  "framework": "cross",
+  "file": "src/cross/gov-stm-01-management-commitment-statement.md"
+ },
+ "GOV-TPL-01": {
+  "title": "Internal audit report template",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-01-internal-audit-report.md"
+ },
+ "GOV-TPL-02": {
+  "title": "Corrective action request form",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-02-corrective-action-request.md"
+ },
+ "GOV-TPL-03": {
+  "title": "Management review minutes template",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-03-management-review-minutes.md"
+ },
+ "GOV-TPL-04": {
+  "title": "Supplier Security and Privacy Questionnaire",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-04-supplier-security-questionnaire.md"
+ },
+ "GOV-TPL-05": {
+  "title": "Incident Report Form",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-05-incident-report-form.md"
+ },
+ "GOV-TPL-06": {
+  "title": "Risk acceptance and exception form",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-06-risk-acceptance-form.md"
+ },
+ "GOV-TPL-07": {
+  "title": "Business Impact Analysis Worksheet",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-07-business-impact-analysis-worksheet.md"
+ },
+ "GOV-TPL-08": {
+  "title": "Change Request Form",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-08-change-request-form.md"
+ },
+ "GOV-TPL-09": {
+  "title": "Access request and approval form",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-09-access-request-form.md"
+ },
+ "GOV-TPL-10": {
+  "title": "Awareness session record and acknowledgement",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-10-training-session-record.md"
+ },
+ "GOV-TPL-11": {
+  "title": "Post-Incident Review Template",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-11-post-incident-review.md"
+ },
+ "GOV-TPL-12": {
+  "title": "Readiness Verdict Note",
+  "type": "template",
+  "framework": "cross",
+  "file": "src/cross/gov-tpl-12-readiness-verdict-note.md"
+ },
+ "PB-01": {
+  "title": "Playbook: start here, how to use this kit",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-01-how-to-use-this-kit.md"
+ },
+ "PB-02": {
+  "title": "Playbook: ISO/IEC 27001:2022 implementation in twelve steps",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-02-iso-27001-in-twelve-steps.md"
+ },
+ "PB-03": {
+  "title": "Playbook: SOC 2 Type 2 readiness in 90 days",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-03-soc-2-type-2-readiness-in-90-days.md"
+ },
+ "PB-04": {
+  "title": "Playbook: GDPR operations for a product team in ten steps",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-04-gdpr-operations-in-ten-steps.md"
+ },
+ "PB-05": {
+  "title": "Playbook: adding ISO/IEC 27701 privacy management to an existing ISMS",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-05-adding-privacy-to-an-isms.md"
+ },
+ "PB-06": {
+  "title": "Playbook: running your first internal audit cycle",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-06-first-internal-audit-cycle.md"
+ },
+ "PB-07": {
+  "title": "Playbook: The Go-Live Security and Privacy Gate for a Software Project",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-07-go-live-security-gate.md"
+ },
+ "PB-08": {
+  "title": "Playbook: Running a Readiness Assessment with the Questionnaire",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-08-readiness-questionnaire-guide.md"
+ },
+ "PB-09": {
+  "title": "Playbook: Evidence Management That Survives an Audit",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-09-evidence-management.md"
+ },
+ "PB-10": {
+  "title": "Playbook: one control set, several certifications",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-10-combining-frameworks.md"
+ },
+ "GDPR-GDE-01": {
+  "title": "Guide: a GDPR operating model for a product or service team",
+  "type": "guide",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-gde-01-operating-model.md"
+ },
+ "GDPR-GDE-02": {
+  "title": "Guide: GDPR articles mapped to the kit",
+  "type": "guide",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-gde-02-article-map.md"
+ },
+ "GDPR-POL-01": {
+  "title": "Data protection policy",
+  "type": "policy",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-pol-01-data-protection-policy.md"
+ },
+ "GDPR-PRO-01": {
+  "title": "Data mapping and records of processing procedure",
+  "type": "procedure",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-pro-01-data-mapping-and-records-of-processing-procedure.md"
+ },
+ "GDPR-PRO-02": {
+  "title": "HR data handling procedure",
+  "type": "procedure",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-pro-02-hr-data-handling-procedure.md"
+ },
+ "GDPR-TPL-01": {
+  "title": "Privacy notice template (customers and website)",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-01-privacy-notice.md"
+ },
+ "GDPR-TPL-02": {
+  "title": "Employee privacy notice template",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-02-employee-privacy-notice.md"
+ },
+ "GDPR-TPL-03": {
+  "title": "Job applicant privacy notice template",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-03-job-applicant-privacy-notice.md"
+ },
+ "GDPR-TPL-04": {
+  "title": "Cookie and tracking technologies notice template",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-04-cookie-and-tracking-notice.md"
+ },
+ "GDPR-TPL-05": {
+  "title": "Data subject request response letters",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-05-data-subject-request-letters.md"
+ },
+ "GDPR-TPL-06": {
+  "title": "Consent form templates (customers and employees)",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-06-consent-forms.md"
+ },
+ "GDPR-TPL-07": {
+  "title": "Legitimate interests assessment template",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-07-legitimate-interests-assessment.md"
+ },
+ "GDPR-TPL-08": {
+  "title": "Transfer impact assessment template",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-08-transfer-impact-assessment.md"
+ },
+ "GDPR-TPL-09": {
+  "title": "Supplier GDPR assessment questionnaire",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-09-supplier-gdpr-assessment.md"
+ },
+ "GDPR-TPL-10": {
+  "title": "Personal data breach notification form (to the supervisory authority)",
+  "type": "template",
+  "framework": "gdpr",
+  "file": "src/gdpr/gdpr-tpl-10-breach-notification-form.md"
+ },
+ "ISMS-GDE-01": {
+  "title": "Guide: the 93 Annex A controls and where the kit covers each",
+  "type": "guide",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-gde-01-annex-a-control-guide.md"
+ },
+ "ISMS-GDE-02": {
+  "title": "Guide: mandatory documented information and records for ISO/IEC 27001:2022",
+  "type": "guide",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-gde-02-mandatory-documents-map.md"
+ },
+ "ISMS-GDE-03": {
+  "title": "Guide: the certification journey from decision to recertification",
+  "type": "guide",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-gde-03-certification-journey.md"
+ },
+ "ISMS-PLN-01": {
+  "title": "Information security objectives and plan",
+  "type": "plan",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-pln-01-security-objectives-plan.md"
+ },
+ "ISMS-PLN-02": {
+  "title": "Communication plan",
+  "type": "plan",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-pln-02-communication-plan.md"
+ },
+ "ISMS-PLN-03": {
+  "title": "Annual internal audit plan",
+  "type": "plan",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-pln-03-annual-audit-plan.md"
+ },
+ "ISMS-PRO-01": {
+  "title": "Context of the organisation and interested parties procedure",
+  "type": "procedure",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-pro-01-context-and-interested-parties-procedure.md"
+ },
+ "ISMS-PRO-02": {
+  "title": "Competence and awareness procedure",
+  "type": "procedure",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-pro-02-competence-procedure.md"
+ },
+ "ISMS-PRO-03": {
+  "title": "Operational planning and control procedure",
+  "type": "procedure",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-pro-03-operational-planning-and-control-procedure.md"
+ },
+ "ISMS-PRO-04": {
+  "title": "Monitoring, measurement, analysis and evaluation procedure",
+  "type": "procedure",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-pro-04-monitoring-and-measurement-procedure.md"
+ },
+ "ISMS-STM-01": {
+  "title": "ISMS scope statement",
+  "type": "statement",
+  "framework": "iso27001",
+  "file": "src/iso27001/isms-stm-01-isms-scope-statement.md"
+ },
+ "PIMS-GDE-01": {
+  "title": "Guide: ISO/IEC 27701 Annex A (controller) and Annex B (processor) controls and where the kit covers each",
+  "type": "guide",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-gde-01-annex-controls-map.md"
+ },
+ "PIMS-POL-01": {
+  "title": "Privacy information management policy",
+  "type": "policy",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pol-01-privacy-information-management-policy.md"
+ },
+ "PIMS-POL-02": {
+  "title": "Data retention and disposal policy",
+  "type": "policy",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pol-02-data-retention-and-disposal-policy.md"
+ },
+ "PIMS-POL-03": {
+  "title": "International transfer policy",
+  "type": "policy",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pol-03-international-transfer-policy.md"
+ },
+ "PIMS-PRO-01": {
+  "title": "Determining controller and processor roles",
+  "type": "procedure",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pro-01-controller-and-processor-roles-procedure.md"
+ },
+ "PIMS-PRO-02": {
+  "title": "Privacy risk and data protection impact assessment procedure",
+  "type": "procedure",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pro-02-privacy-impact-assessment-procedure.md"
+ },
+ "PIMS-PRO-03": {
+  "title": "Data subject rights handling procedure",
+  "type": "procedure",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pro-03-data-subject-rights-procedure.md"
+ },
+ "PIMS-PRO-04": {
+  "title": "Personal data breach assessment and notification procedure",
+  "type": "procedure",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pro-04-personal-data-breach-procedure.md"
+ },
+ "PIMS-PRO-05": {
+  "title": "Consent and privacy notice management procedure",
+  "type": "procedure",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pro-05-consent-and-privacy-notice-procedure.md"
+ },
+ "PIMS-PRO-06": {
+  "title": "Privacy by design and by default procedure",
+  "type": "procedure",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pro-06-privacy-by-design-procedure.md"
+ },
+ "PIMS-PRO-07": {
+  "title": "Privacy control effectiveness monitoring procedure",
+  "type": "procedure",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-pro-07-privacy-monitoring-procedure.md"
+ },
+ "PIMS-TPL-01": {
+  "title": "Data protection impact assessment template",
+  "type": "template",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-tpl-01-dpia-template.md"
+ },
+ "PIMS-TPL-02": {
+  "title": "Data processing agreement template",
+  "type": "template",
+  "framework": "iso27701",
+  "file": "src/iso27701/pims-tpl-02-data-processing-agreement.md"
+ },
+ "SOC-GDE-01": {
+  "title": "Guide: SOC 2 in plain words",
+  "type": "guide",
+  "framework": "soc2",
+  "file": "src/soc2/soc-gde-01-soc-2-in-plain-words.md"
+ },
+ "SOC-GDE-02": {
+  "title": "Guide: the auditor's request list and how to answer it from the kit",
+  "type": "guide",
+  "framework": "soc2",
+  "file": "src/soc2/soc-gde-02-auditor-request-list.md"
+ },
+ "SOC-GDE-03": {
+  "title": "Guide: Trust Services Criteria mapped to kit documents",
+  "type": "guide",
+  "framework": "soc2",
+  "file": "src/soc2/soc-gde-03-criteria-to-kit-map.md"
+ },
+ "SOC-POL-01": {
+  "title": "Processing integrity policy",
+  "type": "policy",
+  "framework": "soc2",
+  "file": "src/soc2/soc-pol-01-processing-integrity-policy.md"
+ },
+ "SOC-PRO-01": {
+  "title": "Control testing and sampling procedure",
+  "type": "procedure",
+  "framework": "soc2",
+  "file": "src/soc2/soc-pro-01-control-testing-and-sampling-procedure.md"
+ },
+ "SOC-PRO-02": {
+  "title": "Subservice organisation and vendor assurance report review procedure",
+  "type": "procedure",
+  "framework": "soc2",
+  "file": "src/soc2/soc-pro-02-vendor-soc-report-review-procedure.md"
+ },
+ "SOC-PRO-03": {
+  "title": "Input validation and reconciliation procedure",
+  "type": "procedure",
+  "framework": "soc2",
+  "file": "src/soc2/soc-pro-03-input-validation-and-reconciliation-procedure.md"
+ },
+ "SOC-PRO-04": {
+  "title": "Output distribution and storage integrity procedure",
+  "type": "procedure",
+  "framework": "soc2",
+  "file": "src/soc2/soc-pro-04-output-and-storage-integrity-procedure.md"
+ },
+ "SOC-TPL-01": {
+  "title": "System description template",
+  "type": "template",
+  "framework": "soc2",
+  "file": "src/soc2/soc-tpl-01-system-description.md"
+ },
+ "AI-REG-01": {
+  "title": "AI system inventory",
+  "type": "register",
+  "framework": "ai",
+  "file": "kit/ai/ai-reg-01-ai-system-inventory.xlsx"
+ },
+ "AI-REG-02": {
+  "title": "AI risk register",
+  "type": "register",
+  "framework": "ai",
+  "file": "kit/ai/ai-reg-02-ai-risk-register.xlsx"
+ },
+ "AI-REG-03": {
+  "title": "AI change and evaluation log",
+  "type": "register",
+  "framework": "ai",
+  "file": "kit/ai/ai-reg-03-ai-change-and-evaluation-log.xlsx"
+ },
+ "AI-REG-04": {
+  "title": "AI tool approval register",
+  "type": "register",
+  "framework": "ai",
+  "file": "kit/ai/ai-reg-04-ai-tool-approval-register.xlsx"
+ },
+ "GOV-REG-01": {
+  "title": "Master list of documents and records",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-01-master-list-of-documents.xlsx"
+ },
+ "GOV-REG-27": {
+  "title": "Framework crosswalk",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-27-framework-crosswalk.xlsx"
+ },
+ "GDPR-REG-01": {
+  "title": "GDPR gap assessment",
+  "type": "register",
+  "framework": "gdpr",
+  "file": "kit/gdpr/gdpr-reg-01-gap-assessment.xlsx"
+ },
+ "GDPR-REG-02": {
+  "title": "Data flow and transfer map",
+  "type": "register",
+  "framework": "gdpr",
+  "file": "kit/gdpr/gdpr-reg-02-data-flow-and-transfer-map.xlsx"
+ },
+ "GDPR-REG-03": {
+  "title": "Legitimate interests assessment register",
+  "type": "register",
+  "framework": "gdpr",
+  "file": "kit/gdpr/gdpr-reg-03-legitimate-interests-assessment-register.xlsx"
+ },
+ "GDPR-REG-04": {
+  "title": "Cookie and tracker inventory",
+  "type": "register",
+  "framework": "gdpr",
+  "file": "kit/gdpr/gdpr-reg-04-cookie-and-tracker-inventory.xlsx"
+ },
+ "GDPR-REG-05": {
+  "title": "Privacy training register",
+  "type": "register",
+  "framework": "gdpr",
+  "file": "kit/gdpr/gdpr-reg-05-privacy-training-register.xlsx"
+ },
+ "GOV-REG-02": {
+  "title": "Audit programme and findings",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-02-audit-programme-and-findings.xlsx"
+ },
+ "GOV-REG-03": {
+  "title": "Corrective action log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-03-corrective-action-log.xlsx"
+ },
+ "GOV-REG-04": {
+  "title": "Legal, regulatory and contractual register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-04-legal-regulatory-and-contractual-register.xlsx"
+ },
+ "GOV-REG-05": {
+  "title": "Information security risk register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-05-information-security-risk-register.xlsx"
+ },
+ "GOV-REG-06": {
+  "title": "Risk acceptance and exception register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-06-risk-acceptance-and-exception-register.xlsx"
+ },
+ "GOV-REG-21": {
+  "title": "Security objectives and measures tracker",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-21-security-objectives-and-measures-tracker.xlsx"
+ },
+ "GOV-REG-22": {
+  "title": "Management review action tracker",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-22-management-review-action-tracker.xlsx"
+ },
+ "GOV-REG-09": {
+  "title": "Training and awareness register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-09-training-and-awareness-register.xlsx"
+ },
+ "GOV-REG-10": {
+  "title": "Information asset register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-10-information-asset-register.xlsx"
+ },
+ "GOV-REG-12": {
+  "title": "Access review log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-12-access-review-log.xlsx"
+ },
+ "GOV-REG-13": {
+  "title": "Privileged account register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-13-privileged-account-register.xlsx"
+ },
+ "GOV-REG-19": {
+  "title": "Physical access and visitor log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-19-physical-access-and-visitor-log.xlsx"
+ },
+ "GOV-REG-20": {
+  "title": "Media and equipment disposal log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-20-media-and-equipment-disposal-log.xlsx"
+ },
+ "GOV-REG-23": {
+  "title": "Policy acknowledgement register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-23-policy-acknowledgement-register.xlsx"
+ },
+ "GOV-REG-24": {
+  "title": "Software and hardware inventory",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-24-software-and-hardware-inventory.xlsx"
+ },
+ "GOV-REG-07": {
+  "title": "Supplier register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-07-supplier-register.xlsx"
+ },
+ "GOV-REG-08": {
+  "title": "Incident register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-08-incident-register.xlsx"
+ },
+ "GOV-REG-28": {
+  "title": "Readiness questionnaire",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-28-readiness-questionnaire.xlsx"
+ },
+ "GOV-REG-29": {
+  "title": "Go-live gate checklist",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-29-go-live-gate-checklist.xlsx"
+ },
+ "GOV-REG-11": {
+  "title": "Change log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-11-change-log.xlsx"
+ },
+ "GOV-REG-14": {
+  "title": "Vulnerability register",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-14-vulnerability-register.xlsx"
+ },
+ "GOV-REG-15": {
+  "title": "Backup and restore test log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-15-backup-and-restore-test-log.xlsx"
+ },
+ "GOV-REG-16": {
+  "title": "Business continuity exercise log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-16-business-continuity-exercise-log.xlsx"
+ },
+ "GOV-REG-17": {
+  "title": "Capacity and availability log",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-17-capacity-and-availability-log.xlsx"
+ },
+ "GOV-REG-18": {
+  "title": "Cryptographic key and certificate inventory",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-18-cryptographic-key-and-certificate-inventory.xlsx"
+ },
+ "GOV-REG-25": {
+  "title": "Data flow and interface inventory",
+  "type": "register",
+  "framework": "cross",
+  "file": "kit/cross/gov-reg-25-data-flow-and-interface-inventory.xlsx"
+ },
+ "ISMS-REG-04": {
+  "title": "Internal audit checklist",
+  "type": "register",
+  "framework": "iso27001",
+  "file": "kit/iso27001/isms-reg-04-internal-audit-checklist.xlsx"
+ },
+ "ISMS-REG-01": {
+  "title": "Statement of Applicability",
+  "type": "register",
+  "framework": "iso27001",
+  "file": "kit/iso27001/isms-reg-01-statement-of-applicability.xlsx"
+ },
+ "ISMS-REG-02": {
+  "title": "Control implementation tracker",
+  "type": "register",
+  "framework": "iso27001",
+  "file": "kit/iso27001/isms-reg-02-control-implementation-tracker.xlsx"
+ },
+ "ISMS-REG-03": {
+  "title": "Interested parties and requirements register",
+  "type": "register",
+  "framework": "iso27001",
+  "file": "kit/iso27001/isms-reg-03-interested-parties-and-requirements.xlsx"
+ },
+ "ISMS-REG-05": {
+  "title": "Implementation project plan",
+  "type": "register",
+  "framework": "iso27001",
+  "file": "kit/iso27001/isms-reg-05-implementation-project-plan.xlsx"
+ },
+ "PIMS-REG-01": {
+  "title": "Personal data processing inventory",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-01-personal-data-processing-inventory.xlsx"
+ },
+ "PIMS-REG-02": {
+  "title": "Data subject request register",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-02-data-subject-request-register.xlsx"
+ },
+ "PIMS-REG-03": {
+  "title": "Personal data breach register",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-03-personal-data-breach-register.xlsx"
+ },
+ "PIMS-REG-04": {
+  "title": "Consent record register",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-04-consent-record-register.xlsx"
+ },
+ "PIMS-REG-05": {
+  "title": "International transfer register",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-05-international-transfer-register.xlsx"
+ },
+ "PIMS-REG-06": {
+  "title": "Processor and sub-processor register",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-06-processor-and-sub-processor-register.xlsx"
+ },
+ "PIMS-REG-07": {
+  "title": "Retention schedule",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-07-retention-schedule.xlsx"
+ },
+ "PIMS-REG-08": {
+  "title": "Data protection impact assessment register",
+  "type": "register",
+  "framework": "iso27701",
+  "file": "kit/iso27701/pims-reg-08-dpia-register.xlsx"
+ },
+ "SOC-REG-01": {
+  "title": "Trust Services Criteria control matrix",
+  "type": "register",
+  "framework": "soc2",
+  "file": "kit/soc2/soc-reg-01-trust-services-criteria-control-matrix.xlsx"
+ },
+ "SOC-REG-02": {
+  "title": "Evidence calendar",
+  "type": "register",
+  "framework": "soc2",
+  "file": "kit/soc2/soc-reg-02-evidence-calendar.xlsx"
+ },
+ "SOC-REG-03": {
+  "title": "SOC 2 readiness checklist",
+  "type": "register",
+  "framework": "soc2",
+  "file": "kit/soc2/soc-reg-03-readiness-checklist.xlsx"
+ }
+}

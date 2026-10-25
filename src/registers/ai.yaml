@@ -1,0 +1,93 @@
+- id: AI-REG-01
+  key: ai-reg-01-ai-system-inventory
+  title: AI system inventory
+  framework: ai
+  maps:
+    - ISO/IEC 42001 clause 8.1
+    - NIST AI RMF MAP
+  purpose: One row per AI system the organisation builds, buys or uses, recording its purpose, the model behind it, the data it handles and its risk class. The starting point for AI risk assessment, privacy assessment and oversight.
+  columns:
+    - {name: System ID, width: 12}
+    - {name: Name, width: 24}
+    - {name: Purpose, width: 30}
+    - {name: Type, width: 18, values: [Internal tool, Product feature, Vendor service]}
+    - {name: Model and provider, width: 24}
+    - {name: Where it runs, width: 20}
+    - {name: Inputs, width: 24}
+    - {name: Outputs, width: 24}
+    - {name: Personal data, width: 12, values: [Yes, No]}
+    - {name: Risk class, width: 16, values: [Minimal, Limited, High, Unacceptable], help: Classified against the risk rules in AI-POL-02.}
+    - {name: Owner (role), width: 18}
+    - {name: DPIA reference, width: 14, help: PIMS-REG-08 row where personal data is involved.}
+    - {name: Review date, width: 14, date: true}
+    - {name: Status, width: 14, values: [Proposed, Approved, Retired]}
+    - {name: Notes, width: 26}
+
+- id: AI-REG-02
+  key: ai-reg-02-ai-risk-register
+  title: AI risk register
+  framework: ai
+  maps:
+    - ISO/IEC 42001 clause 6.1.2
+    - NIST AI RMF MEASURE
+  purpose: One row per AI risk, scored the same way as the information security risk register but with an explicit view of the impact on people. Fed by AI-PRO-01 and reviewed on the same cycle as the AI system inventory.
+  columns:
+    - {name: Risk ID, width: 12}
+    - {name: AI system, width: 20, help: AI-REG-01 system.}
+    - {name: Risk scenario, width: 30}
+    - {name: Impact on people, width: 26, help: Harm to individuals or groups, including unfair or unsafe outcomes.}
+    - {name: Likelihood, width: 12, range: [1, 5]}
+    - {name: Impact, width: 12, range: [1, 5]}
+    - {name: Score, width: 10, formula: '=IF(OR(E{r}="",F{r}=""),"",E{r}*F{r})', number_format: '0'}
+    - {name: Band, width: 12, formula: '=IF(G{r}="","",IF(G{r}>=16,"Critical",IF(G{r}>=10,"High",IF(G{r}>=5,"Medium","Low"))))'}
+    - {name: Controls, width: 26}
+    - {name: Treatment, width: 16, values: [Modify, Retain, Avoid, Share]}
+    - {name: Owner (role), width: 18}
+    - {name: Due date, width: 14, date: true}
+    - {name: Residual score, width: 12, range: [1, 25]}
+    - {name: Status, width: 14, values: [Open, Treating, Accepted, Closed]}
+    - {name: Notes, width: 26}
+
+- id: AI-REG-03
+  key: ai-reg-03-ai-change-and-evaluation-log
+  title: AI change and evaluation log
+  framework: ai
+  maps:
+    - ISO/IEC 42001 clause 8.3
+    - NIST AI RMF MANAGE
+  purpose: One row per material change to an AI system, recording the evaluation performed before and after, the result and the rollback plan. The record that a system was tested for safety and performance before a change reached production.
+  columns:
+    - {name: Change ID, width: 12}
+    - {name: AI system, width: 20}
+    - {name: Change, width: 28}
+    - {name: Reason, width: 24}
+    - {name: Evaluation performed, width: 28, help: Tests run, including safety, bias and performance.}
+    - {name: Result, width: 20, values: [Passed, Passed with conditions, Failed]}
+    - {name: Approved by (role), width: 18}
+    - {name: Rollback plan, width: 24}
+    - {name: Change reference, width: 16, help: GOV-REG-11 row.}
+    - {name: Date, width: 14, date: true}
+    - {name: Status, width: 14, values: [Planned, Deployed, Rolled back]}
+    - {name: Notes, width: 26}
+
+- id: AI-REG-04
+  key: ai-reg-04-ai-tool-approval-register
+  title: AI tool approval register
+  framework: ai
+  maps:
+    - ISO/IEC 42001 clause 6.1.4
+    - NIST AI RMF GOVERN
+  purpose: One row per AI tool staff are allowed to use, recording the approved uses, the data that must never be entered and the approver. The reference behind AI-POL-01 and the answer to the question of which assistant is safe for which task.
+  columns:
+    - {name: Tool ID, width: 12}
+    - {name: Tool, width: 22}
+    - {name: Provider, width: 20}
+    - {name: Approved uses, width: 30}
+    - {name: Prohibited data, width: 28, help: Data that must never be entered into this tool.}
+    - {name: Data retention, width: 20, help: What the provider does with inputs and outputs.}
+    - {name: Approved by (role), width: 18}
+    - {name: Approved date, width: 14, date: true}
+    - {name: Review date, width: 14, date: true}
+    - {name: Owner (role), width: 18}
+    - {name: Status, width: 14, values: [Approved, Restricted, Withdrawn]}
+    - {name: Notes, width: 26}

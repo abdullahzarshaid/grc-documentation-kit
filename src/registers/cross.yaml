@@ -1,0 +1,21 @@
+- id: GOV-REG-01
+  key: gov-reg-01-master-list-of-documents
+  title: Master list of documents and records
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 7.5
+    - SOC 2 CC2.2
+  purpose: The index of every controlled document and record in the management system. One row per document, with its current version, owner, approver, location and review dates. Updated whenever a document is issued, changed or withdrawn.
+  columns:
+    - {name: Document ID, width: 16, help: The permanent identifier, for example ISMS-POL-03.}
+    - {name: Title, width: 40}
+    - {name: Type, width: 14, values: [Policy, Procedure, Plan, Statement, Register, Form, Record, External]}
+    - {name: Framework, width: 16, values: [ISO 27001, ISO 27701, SOC 2, GDPR, AI, Cross]}
+    - {name: Owner (role), width: 24}
+    - {name: Approver (role), width: 22}
+    - {name: Version, width: 10}
+    - {name: Status, width: 14, values: [Draft, Approved, Withdrawn]}
+    - {name: Effective date, width: 14, date: true}
+    - {name: Next review, width: 14, date: true}
+    - {name: Location, width: 36, help: The single approved location of the current version.}
+    - {name: Notes, width: 30}

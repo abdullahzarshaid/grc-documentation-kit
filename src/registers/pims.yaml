@@ -1,0 +1,190 @@
+- id: PIMS-REG-01
+  key: pims-reg-01-personal-data-processing-inventory
+  title: Personal data processing inventory
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 7.2.8
+    - ISO/IEC 27701 Annex A 7.2.8
+    - GDPR Article 30
+  purpose: One row per processing activity, recording what personal data is processed, why, on what basis, who receives it, where it goes and how long it is kept. This is the record of processing that the organisation keeps as a controller, and the operational source for notices, assessments and requests.
+  columns:
+    - {name: Processing ID, width: 12, help: Permanent identifier for the activity.}
+    - {name: Activity, width: 28}
+    - {name: Role, width: 14, values: [Controller, Processor, Joint controller]}
+    - {name: Purpose, width: 30}
+    - {name: Lawful basis, width: 20, values: [Consent, Contract, Legal obligation, Vital interests, Public task, Legitimate interests]}
+    - {name: Special category, width: 12, values: [Yes, No], help: Health, biometric, racial, political, religious, union, sex-life or criminal data.}
+    - {name: Data subjects, width: 22}
+    - {name: Data categories, width: 26}
+    - {name: Recipients, width: 24, help: Internal functions and third parties, including processors.}
+    - {name: Transfers outside region, width: 18, help: Countries outside the home jurisdiction, or None.}
+    - {name: Safeguard, width: 20, help: Mechanism for any transfer, from PIMS-REG-05.}
+    - {name: Retention, width: 18, help: Period and trigger, from PIMS-REG-07.}
+    - {name: Owner (role), width: 20}
+    - {name: DPIA reference, width: 16, help: PIMS-REG-08 row, where a DPIA was required.}
+    - {name: Last review, width: 14, date: true}
+    - {name: Notes, width: 26}
+
+- id: PIMS-REG-02
+  key: pims-reg-02-data-subject-request-register
+  title: Data subject request register
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 7.3
+    - GDPR Article 12
+  purpose: One row per request from an individual to exercise a right over their personal data. Records the clock, the identity check, the outcome and the proof, so that the one-month deadline is met and the handling can be shown.
+  columns:
+    - {name: Request ID, width: 12}
+    - {name: Received, width: 14, date: true, help: Starts the one-month clock.}
+    - {name: Requester, width: 20}
+    - {name: Right requested, width: 18, values: [Access, Rectification, Erasure, Restriction, Portability, Objection, Automated decision]}
+    - {name: Identity verified, width: 14, values: [Yes, No, Pending]}
+    - {name: Due, width: 14, date: true, formula: '=IF(B{r}="","",EDATE(B{r},1))', help: One month from receipt, extendable by two months with a recorded reason.}
+    - {name: Extension taken, width: 14, values: [Yes, No]}
+    - {name: Outcome, width: 24, values: [Fulfilled, Partially fulfilled, Refused, Withdrawn]}
+    - {name: Refusal basis, width: 24, help: Required when the outcome is a refusal or a partial fulfilment.}
+    - {name: Closed, width: 14, date: true}
+    - {name: Owner (role), width: 18}
+    - {name: Evidence reference, width: 22}
+    - {name: Status, width: 14, values: [Open, Verifying, Fulfilling, Closed]}
+    - {name: Notes, width: 26}
+
+- id: PIMS-REG-03
+  key: pims-reg-03-personal-data-breach-register
+  title: Personal data breach register
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 6.13.1.5
+    - GDPR Article 33
+    - GDPR Article 34
+  purpose: One row per personal data breach, whether or not it was notifiable. Records the awareness time that starts the seventy-two hour clock, the assessment of risk to individuals, and the notification decisions, so that accountability can be shown even when no notification was required.
+  columns:
+    - {name: Breach ID, width: 12}
+    - {name: Detected, width: 14, date: true}
+    - {name: Awareness time, width: 16, date: true, help: Starts the seventy-two hour clock for the authority.}
+    - {name: Summary, width: 30}
+    - {name: Data subjects affected, width: 16}
+    - {name: Data categories, width: 24}
+    - {name: Risk to individuals, width: 16, values: [Low, Medium, High]}
+    - {name: Authority notified, width: 16, values: [Yes, No, Not required]}
+    - {name: Authority notified at, width: 16, date: true}
+    - {name: Individuals notified, width: 16, values: [Yes, No, Not required]}
+    - {name: Containment, width: 24}
+    - {name: Corrective action, width: 16, help: GOV-REG-03 reference.}
+    - {name: Owner (role), width: 18}
+    - {name: Status, width: 14, values: [Open, Assessing, Notifying, Closed]}
+    - {name: Notes, width: 26}
+
+- id: PIMS-REG-04
+  key: pims-reg-04-consent-record-register
+  title: Consent record register
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 7.2.3
+    - GDPR Article 7
+  purpose: One row per consent given, where consent is the lawful basis. Records what was consented to, how, when and the wording shown, so that valid consent can be demonstrated and withdrawal honoured.
+  columns:
+    - {name: Consent ID, width: 12}
+    - {name: Data subject, width: 22}
+    - {name: Processing, width: 24, help: PIMS-REG-01 activity the consent covers.}
+    - {name: Purpose consented, width: 28}
+    - {name: Method, width: 18, help: How consent was captured, for example a ticked unticked box on a named form.}
+    - {name: Notice version, width: 16, help: Version of the privacy notice shown at the time.}
+    - {name: Given at, width: 14, date: true}
+    - {name: Withdrawn at, width: 14, date: true}
+    - {name: Owner (role), width: 18}
+    - {name: Evidence reference, width: 22}
+    - {name: Status, width: 14, values: [Active, Withdrawn, Expired]}
+    - {name: Notes, width: 26}
+
+- id: PIMS-REG-05
+  key: pims-reg-05-international-transfer-register
+  title: International transfer register
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 7.5
+    - GDPR Article 44
+  purpose: One row per transfer of personal data outside the home jurisdiction. Records the destination, the mechanism that makes the transfer lawful and the assessment behind it, so that transfers can be shown to be governed rather than incidental.
+  columns:
+    - {name: Transfer ID, width: 12}
+    - {name: Processing, width: 24, help: PIMS-REG-01 activity.}
+    - {name: Exporter, width: 20}
+    - {name: Importer, width: 20}
+    - {name: Destination, width: 18}
+    - {name: Data categories, width: 24}
+    - {name: Mechanism, width: 24, values: [Adequacy decision, Standard contractual clauses, Binding corporate rules, Codes or certification, Derogation]}
+    - {name: Assessment done, width: 14, values: [Yes, No], help: Transfer impact assessment, GDPR-TPL-08.}
+    - {name: Supplementary measures, width: 24}
+    - {name: Owner (role), width: 18}
+    - {name: Review date, width: 14, date: true}
+    - {name: Status, width: 14, values: [Active, Suspended, Ended]}
+    - {name: Notes, width: 26}
+
+- id: PIMS-REG-06
+  key: pims-reg-06-processor-and-sub-processor-register
+  title: Processor and sub-processor register
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 7.2.6
+    - GDPR Article 28
+  purpose: One row per processor and sub-processor that handles personal data on the organisation's behalf. Records the data they access, the contract terms that bind them and the assurance held, linking to the wider supplier register.
+  columns:
+    - {name: Processor ID, width: 12}
+    - {name: Name, width: 22}
+    - {name: Role, width: 14, values: [Processor, Sub-processor]}
+    - {name: Service, width: 24}
+    - {name: Processing, width: 20, help: PIMS-REG-01 activities served.}
+    - {name: Data categories, width: 24}
+    - {name: Location, width: 16}
+    - {name: Processing terms, width: 14, values: [Yes, No], help: Article 28 terms in place, PIMS-TPL-02.}
+    - {name: Assurance, width: 20, help: Certification, report or assessment held.}
+    - {name: Supplier register, width: 16, help: GOV-REG-07 row.}
+    - {name: Owner (role), width: 18}
+    - {name: Last review, width: 14, date: true}
+    - {name: Status, width: 14, values: [Approved, Under review, Exited]}
+    - {name: Notes, width: 26}
+
+- id: PIMS-REG-07
+  key: pims-reg-07-retention-schedule
+  title: Retention schedule
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 7.4.7
+    - GDPR Article 5
+  purpose: One row per category of personal data, recording how long it is kept, what triggers the clock, how it is disposed of and where that is configured. Checked on a cycle so that data is not kept longer than its basis allows.
+  columns:
+    - {name: Category, width: 24}
+    - {name: System, width: 22}
+    - {name: Retention period, width: 18}
+    - {name: Trigger, width: 24, help: The event that starts the retention clock.}
+    - {name: Disposal method, width: 20, values: [Deletion, Anonymisation, Secure destruction, Return]}
+    - {name: Where configured, width: 22, help: Where the rule is enforced, or Manual.}
+    - {name: Last check, width: 14, date: true}
+    - {name: Result, width: 14, values: [Pass, Fail, To confirm]}
+    - {name: Deviation action, width: 16, help: GOV-REG-03 reference where the check failed.}
+    - {name: Owner (role), width: 18}
+    - {name: Status, width: 14, values: [Active, Under review, Retired]}
+    - {name: Notes, width: 26}
+
+- id: PIMS-REG-08
+  key: pims-reg-08-dpia-register
+  title: Data protection impact assessment register
+  framework: iso27701
+  maps:
+    - ISO/IEC 27701 clause 7.2.5
+    - GDPR Article 35
+  purpose: One row per data protection impact assessment, recording the processing it covered, the screening outcome, the residual risk and the approval. The index to the assessments held as PIMS-TPL-01.
+  columns:
+    - {name: DPIA ID, width: 12}
+    - {name: Processing, width: 26, help: PIMS-REG-01 activity assessed.}
+    - {name: Trigger, width: 22, help: Why a DPIA was required.}
+    - {name: Screening outcome, width: 18, values: [DPIA required, Not required]}
+    - {name: Residual risk, width: 14, values: [Low, Medium, High]}
+    - {name: Decision, width: 20, values: [Proceed, Proceed with controls, Consult authority, Do not proceed]}
+    - {name: Approved by (role), width: 18}
+    - {name: Approved date, width: 14, date: true}
+    - {name: Review date, width: 14, date: true}
+    - {name: Owner (role), width: 18}
+    - {name: Evidence reference, width: 20, help: The completed PIMS-TPL-01.}
+    - {name: Status, width: 14, values: [Draft, Approved, Superseded]}
+    - {name: Notes, width: 26}

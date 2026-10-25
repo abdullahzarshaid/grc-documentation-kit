@@ -1,0 +1,116 @@
+- id: GOV-REG-27
+  key: gov-reg-27-framework-crosswalk
+  title: Framework crosswalk
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A
+    - ISO/IEC 27001:2022 clause 6.1.3
+    - SOC 2 CC4.1
+    - GDPR Article 24
+    - GDPR Article 32
+    - NIST CSF 2.0 GV.OC
+  purpose: One row per Annex A control of ISO/IEC 27001:2022, recording the SOC 2 Trust Services Criteria the control contributes to, the GDPR articles it helps satisfy, the NIST CSF 2.0 categories whose outcomes it supports and the kit documents that implement it. Used to tag the shared registers and the evidence folder so that one control set serves every framework, as PB-10 describes; a mapping shows which evidence to present to whom, never that a requirement is met.
+  columns:
+    - {name: Annex A control, width: 10, fixed: true}
+    - {name: Theme, width: 30, fixed: true, help: The same plain words as ISMS-REG-01. Read the standard for the authoritative text.}
+    - {name: SOC 2 criteria, width: 22, help: Criteria the control contributes to, separated by semicolons. A listed criterion usually draws on several controls.}
+    - {name: GDPR articles, width: 26, help: Articles the control helps satisfy. Security controls mostly serve Article 32; none means the regulation has no requirement this control serves.}
+    - {name: NIST CSF 2.0 category, width: 18, help: Category identifiers in the form of function and category, for example PR.AA.}
+    - {name: Kit documents, width: 32, help: Kit IDs separated by semicolons, the first being the primary document. Replace with your own where you have changed them.}
+    - {name: Notes, width: 44, help: Where a mapping is partial or conditional.}
+    - {name: Status, width: 14, values: [Confirmed, To review, Not applicable], help: Your own review of the row. Set every row to To review when a framework changes edition.}
+    - {name: Last reviewed, width: 14, date: true}
+  rows:
+    - ["5.1", "Policy framework and approval", "CC1.1; CC2.2; CC5.3", "Article 24", "GV.PO", "GOV-POL-03; GOV-PRO-01", "Article 24 treats documented policies as one way of demonstrating accountability.", null, null]
+    - ["5.2", "Assigned security roles", "CC1.3; CC1.5", "Article 24; Article 37 to 39", "GV.RR", "GOV-POL-01", "Articles 37 to 39 apply only to the data protection officer role where one is required.", null, null]
+    - ["5.3", "Conflicting duties separated", "CC1.3; CC6.3", "none", "GV.RR", "GOV-POL-01; GOV-PRO-10", null, null, null]
+    - ["5.4", "Leadership enforcement of rules", "CC1.1; CC1.2; CC1.5", "Article 24; Article 29; Article 32(4)", "GV.RR; GV.OV", "GOV-STM-01; GOV-POL-01; GOV-PRO-18", "Articles 29 and 32(4) concern staff acting only on the instructions of the controller or processor.", null, null]
+    - ["5.5", "Regulator and authority liaison", "CC2.3", "Article 31; Article 33; Article 36", "GV.OC; RS.CO", "GOV-PRO-25; GOV-PRO-07; ISMS-PLN-02", null, null, null]
+    - ["5.6", "Specialist community contacts", "CC2.3", "none", "ID.RA", "GOV-PRO-27; ISMS-PLN-02", "Partial: SOC 2 covers only the external communication aspect; no criterion requires forum membership.", null, null]
+    - ["5.7", "Threat information gathering", "CC3.2; CC7.2", "none", "ID.RA", "GOV-PRO-27", null, null, null]
+    - ["5.8", "Security built into projects", "CC3.4; CC8.1", "Article 25; Article 35", "GV.RM; ID.RA", "PB-07; GOV-PRO-15; ISMS-PRO-03", "Article 35 applies only where the project involves processing likely to be high risk to individuals.", null, null]
+    - ["5.9", "Asset and owner inventory", "CC6.1", "Article 30", "ID.AM", "GOV-PRO-16; GOV-REG-10; GOV-REG-24", "Partial: Article 30 requires a record of processing activities, which the asset inventory supports but does not replace.", null, null]
+    - ["5.10", "Rules for using assets", "CC1.1; CC2.2", "Article 29; Article 32(4)", "GV.PO", "GOV-POL-02; GOV-PRO-16", null, null, null]
+    - ["5.11", "Returning assets on exit", "CC6.2", "none", "ID.AM", "GOV-PRO-16; GOV-CHK-01", "Partial: CC6.2 addresses removal of access at exit; asset return is adjacent to it.", null, null]
+    - ["5.12", "Sensitivity grading scheme", "CC6.1; C1.1", "Article 9; Article 32", "ID.AM", "GOV-PRO-16", "Article 9 defines the special categories that a classification scheme must place at its highest level.", null, null]
+    - ["5.13", "Marking by sensitivity", "C1.1", "none", "ID.AM", "GOV-PRO-16", null, null, null]
+    - ["5.14", "Safe information movement", "CC6.7; C1.1", "Article 32; Article 44 to 46", "PR.DS", "GOV-PRO-23; GOV-REG-25", "Articles 44 to 46 apply only where the transfer leaves the jurisdiction; see PIMS-POL-03.", null, null]
+    - ["5.15", "Access rules by need", "CC6.1; CC6.3", "Article 25; Article 32", "PR.AA", "GOV-PRO-10", null, null, null]
+    - ["5.16", "Identity lifecycle control", "CC6.1; CC6.2", "Article 32", "PR.AA", "GOV-PRO-10", null, null, null]
+    - ["5.17", "Credential issue and care", "CC6.1", "Article 32", "PR.AA", "GOV-POL-06; GOV-PRO-10", null, null, null]
+    - ["5.18", "Access grant and review", "CC6.2; CC6.3", "Article 25; Article 32", "PR.AA", "GOV-PRO-10; GOV-TPL-09; GOV-REG-12", "The quarterly access review export is the single artefact all four frameworks will ask for.", null, null]
+    - ["5.19", "Supplier security governance", "CC9.2", "Article 24; Article 28", "GV.SC", "GOV-PRO-06; GOV-REG-07", null, null, null]
+    - ["5.20", "Security terms in contracts", "CC2.3; CC9.2", "Article 28(3)", "GV.SC", "GOV-PRO-06; PIMS-TPL-02", "Article 28(3) sets the mandatory content of processor contracts; PIMS-TPL-02 drafts it.", null, null]
+    - ["5.21", "Technology supply chain depth", "CC9.2", "Article 28(2); Article 28(4)", "GV.SC", "GOV-PRO-06; GOV-PRO-15", "Article 28(2) and (4) govern sub-processors; the software supply chain itself has no GDPR requirement.", null, null]
+    - ["5.22", "Supplier performance monitoring", "CC4.1; CC9.2", "Article 28(3)(h)", "GV.SC", "GOV-PRO-06; GOV-REG-07; SOC-PRO-02", null, null, null]
+    - ["5.23", "Cloud service lifecycle", "CC9.2", "Article 28; Article 44 to 46", "GV.SC", "GOV-PRO-26", "Articles 44 to 46 apply where the cloud service hosts or supports personal data outside the jurisdiction.", null, null]
+    - ["5.24", "Incident response readiness", "CC7.3; CC7.4", "Article 32; Article 33; Article 34", "RS.MA", "GOV-PRO-07", null, null, null]
+    - ["5.25", "Event triage decisions", "CC7.3", "Article 33", "DE.AE; RS.MA", "GOV-PRO-07; GOV-TPL-05", "Triage must decide whether an event is a personal data breach, which starts the Article 33 clock.", null, null]
+    - ["5.26", "Incident handling execution", "CC7.4; CC7.5", "Article 33; Article 34", "RS.MA; RS.MI; RC.RP", "GOV-PRO-07; GOV-REG-08", null, null, null]
+    - ["5.27", "Lessons from incidents", "CC4.2; CC7.5", "Article 33(5)", "ID.IM", "GOV-PRO-07; GOV-TPL-11", "Article 33(5) requires breaches to be documented whether or not they were notified.", null, null]
+    - ["5.28", "Evidence preservation", "CC7.4", "Article 33(5)", "RS.AN", "GOV-PRO-07; PB-09", null, null, null]
+    - ["5.29", "Controls kept through disruption", "CC7.5; CC9.1", "Article 32(1)(b); Article 32(1)(c)", "PR.IR; RC.RP", "GOV-PRO-13", null, null, null]
+    - ["5.30", "Technology continuity readiness", "A1.2; A1.3; CC9.1", "Article 32(1)(c)", "PR.IR; RC.RP; ID.IM", "GOV-PRO-13; GOV-TPL-07; GOV-REG-16", "A1 criteria apply only where the Availability category is in scope of the SOC 2 report.", null, null]
+    - ["5.31", "Legal duties identified", "CC2.3; CC3.1", "Article 5(2); Article 24; Article 30", "GV.OC", "GOV-PRO-25; GOV-REG-04", "Partial: SOC 2 expects legal and regulatory requirements to be understood but has no dedicated criterion.", null, null]
+    - ["5.32", "Respecting licences and copyright", "CC6.8", "none", "GV.OC", "GOV-PRO-25; GOV-PRO-15", "Partial: CC6.8 addresses unauthorised software, which covers unlicensed installation only.", null, null]
+    - ["5.33", "Records kept safe", "C1.1; C1.2", "Article 5(1)(e); Article 30", "PR.DS; ID.AM", "GOV-PRO-25; GOV-PRO-01; PIMS-POL-02", "C1 criteria apply only where the Confidentiality category is in scope.", null, null]
+    - ["5.34", "Personal data safeguards", "P1.1 to P8.1", "Article 5; Article 24; Article 25; Article 28; Article 30; Article 32", "GV.OC; GV.PO", "PIMS-POL-01; GDPR-POL-01; GOV-PRO-25", "The P criteria apply only where the Privacy category is in scope; the GDPR articles listed are the accountability core, not the whole regulation.", null, null]
+    - ["5.35", "Impartial programme review", "CC4.1; CC4.2", "Article 32(1)(d)", "GV.OV; ID.IM", "GOV-PRO-02; GOV-PRO-25", null, null, null]
+    - ["5.36", "Policy compliance checks", "CC4.1; CC4.2", "Article 24; Article 32(1)(d)", "GV.OV; ID.IM", "ISMS-PRO-04; GOV-PRO-02", null, null, null]
+    - ["5.37", "Operating steps written down", "CC5.3", "Article 24(2)", "GV.PO", "GOV-PRO-01; ISMS-PRO-03", null, null, null]
+    - ["6.1", "Pre-employment checks", "CC1.1; CC1.4", "Article 6; Article 10; Article 88", "GV.RR", "GOV-PRO-18", "The GDPR articles constrain how screening data is processed; they do not require screening.", null, null]
+    - ["6.2", "Employment security clauses", "CC1.1; CC1.4; CC1.5", "Article 28(3)(b); Article 29; Article 32(4)", "GV.RR", "GOV-PRO-18", null, null, null]
+    - ["6.3", "Staff awareness and skills", "CC1.4; CC2.2", "Article 32; Article 39(1)(b)", "PR.AT", "GOV-PRO-08; ISMS-PRO-02; GOV-REG-09", "Article 39(1)(b) names awareness raising and training of staff as a task of the data protection officer.", null, null]
+    - ["6.4", "Consequences for breaches", "CC1.1; CC1.5", "Article 29; Article 32(4)", "GV.RR", "GOV-PRO-18; GOV-POL-03", null, null, null]
+    - ["6.5", "Duties after leaving", "CC1.1; CC6.2", "Article 28(3)(b); Article 29", "GV.RR; PR.AA", "GOV-PRO-18; GOV-CHK-01", null, null, null]
+    - ["6.6", "Secrecy undertakings signed", "CC1.1; CC9.2; C1.1", "Article 28(3)(b); Article 29", "GV.RR; GV.SC", "GOV-PRO-18; GOV-PRO-06", null, null, null]
+    - ["6.7", "Working away from office", "CC6.6; CC6.7", "Article 32", "PR.AA; PR.PS", "GOV-POL-05; GOV-PRO-22", null, null, null]
+    - ["6.8", "Staff event reporting", "CC2.2; CC7.3", "Article 33(2)", "PR.AT; DE.AE", "GOV-PRO-07; GOV-POL-02", "Article 33(2) requires a processor to tell the controller of a breach without undue delay; internal reporting is what makes that possible.", null, null]
+    - ["7.1", "Protected area boundaries", "CC6.4", "Article 32", "PR.AA", "GOV-PRO-17", null, null, null]
+    - ["7.2", "Entry control and visitors", "CC6.4", "Article 32", "PR.AA", "GOV-PRO-17; GOV-REG-19", null, null, null]
+    - ["7.3", "Room and facility protection", "CC6.4", "Article 32", "PR.AA; PR.IR", "GOV-PRO-17", null, null, null]
+    - ["7.4", "Premises surveillance", "CC6.4; CC7.2", "Article 6; Article 13; Article 35", "DE.CM", "GOV-PRO-17", "Surveillance that records people is itself processing: it needs a lawful basis, a notice and possibly an impact assessment.", null, null]
+    - ["7.5", "Protection from hazards", "A1.2; CC6.4", "Article 32(1)(b); Article 32(1)(c)", "PR.IR", "GOV-PRO-17", null, null, null]
+    - ["7.6", "Conduct in secure areas", "CC6.4", "Article 32", "PR.AA", "GOV-PRO-17", null, null, null]
+    - ["7.7", "Tidy desks and locked screens", "CC6.1; C1.1", "Article 25; Article 32", "PR.DS; PR.AA", "GOV-POL-04", null, null, null]
+    - ["7.8", "Placing equipment safely", "A1.2; CC6.4", "Article 32", "PR.IR", "GOV-PRO-17", null, null, null]
+    - ["7.9", "Assets taken off site", "CC6.1; CC6.7", "Article 32", "PR.DS; ID.AM", "GOV-PRO-17; GOV-POL-05", null, null, null]
+    - ["7.10", "Media handling lifecycle", "CC6.5; CC6.7; C1.2", "Article 5(1)(f); Article 32", "PR.DS; ID.AM", "GOV-PRO-16; GOV-REG-20", null, null, null]
+    - ["7.11", "Power and support services", "A1.2", "Article 32(1)(b)", "PR.IR", "GOV-PRO-17", null, null, null]
+    - ["7.12", "Cable protection", "A1.2; CC6.4", "Article 32", "PR.IR", "GOV-PRO-17", null, null, null]
+    - ["7.13", "Equipment upkeep", "A1.2", "Article 32", "PR.PS", "GOV-PRO-17", null, null, null]
+    - ["7.14", "Wiping before disposal", "CC6.5; C1.2", "Article 5(1)(e); Article 17; Article 32", "ID.AM; PR.DS", "GOV-PRO-16; GOV-REG-20", null, null, null]
+    - ["8.1", "User device protection", "CC6.1; CC6.7; CC6.8", "Article 32", "PR.PS; PR.DS", "GOV-PRO-22", null, null, null]
+    - ["8.2", "Elevated privileges limited", "CC6.1; CC6.3", "Article 25; Article 32", "PR.AA", "GOV-PRO-10; GOV-REG-13", null, null, null]
+    - ["8.3", "Information access limits", "CC6.1; CC6.3; C1.1", "Article 5(1)(f); Article 25; Article 32", "PR.AA; PR.DS", "GOV-PRO-10; GOV-PRO-16", null, null, null]
+    - ["8.4", "Source code safeguarding", "CC6.1; CC8.1", "none", "PR.AA; PR.PS", "GOV-PRO-15; GOV-PRO-10", null, null, null]
+    - ["8.5", "Strong authentication methods", "CC6.1", "Article 32", "PR.AA", "GOV-POL-06", null, null, null]
+    - ["8.6", "Capacity forecasting", "A1.1", "Article 32(1)(b)", "PR.IR", "GOV-PRO-19; GOV-REG-17", "Partial: the GDPR link is the availability element of Article 32 only.", null, null]
+    - ["8.7", "Malicious code defence", "CC6.8", "Article 32", "PR.PS; DE.CM", "GOV-PRO-22", null, null, null]
+    - ["8.8", "Vulnerability handling", "CC7.1", "Article 32(1)(d)", "ID.RA; PR.PS", "GOV-PRO-11; GOV-REG-14", null, null, null]
+    - ["8.9", "Hardened configuration baselines", "CC7.1; CC8.1", "Article 25; Article 32", "PR.PS", "GOV-CHK-02; GOV-PRO-22; GOV-PRO-26", null, null, null]
+    - ["8.10", "Deleting unneeded information", "CC6.5; C1.2", "Article 5(1)(e); Article 17", "ID.AM; PR.DS", "PIMS-POL-02; GOV-PRO-16", null, null, null]
+    - ["8.11", "Masking sensitive values", "CC6.1; C1.1", "Article 25; Article 32(1)(a)", "PR.DS", "GOV-PRO-15; PIMS-PRO-06", "Article 32(1)(a) names pseudonymisation as an example measure; Article 25 expects it by design.", null, null]
+    - ["8.12", "Stopping data exfiltration", "CC6.7; CC7.2; C1.1", "Article 5(1)(f); Article 32", "PR.DS; DE.CM", "GOV-PRO-23", null, null, null]
+    - ["8.13", "Backup copies and tests", "A1.2; A1.3", "Article 32(1)(c)", "PR.DS; RC.RP", "GOV-PRO-12; GOV-REG-15", null, null, null]
+    - ["8.14", "Resilience through redundancy", "A1.2", "Article 32(1)(b)", "PR.IR", "GOV-PRO-19; GOV-PRO-13", null, null, null]
+    - ["8.15", "Event log capture", "CC7.2", "Article 32", "PR.PS; DE.CM", "GOV-PRO-14", "Logs that hold personal data are themselves processing and fall under the retention schedule.", null, null]
+    - ["8.16", "Anomaly monitoring", "CC7.2; CC7.3", "Article 32; Article 33", "DE.CM; DE.AE", "GOV-PRO-14", null, null, null]
+    - ["8.17", "Synchronised clocks", "CC7.2", "none", "PR.PS; DE.AE", "GOV-PRO-14", "Partial: no criterion names clock synchronisation; it supports the monitoring criterion.", null, null]
+    - ["8.18", "Powerful utilities controlled", "CC6.1; CC6.3; CC6.8", "Article 32", "PR.AA; PR.PS", "GOV-PRO-10; GOV-CHK-02", null, null, null]
+    - ["8.19", "Controlled software installs", "CC6.8; CC8.1", "Article 32", "PR.PS", "GOV-PRO-22; GOV-PRO-09", null, null, null]
+    - ["8.20", "Network protection", "CC6.1; CC6.6", "Article 32", "PR.IR; PR.AA", "GOV-PRO-21", null, null, null]
+    - ["8.21", "Network service assurance", "CC6.6; CC9.2", "Article 28; Article 32", "PR.IR; GV.SC", "GOV-PRO-21; GOV-PRO-06", null, null, null]
+    - ["8.22", "Network segmentation", "CC6.1; CC6.6", "Article 32", "PR.IR", "GOV-PRO-21", null, null, null]
+    - ["8.23", "Filtering web destinations", "CC6.6; CC6.8", "none", "PR.IR; PR.PS", "GOV-PRO-21", null, null, null]
+    - ["8.24", "Cryptography and keys", "CC6.1; CC6.7", "Article 32(1)(a); Article 34(3)(a)", "PR.DS", "GOV-PRO-20; GOV-REG-18", "Article 34(3)(a) relieves the duty to tell individuals of a breach where the data was unintelligible to the attacker, for example encrypted.", null, null]
+    - ["8.25", "Security across development", "CC8.1", "Article 25", "PR.PS", "GOV-PRO-15", null, null, null]
+    - ["8.26", "Security needs of applications", "CC8.1", "Article 25; Article 32", "PR.PS", "GOV-PRO-15; PB-07", null, null, null]
+    - ["8.27", "Secure design principles", "CC6.1; CC8.1", "Article 25", "PR.PS", "GOV-PRO-15", null, null, null]
+    - ["8.28", "Safe coding rules", "CC8.1", "Article 25; Article 32", "PR.PS", "GOV-PRO-15", null, null, null]
+    - ["8.29", "Security testing before release", "CC7.1; CC8.1", "Article 25; Article 32(1)(d)", "PR.PS", "GOV-PRO-15; PB-07", null, null, null]
+    - ["8.30", "Overseeing external developers", "CC8.1; CC9.2", "Article 25; Article 28", "GV.SC; PR.PS", "GOV-PRO-15; GOV-PRO-06", "Article 28 applies only where the external developer processes personal data.", null, null]
+    - ["8.31", "Environment separation", "CC6.1; CC8.1", "Article 25; Article 32", "PR.PS; PR.IR", "GOV-PRO-15", null, null, null]
+    - ["8.32", "Controlled changes", "CC3.4; CC8.1", "Article 25; Article 32", "PR.PS; ID.RA", "GOV-PRO-09; GOV-TPL-08; GOV-REG-11", null, null, null]
+    - ["8.33", "Test data protection", "CC6.1; CC8.1; C1.1", "Article 5(1)(b); Article 25; Article 32", "PR.DS; PR.PS", "GOV-PRO-15", "Using production personal data in test is a purpose limitation question under Article 5(1)(b) before it is a security one.", null, null]
+    - ["8.34", "Audit test safeguards", "CC4.1", "none", "ID.IM", "GOV-PRO-02; GOV-PRO-09", null, null, null]

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If the kit contributes to your work, please cite it as below."
+title: "GRC Documentation Kit: original policies, procedures, registers and playbooks for ISO/IEC 27001, ISO/IEC 27701, SOC 2, GDPR and AI governance"
+type: software
+version: "1.0.0"
+date-released: "2026-10-17"
+license: MIT
+repository-code: "https://github.com/abdullahzarshaid/grc-documentation-kit"
+url: "https://abdullahzarshaid.github.io/grc-documentation-kit/"
+authors:
+  - family-names: "Bin Zarshaid"
+    given-names: "Abdullah"
+    orcid: "https://orcid.org/0009-0000-8354-5177"
+keywords:
+  - grc
+  - iso27001
+  - iso27701
+  - soc2
+  - gdpr
+  - ai-governance
+  - compliance
+  - templates
+abstract: "An open documentation kit for building and running an information security, privacy and AI governance programme: original policy, procedure, plan, template and playbook documents in Markdown and Word, and Excel registers with prepared rows, covering ISO/IEC 27001:2022, ISO/IEC 27701, SOC 2 Trust Services Criteria, GDPR operations and AI governance, with a crosswalk between them."

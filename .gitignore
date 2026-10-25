@@ -1,0 +1,10 @@
+# Never commit filled registers, evidence or working copies
+*-filled.xlsx
+*-completed.xlsx
+evidence/
+working/
+~$*
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

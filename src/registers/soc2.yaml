@@ -1,0 +1,258 @@
+- id: SOC-REG-01
+  key: soc-reg-01-trust-services-criteria-control-matrix
+  title: Trust Services Criteria control matrix
+  framework: soc2
+  maps:
+    - SOC 2 CC1.1
+    - SOC 2 A1.1
+    - SOC 2 C1.1
+    - SOC 2 PI1.1
+    - SOC 2 P1.1
+  purpose: One row per Trust Services Criteria point, with a plain-words theme and an auditable control activity, then the frequency, owner, evidence, implementing documents and test method that make it real. Fill the common criteria first; add the availability, confidentiality, processing integrity and privacy rows only for the categories in your report scope.
+  columns:
+    - {name: Criterion, width: 12, fixed: true, help: Trust Services Criteria point. Read the AICPA criteria for the authoritative text.}
+    - {name: Theme, width: 26, fixed: true}
+    - {name: Control activity, width: 54, fixed: true, help: What the organisation does, stated so an auditor can test it.}
+    - {name: Frequency, width: 16, help: How often the control operates.}
+    - {name: Owner (role), width: 20}
+    - {name: Evidence, width: 24, help: The artefact that shows the control operating in the period.}
+    - {name: Implementing documents, width: 26, help: Kit document IDs, separated by semicolons.}
+    - {name: Test method, width: 20, values: [Inquiry, Observation, Inspection, Reperformance]}
+    - {name: Status, width: 14, values: [Not started, In progress, Implemented, Not applicable]}
+  rows:
+    - ["CC1.1", "Integrity and ethics", "A code of conduct is approved, acknowledged by staff on joining and annually, and breaches are acted on.", null, null, null, "GOV-POL-01; GOV-PRO-18", null, null]
+    - ["CC1.2", "Governance oversight", "A governing body with security oversight meets on a defined cadence and its decisions are minuted.", null, null, null, "GOV-POL-01; GOV-PRO-03", null, null]
+    - ["CC1.3", "Structure and authority", "Security roles, authorities and reporting lines are documented and assigned.", null, null, null, "GOV-POL-01", null, null]
+    - ["CC1.4", "Competent people", "Security roles have defined competences, and training is assigned and completed.", null, null, null, "GOV-PRO-08; ISMS-PRO-02", null, null]
+    - ["CC1.5", "Accountability", "Individuals are held accountable for their security responsibilities through objectives and review.", null, null, null, "GOV-POL-01; GOV-PRO-18", null, null]
+    - ["CC2.1", "Quality information", "The information needed to run security controls is identified and made available to those who need it.", null, null, null, "ISMS-PRO-04; GOV-PRO-14", null, null]
+    - ["CC2.2", "Internal communication", "Security objectives, policies and responsibilities are communicated to staff and acknowledged.", null, null, null, "ISMS-PLN-02; GOV-PRO-08", null, null]
+    - ["CC2.3", "External communication", "Commitments and relevant security information are communicated to customers and external parties.", null, null, null, "ISMS-PLN-02; SOC-TPL-01", null, null]
+    - ["CC3.1", "Objectives for risk", "Security objectives are set clearly enough to identify and assess the risks to them.", null, null, null, "ISMS-PLN-01; GOV-PRO-05", null, null]
+    - ["CC3.2", "Risks identified", "Risks to the objectives are identified, analysed for likelihood and impact, and recorded in a risk register.", null, null, null, "GOV-PRO-05; GOV-REG-05", null, null]
+    - ["CC3.3", "Fraud risk", "The potential for fraud is considered when assessing risk.", null, null, null, "GOV-PRO-05", null, null]
+    - ["CC3.4", "Change risk", "Significant changes to the business and systems are assessed for their effect on controls.", null, null, null, "GOV-PRO-05; GOV-PRO-09", null, null]
+    - ["CC4.1", "Controls evaluated", "Ongoing and separate evaluations confirm that controls are present and operating.", null, null, null, "GOV-PRO-02; SOC-PRO-01", null, null]
+    - ["CC4.2", "Deficiencies addressed", "Control deficiencies are evaluated, communicated and corrected in good time.", null, null, null, "GOV-PRO-04; GOV-REG-03", null, null]
+    - ["CC5.1", "Controls for risk", "Control activities are selected and developed to reduce risks to acceptable levels.", null, null, null, "GOV-PRO-05; ISMS-REG-01", null, null]
+    - ["CC5.2", "Technology controls", "Control activities over technology are selected and developed to support the objectives.", null, null, null, "GOV-CHK-02; GOV-PRO-15", null, null]
+    - ["CC5.3", "Controls via policy", "Controls are deployed through policies that set expectations and procedures that put them into action.", null, null, null, "GOV-POL-03; GOV-PRO-01", null, null]
+    - ["CC6.1", "Access protected", "Logical access to systems and data is restricted through identification, authentication and authorisation.", null, null, null, "GOV-PRO-10; GOV-POL-06; GOV-PRO-20", null, null]
+    - ["CC6.2", "Access on approval", "Access is granted, modified and removed on the basis of authorised requests.", null, null, null, "GOV-PRO-10; GOV-TPL-09", null, null]
+    - ["CC6.3", "Least privilege", "Access rights follow role and least privilege and are reviewed on a cycle.", null, null, null, "GOV-PRO-10; GOV-REG-12", null, null]
+    - ["CC6.4", "Physical access", "Physical access to facilities and equipment is restricted to authorised people.", null, null, null, "GOV-PRO-17; GOV-REG-19", null, null]
+    - ["CC6.5", "Data removed on disposal", "Data is removed from assets before they are disposed of or reused.", null, null, null, "GOV-PRO-16; GOV-REG-20", null, null]
+    - ["CC6.6", "Boundary protection", "The system boundary is protected against threats from outside it.", null, null, null, "GOV-PRO-21", null, null]
+    - ["CC6.7", "Data in movement", "Data is protected when it is transmitted, moved or removed.", null, null, null, "GOV-PRO-23; GOV-PRO-20", null, null]
+    - ["CC6.8", "Unauthorised software", "The introduction of unauthorised or malicious software is prevented and detected.", null, null, null, "GOV-PRO-22; GOV-CHK-02", null, null]
+    - ["CC7.1", "Vulnerabilities detected", "Configuration and vulnerabilities are monitored to detect susceptibility to new threats.", null, null, null, "GOV-PRO-11; GOV-REG-14", null, null]
+    - ["CC7.2", "Anomalies detected", "Systems are monitored and anomalies that could indicate a security event are detected.", null, null, null, "GOV-PRO-14", null, null]
+    - ["CC7.3", "Events evaluated", "Detected security events are evaluated to decide whether they are incidents.", null, null, null, "GOV-PRO-07", null, null]
+    - ["CC7.4", "Incidents responded to", "Security incidents are responded to, contained and recovered under a defined process.", null, null, null, "GOV-PRO-07; GOV-REG-08", null, null]
+    - ["CC7.5", "Recovery and lessons", "The organisation recovers from identified security incidents and applies the lessons.", null, null, null, "GOV-PRO-07; GOV-TPL-11", null, null]
+    - ["CC8.1", "Changes managed", "Changes to infrastructure, data and software are authorised, tested and deployed under change management.", null, null, null, "GOV-PRO-09; GOV-REG-11", null, null]
+    - ["CC9.1", "Disruption risk", "The organisation identifies and mitigates risks from business disruptions.", null, null, null, "GOV-PRO-13; GOV-PRO-24", null, null]
+    - ["CC9.2", "Vendor risk", "Risks from vendors and business partners are assessed and managed.", null, null, null, "GOV-PRO-06; GOV-REG-07", null, null]
+    - ["A1.1", "Capacity managed", "Capacity and usage are monitored and managed to meet availability commitments.", null, null, null, "GOV-PRO-19; GOV-REG-17", null, null]
+    - ["A1.2", "Backup and recovery", "Backup, recovery and environmental protections support availability commitments.", null, null, null, "GOV-PRO-12; GOV-PRO-17", null, null]
+    - ["A1.3", "Recovery tested", "Recovery and continuity plans are tested.", null, null, null, "GOV-PRO-13; GOV-REG-16", null, null]
+    - ["C1.1", "Confidential data identified", "Confidential information is identified and maintained to meet confidentiality commitments.", null, null, null, "GOV-PRO-16; GOV-PRO-23", null, null]
+    - ["C1.2", "Confidential data disposed", "Confidential information is disposed of when it is no longer needed.", null, null, null, "GOV-PRO-16; PIMS-POL-02", null, null]
+    - ["PI1.1", "Processing definitions", "Definitions of data and processing are maintained so that products and services meet specifications.", null, null, null, "SOC-POL-01", null, null]
+    - ["PI1.2", "Inputs validated", "Inputs are validated for completeness and accuracy before processing.", null, null, null, "SOC-PRO-03", null, null]
+    - ["PI1.3", "Processing accurate", "Processing is complete, accurate and timely, with errors detected and handled.", null, null, null, "SOC-POL-01", null, null]
+    - ["PI1.4", "Outputs correct", "Outputs are complete, accurate and delivered to the right recipients.", null, null, null, "SOC-PRO-04", null, null]
+    - ["PI1.5", "Stored data integrity", "Stored data is kept complete, accurate and protected against loss.", null, null, null, "SOC-PRO-04; GOV-PRO-12", null, null]
+    - ["P1.1", "Privacy notice given", "Notice about the collection and use of personal information is provided to data subjects.", null, null, null, "GDPR-TPL-01; PIMS-PRO-05", null, null]
+    - ["P2.1", "Choice and consent", "Choices about personal information are offered and consent is obtained where required.", null, null, null, "PIMS-PRO-05; PIMS-REG-04", null, null]
+    - ["P3.1", "Collection limited", "Personal information is collected consistently with the notice and limited to the purpose.", null, null, null, "PIMS-REG-01; GDPR-PRO-01", null, null]
+    - ["P3.2", "Explicit consent", "Explicit consent is obtained for sensitive personal information where required.", null, null, null, "PIMS-PRO-05", null, null]
+    - ["P4.1", "Use limited", "Personal information is used only for the purposes identified in the notice and with consent.", null, null, null, "PIMS-REG-01", null, null]
+    - ["P4.2", "Retention limited", "Personal information is retained no longer than needed for the stated purposes.", null, null, null, "PIMS-POL-02; PIMS-REG-07", null, null]
+    - ["P4.3", "Secure disposal", "Personal information is securely disposed of when retention ends.", null, null, null, "PIMS-POL-02; GOV-REG-20", null, null]
+    - ["P5.1", "Access to own data", "Data subjects can access their personal information held by the organisation.", null, null, null, "PIMS-PRO-03; PIMS-REG-02", null, null]
+    - ["P5.2", "Correction of own data", "Data subjects can update or correct their personal information.", null, null, null, "PIMS-PRO-03", null, null]
+    - ["P6.1", "Disclosure with consent", "Personal information is disclosed to third parties only with consent or as permitted.", null, null, null, "PIMS-PRO-01; PIMS-REG-06", null, null]
+    - ["P6.2", "Disclosures recorded", "Authorised disclosures of personal information are recorded.", null, null, null, "PIMS-REG-06", null, null]
+    - ["P6.3", "Unauthorised disclosures", "Unauthorised disclosures of personal information are recorded and handled.", null, null, null, "PIMS-PRO-04; PIMS-REG-03", null, null]
+    - ["P6.4", "Third-party commitments", "Third parties handling personal information are bound to equivalent privacy commitments.", null, null, null, "PIMS-TPL-02; PIMS-REG-06", null, null]
+    - ["P6.5", "Third-party breaches", "Breaches by third parties handling personal information are assessed and acted on.", null, null, null, "PIMS-PRO-04; GOV-PRO-06", null, null]
+    - ["P6.6", "Breach notification", "Affected parties and authorities are notified of privacy breaches as required.", null, null, null, "PIMS-PRO-04; GDPR-TPL-10", null, null]
+    - ["P6.7", "Accounting of disclosures", "An accounting of disclosures of personal information is maintained and available to data subjects.", null, null, null, "PIMS-REG-06", null, null]
+    - ["P7.1", "Data quality", "Personal information is accurate and complete for the purposes it is used for.", null, null, null, "PIMS-REG-01", null, null]
+    - ["P8.1", "Monitoring and enforcement", "Privacy complaints are handled and compliance with the privacy commitments is monitored and enforced.", null, null, null, "PIMS-PRO-07", null, null]
+
+- id: SOC-REG-02
+  key: soc-reg-02-evidence-calendar
+  title: Evidence calendar
+  framework: soc2
+  maps:
+    - SOC 2 CC4.1
+  purpose: One row per recurring control event, at the cadence it runs, with the criteria it serves and the evidence it produces. The backbone of a Type 2 report, because every control needs evidence for every occurrence in the observation period. Set the owner, last done and next due, and work it as a calendar.
+  columns:
+    - {name: Frequency, width: 14, fixed: true, values: [Daily, Weekly, Monthly, Quarterly, Annual]}
+    - {name: Event, width: 44, fixed: true}
+    - {name: Criteria, width: 16, fixed: true, help: Primary criterion served.}
+    - {name: Owner (role), width: 20}
+    - {name: Evidence produced, width: 28}
+    - {name: Last done, width: 14, date: true}
+    - {name: Next due, width: 14, date: true}
+    - {name: Status, width: 14, values: [On track, Due soon, Overdue, Done]}
+  rows:
+    - ["Daily", "Review logs and triage alerts", "CC7.2", null, null, null, null]
+    - ["Daily", "Confirm backup jobs succeeded", "A1.2", null, null, null, null]
+    - ["Weekly", "Triage new vulnerabilities", "CC7.1", null, null, null, null]
+    - ["Weekly", "Review open incidents", "CC7.4", null, null, null, null]
+    - ["Weekly", "Review and approve changes", "CC8.1", null, null, null, null]
+    - ["Monthly", "Review access additions and removals", "CC6.2", null, null, null, null]
+    - ["Monthly", "Review privileged access", "CC6.3", null, null, null, null]
+    - ["Monthly", "Review patch compliance", "CC7.1", null, null, null, null]
+    - ["Monthly", "Spot-check one-twelfth of controls", "CC4.1", null, null, null, null]
+    - ["Monthly", "Produce the security metrics report", "CC4.1", null, null, null, null]
+    - ["Monthly", "Run a phishing simulation", "CC2.2", null, null, null, null]
+    - ["Monthly", "Confirm log retention and integrity", "CC7.2", null, null, null, null]
+    - ["Quarterly", "User access review and sign-off", "CC6.3", null, null, null, null]
+    - ["Quarterly", "Vulnerability scan and remediation", "CC7.1", null, null, null, null]
+    - ["Quarterly", "Review the risk register", "CC3.2", null, null, null, null]
+    - ["Quarterly", "Management review meeting", "CC4.1", null, null, null, null]
+    - ["Quarterly", "Backup restore test", "A1.3", null, null, null, null]
+    - ["Quarterly", "Review the exception register", "CC9.1", null, null, null, null]
+    - ["Quarterly", "Confirm vendor assurance is current", "CC9.2", null, null, null, null]
+    - ["Annual", "Penetration test and remediation", "CC7.1", null, null, null, null]
+    - ["Annual", "Review and re-approve policies", "CC5.3", null, null, null, null]
+    - ["Annual", "Enterprise risk assessment", "CC3.2", null, null, null, null]
+    - ["Annual", "Security awareness training", "CC1.4", null, null, null, null]
+    - ["Annual", "Internal audit", "CC4.1", null, null, null, null]
+    - ["Annual", "Business continuity and DR exercise", "A1.3", null, null, null, null]
+    - ["Annual", "Vendor reassessment", "CC9.2", null, null, null, null]
+    - ["Annual", "Refresh network and data-flow diagrams", "CC2.1", null, null, null, null]
+    - ["Annual", "Confirm background checks completed", "CC1.4", null, null, null, null]
+    - ["Annual", "Board security briefing", "CC1.2", null, null, null, null]
+    - ["Annual", "Review the system description", "CC2.3", null, null, null, null]
+    - ["Annual", "Incident response tabletop", "CC7.4", null, null, null, null]
+    - ["Annual", "Capacity and availability review", "A1.1", null, null, null, null]
+    - ["Annual", "Encryption key rotation review", "CC6.1", null, null, null, null]
+    - ["Annual", "Cyber insurance review", "CC9.1", null, null, null, null]
+    - ["Annual", "Access recertification sign-off", "CC6.3", null, null, null, null]
+    - ["Annual", "SDLC and code review assurance", "CC8.1", null, null, null, null]
+    - ["Annual", "Confidential data inventory review", "C1.1", null, null, null, null]
+    - ["Annual", "Privacy impact assessment refresh", "P3.1", null, null, null, null]
+    - ["Annual", "Customer commitments and SLA review", "CC2.3", null, null, null, null]
+    - ["Annual", "Physical access list review", "CC6.4", null, null, null, null]
+
+- id: SOC-REG-03
+  key: soc-reg-03-readiness-checklist
+  title: SOC 2 readiness checklist
+  framework: soc2
+  maps:
+    - SOC 2 CC1.1
+  purpose: One hundred checks grouped by criteria area that tell you how ready you are for a SOC 2 examination. Mark each present, partial or missing, attach the evidence, and turn every gap into an action before the observation period begins.
+  columns:
+    - {name: Criteria, width: 14, fixed: true}
+    - {name: Check, width: 60, fixed: true}
+    - {name: Status, width: 14, values: [Present, Partial, Missing, Not applicable]}
+    - {name: Evidence, width: 24}
+    - {name: Owner (role), width: 20}
+    - {name: Due, width: 14, date: true}
+    - {name: Notes, width: 26}
+  rows:
+    - ["CC1", "A code of conduct is approved and published.", null, null, null, null]
+    - ["CC1", "Staff acknowledge the code of conduct on joining.", null, null, null, null]
+    - ["CC1", "Staff re-acknowledge the code annually.", null, null, null, null]
+    - ["CC1", "An organisation chart is current.", null, null, null, null]
+    - ["CC1", "Security roles and responsibilities are documented.", null, null, null, null]
+    - ["CC1", "Job descriptions exist for key security roles.", null, null, null, null]
+    - ["CC1", "A governing body meets and keeps minutes.", null, null, null, null]
+    - ["CC1", "Staff are held accountable through objectives and reviews.", null, null, null, null]
+    - ["CC1", "A training plan exists for security roles.", null, null, null, null]
+    - ["CC1", "Training completion is recorded.", null, null, null, null]
+    - ["CC1", "Background checks are performed on hire.", null, null, null, null]
+    - ["CC1", "Performance reviews are conducted.", null, null, null, null]
+    - ["CC1", "Security objectives are set and measurable.", null, null, null, null]
+    - ["CC2", "Security policies are published and accessible.", null, null, null, null]
+    - ["CC2", "Staff acknowledge the policies.", null, null, null, null]
+    - ["CC2", "Security commitments are communicated to customers.", null, null, null, null]
+    - ["CC2", "A system description is available to customers.", null, null, null, null]
+    - ["CC2", "An internal channel exists to report concerns.", null, null, null, null]
+    - ["CC2", "A confidential or whistleblower channel exists.", null, null, null, null]
+    - ["CC2", "Customer agreements include security commitments.", null, null, null, null]
+    - ["CC3", "A risk assessment method is documented.", null, null, null, null]
+    - ["CC3", "A risk register is maintained.", null, null, null, null]
+    - ["CC3", "Risks are scored for likelihood and impact.", null, null, null, null]
+    - ["CC3", "Fraud risk is considered in the assessment.", null, null, null, null]
+    - ["CC3", "Significant changes are assessed for risk.", null, null, null, null]
+    - ["CC4", "A named owner monitors the control set.", null, null, null, null]
+    - ["CC4", "Monthly control spot-checks are performed.", null, null, null, null]
+    - ["CC4", "An internal audit is performed.", null, null, null, null]
+    - ["CC4", "Deficiencies are tracked to closure.", null, null, null, null]
+    - ["CC4", "Management reviews are held and minuted.", null, null, null, null]
+    - ["CC5", "Controls are mapped to the criteria.", null, null, null, null]
+    - ["CC5", "Technology control activities are in place.", null, null, null, null]
+    - ["CC5", "Procedures are documented for key controls.", null, null, null, null]
+    - ["CC6", "Each user has a unique account.", null, null, null, null]
+    - ["CC6", "Multi-factor authentication protects remote access.", null, null, null, null]
+    - ["CC6", "Multi-factor authentication protects privileged access.", null, null, null, null]
+    - ["CC6", "A password policy is enforced.", null, null, null, null]
+    - ["CC6", "Access requests are approved before provisioning.", null, null, null, null]
+    - ["CC6", "Joiner access is provisioned on approval.", null, null, null, null]
+    - ["CC6", "Leaver access is removed by the last day.", null, null, null, null]
+    - ["CC6", "Access is reviewed each quarter.", null, null, null, null]
+    - ["CC6", "Least privilege is applied to access rights.", null, null, null, null]
+    - ["CC6", "Privileged accounts are separate from daily accounts.", null, null, null, null]
+    - ["CC6", "Physical access to facilities is restricted.", null, null, null, null]
+    - ["CC6", "A visitor log is kept.", null, null, null, null]
+    - ["CC6", "Media and asset disposal is recorded.", null, null, null, null]
+    - ["CC6", "Data is encrypted in transit.", null, null, null, null]
+    - ["CC6", "Data is encrypted at rest.", null, null, null, null]
+    - ["CC6", "Key management is defined.", null, null, null, null]
+    - ["CC6", "Endpoints are encrypted.", null, null, null, null]
+    - ["CC6", "Firewalls default to deny.", null, null, null, null]
+    - ["CC6", "Single sign-on is configured where used.", null, null, null, null]
+    - ["CC7", "Vulnerability scanning is scheduled.", null, null, null, null]
+    - ["CC7", "Scan findings are remediated within SLAs.", null, null, null, null]
+    - ["CC7", "Patch management SLAs are met.", null, null, null, null]
+    - ["CC7", "Monitoring and alerting are in place.", null, null, null, null]
+    - ["CC7", "Log retention is set and protected.", null, null, null, null]
+    - ["CC7", "An incident response plan exists.", null, null, null, null]
+    - ["CC7", "Incidents are logged.", null, null, null, null]
+    - ["CC7", "Incidents are triaged by severity.", null, null, null, null]
+    - ["CC7", "Post-incident reviews are performed.", null, null, null, null]
+    - ["CC7", "Intrusion detection or equivalent is deployed.", null, null, null, null]
+    - ["CC7", "System clocks are synchronised.", null, null, null, null]
+    - ["CC8", "A change management policy exists.", null, null, null, null]
+    - ["CC8", "Changes are authorised before deployment.", null, null, null, null]
+    - ["CC8", "Changes are tested.", null, null, null, null]
+    - ["CC8", "Rollback plans exist for changes.", null, null, null, null]
+    - ["CC8", "Development and production environments are separate.", null, null, null, null]
+    - ["CC8", "A change log is maintained.", null, null, null, null]
+    - ["CC9", "A business continuity plan exists.", null, null, null, null]
+    - ["CC9", "Risks from disruption are assessed.", null, null, null, null]
+    - ["CC9", "A vendor inventory is maintained.", null, null, null, null]
+    - ["CC9", "Vendors are risk-tiered.", null, null, null, null]
+    - ["CC9", "Vendor assurance is reviewed.", null, null, null, null]
+    - ["CC9", "Cyber insurance is held and reviewed.", null, null, null, null]
+    - ["A1", "Capacity and usage are monitored.", null, null, null, null]
+    - ["A1", "Backups run and are verified.", null, null, null, null]
+    - ["A1", "A restore test is performed.", null, null, null, null]
+    - ["A1", "A disaster recovery plan is tested.", null, null, null, null]
+    - ["A1", "Availability targets are tracked.", null, null, null, null]
+    - ["A1", "Redundancy supports availability commitments.", null, null, null, null]
+    - ["C1", "Confidential data is identified.", null, null, null, null]
+    - ["C1", "Handling rules exist for confidential data.", null, null, null, null]
+    - ["C1", "Confidential data is disposed of when no longer needed.", null, null, null, null]
+    - ["C1", "Confidentiality agreements bind staff and vendors.", null, null, null, null]
+    - ["PI1", "Data and processing specifications are defined.", null, null, null, null]
+    - ["PI1", "Inputs are validated before processing.", null, null, null, null]
+    - ["PI1", "Processing errors are detected and handled.", null, null, null, null]
+    - ["PI1", "Outputs are reconciled for completeness and accuracy.", null, null, null, null]
+    - ["PI1", "Storage integrity is checked.", null, null, null, null]
+    - ["P", "A privacy notice is published.", null, null, null, null]
+    - ["P", "Consent is captured and recorded where required.", null, null, null, null]
+    - ["P", "Collection is limited to the stated purpose.", null, null, null, null]
+    - ["P", "Use is limited to the notice and consent.", null, null, null, null]
+    - ["P", "A retention schedule is applied to personal data.", null, null, null, null]
+    - ["P", "A data subject access process exists.", null, null, null, null]
+    - ["P", "A data subject correction process exists.", null, null, null, null]
+    - ["P", "A privacy breach notification process exists.", null, null, null, null]
+    - ["P", "Third parties are bound to privacy commitments.", null, null, null, null]
+    - ["P", "Privacy complaints are handled and recorded.", null, null, null, null]

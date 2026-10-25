@@ -1,0 +1,186 @@
+- id: GOV-REG-11
+  key: gov-reg-11-change-log
+  title: Change log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 8.32
+    - SOC 2 CC8.1
+  purpose: "One row per change to a production system, configuration or security control, from request to closure. It is the index that proves every change was assessed, approved by the right authority, tested and reviewed under GOV-PRO-09."
+  columns:
+    - {name: Change ID, width: 14, help: "Sequential reference. Matches the change request form."}
+    - {name: Date raised, width: 14, date: true}
+    - {name: Requester (role), width: 22}
+    - {name: Type, width: 14, values: [Standard, Normal, Emergency]}
+    - {name: Summary, width: 40}
+    - {name: Systems affected, width: 28, help: "Use the names in GOV-REG-24."}
+    - {name: Risk rating, width: 12, values: [Low, Medium, High]}
+    - {name: Security relevant, width: 12, values: ["Yes", "No"]}
+    - {name: Approver (role), width: 24}
+    - {name: Approval date, width: 14, date: true}
+    - {name: Planned window, width: 22, help: "Start and end of the agreed window."}
+    - {name: Implemented date, width: 14, date: true}
+    - {name: Result, width: 18, values: [Successful, Rolled back, Partially implemented, Failed, Cancelled]}
+    - {name: Status, width: 16, values: [Requested, Approved, Scheduled, Implemented, Reviewed, Closed, Rejected]}
+    - {name: Post-implementation review, width: 22, help: "Date and outcome, or the review reference."}
+    - {name: Notes, width: 30}
+
+- id: GOV-REG-14
+  key: gov-reg-14-vulnerability-register
+  title: Vulnerability register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 8.8
+    - SOC 2 CC7.1
+  purpose: "Every technical vulnerability found by scanning, dependency analysis, configuration assessment, advisories, penetration tests or external reports, with its severity, owner and deadline. The SLA due date is calculated from the severity and the found date using the deadlines in GOV-PRO-11, and the SLA position shows what is overdue."
+  columns:
+    - {name: Finding ID, width: 14}
+    - {name: Source, width: 20, values: [Scanner, Dependency analysis, Cloud configuration check, Vendor advisory, Penetration test, External report, Incident, Other]}
+    - {name: Asset, width: 24, help: "Host, image, repository, account or service, as named in GOV-REG-24."}
+    - {name: Description, width: 40, help: "Public vulnerability identifier if one exists, and what it allows."}
+    - {name: Severity, width: 12, values: [Critical, High, Medium, Low]}
+    - {name: CVSS score, width: 10, number_format: "0.0", help: "Base score 0.0 to 10.0 from the source, after any approved adjustment."}
+    - {name: Found date, width: 14, date: true, help: "The date the source first reported the finding, not the triage date."}
+    - {name: SLA due, width: 14, formula: "=IF(OR(E{r}=\"\",G{r}=\"\"),\"\",G{r}+IF(E{r}=\"Critical\",7,IF(E{r}=\"High\",30,IF(E{r}=\"Medium\",90,180))))", number_format: "yyyy-mm-dd", help: "Calculated. Critical 7 days, High 30, Medium 90, Low 180."}
+    - {name: Owner (role), width: 22}
+    - {name: Status, width: 16, values: [Open, In progress, Fixed, Risk accepted, False positive, Closed]}
+    - {name: Fixed date, width: 14, date: true}
+    - {name: Verification, width: 18, values: [Not yet verified, Rescan clean, Manually verified, Not applicable]}
+    - {name: Verification date, width: 14, date: true}
+    - {name: Exception reference, width: 18, help: "GOV-REG-06 entry when the deadline is not met."}
+    - {name: SLA position, width: 14, formula: "=IF(H{r}=\"\",\"\",IF(OR(J{r}=\"Fixed\",J{r}=\"Closed\",J{r}=\"False positive\"),\"Closed\",IF(J{r}=\"Risk accepted\",\"Exception\",IF(TODAY()>H{r},\"Overdue\",\"Within SLA\"))))", help: "Calculated from the status and the SLA due date."}
+    - {name: Notes, width: 30}
+
+- id: GOV-REG-15
+  key: gov-reg-15-backup-and-restore-test-log
+  title: Backup and restore test log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 8.13
+    - SOC 2 A1.2
+  purpose: "A record of every restore test and operational restore under GOV-PRO-12, with the time taken against the recovery objectives. It proves that backups can be restored, not only that backup jobs ran."
+  columns:
+    - {name: Test ID, width: 12}
+    - {name: Test date, width: 14, date: true}
+    - {name: System or data set, width: 26}
+    - {name: Backup type, width: 16, values: [Full, Incremental, Snapshot, Continuous, Export]}
+    - {name: Backup taken date, width: 14, date: true, help: "Date of the backup copy that was restored."}
+    - {name: Restore target, width: 20, values: [Isolated test environment, Alternate site, Production]}
+    - {name: Tester (role), width: 20}
+    - {name: Integrity check, width: 14, values: [Pass, Fail, Partial]}
+    - {name: Time to restore (hours), width: 12, number_format: "0.0"}
+    - {name: RTO (hours), width: 12, number_format: "0.0", help: "Recovery time objective from GOV-TPL-07."}
+    - {name: RTO met, width: 10, formula: "=IF(OR(I{r}=\"\",J{r}=\"\"),\"\",IF(I{r}<=J{r},\"Yes\",\"No\"))"}
+    - {name: RPO met, width: 12, values: ["Yes", "No", Not measured]}
+    - {name: Result, width: 12, values: [Pass, Fail, Partial]}
+    - {name: Corrective action reference, width: 18, help: "GOV-REG-03 entry for a failed or partial test."}
+    - {name: Status, width: 16, values: [Planned, Completed, Follow-up open, Closed]}
+    - {name: Notes, width: 30}
+
+- id: GOV-REG-16
+  key: gov-reg-16-business-continuity-exercise-log
+  title: Business continuity exercise log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.29
+    - ISO/IEC 27001:2022 Annex A 5.30
+    - SOC 2 A1.3
+  purpose: "Every continuity exercise, technical recovery test and real activation under GOV-PRO-13, with the objectives, the recovery time achieved and the findings. It shows that plans are exercised on the required cadence and that lessons become actions."
+  columns:
+    - {name: Exercise ID, width: 12}
+    - {name: Date, width: 14, date: true}
+    - {name: Type, width: 20, values: [Tabletop walkthrough, Technical recovery test, Full exercise, Component test, Real activation]}
+    - {name: Scenario, width: 32}
+    - {name: Plans and systems in scope, width: 28}
+    - {name: Participants (roles), width: 26}
+    - {name: Facilitator (role), width: 20}
+    - {name: Objectives, width: 32}
+    - {name: Objectives met, width: 14, values: [Fully, Partly, Not met]}
+    - {name: Recovery time achieved (hours), width: 14, number_format: "0.0"}
+    - {name: RTO (hours), width: 12, number_format: "0.0"}
+    - {name: RTO met, width: 10, formula: "=IF(OR(J{r}=\"\",K{r}=\"\"),\"\",IF(J{r}<=K{r},\"Yes\",\"No\"))"}
+    - {name: Findings, width: 36}
+    - {name: Actions reference, width: 18, help: "GOV-REG-03 entries raised."}
+    - {name: Next exercise due, width: 14, date: true}
+    - {name: Status, width: 16, values: [Planned, Completed, Actions open, Closed]}
+
+- id: GOV-REG-17
+  key: gov-reg-17-capacity-and-availability-log
+  title: Capacity and availability log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 8.6
+    - ISO/IEC 27001:2022 Annex A 8.14
+    - SOC 2 A1.1
+  purpose: "Monthly capacity and availability results per system or component under GOV-PRO-19, with headroom forecasts and the actions they trigger. It gives management review a single view of where capacity or resilience is at risk."
+  columns:
+    - {name: Entry ID, width: 12}
+    - {name: Period, width: 14, help: "Month and year the entry covers."}
+    - {name: System or component, width: 26}
+    - {name: Metric, width: 18, values: [Processor, Memory, Storage, Bandwidth, Database or queue, Transactions, Error rate, Latency, Availability, Licences or quota, Other]}
+    - {name: Threshold, width: 14, help: "The critical threshold for this metric."}
+    - {name: Peak value, width: 12}
+    - {name: Average value, width: 12}
+    - {name: Availability achieved (%), width: 14, number_format: "0.00"}
+    - {name: Availability target (%), width: 14, number_format: "0.00"}
+    - {name: Target met, width: 10, formula: "=IF(OR(H{r}=\"\",I{r}=\"\"),\"\",IF(H{r}>=I{r},\"Yes\",\"No\"))"}
+    - {name: Headroom (months), width: 12, number_format: "0", help: "Months until the critical threshold at the current trend."}
+    - {name: Action required, width: 12, values: ["Yes", "No"]}
+    - {name: Action, width: 32}
+    - {name: Owner (role), width: 20}
+    - {name: Status, width: 16, values: [Monitoring, Action planned, Action in progress, Resolved]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-18
+  key: gov-reg-18-cryptographic-key-and-certificate-inventory
+  title: Cryptographic key and certificate inventory
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 8.24
+    - SOC 2 CC6.1
+    - SOC 2 CC6.7
+  purpose: "Every key, certificate and long-lived secret that protects [Organisation] data, with its purpose, algorithm, location, custodian and rotation dates under GOV-PRO-20. Rotation due and days to expiry are calculated so that nothing expires unnoticed."
+  columns:
+    - {name: Item ID, width: 12}
+    - {name: Type, width: 20, values: [Data encryption key, Key encryption key, Signing key, TLS certificate, SSH key, API or service secret, Other]}
+    - {name: Name or identifier, width: 28, help: "Key alias, certificate common name or secret name. Never the key material."}
+    - {name: Purpose, width: 26}
+    - {name: System, width: 22}
+    - {name: Algorithm and length, width: 18}
+    - {name: Location, width: 18, values: [Key management service, Hardware security module, Secrets store, Certificate store, Device, Other]}
+    - {name: Owner (role), width: 20}
+    - {name: Custodian (role), width: 20}
+    - {name: Created date, width: 14, date: true}
+    - {name: Rotation period (days), width: 12, number_format: "0"}
+    - {name: Rotation due, width: 14, formula: "=IF(OR(J{r}=\"\",K{r}=\"\"),\"\",J{r}+K{r})", number_format: "yyyy-mm-dd", help: "Calculated from the created date and the rotation period."}
+    - {name: Expiry date, width: 14, date: true, help: "Certificate or secret expiry where one exists."}
+    - {name: Days to expiry, width: 12, formula: "=IF(M{r}=\"\",\"\",M{r}-TODAY())", number_format: "0"}
+    - {name: Status, width: 16, values: [Active, Due for rotation, Expired, Revoked, Retired]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-25
+  key: gov-reg-25-data-flow-and-interface-inventory
+  title: Data flow and interface inventory
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.14
+    - ISO/IEC 27001:2022 Annex A 8.12
+    - SOC 2 C1.1
+    - GDPR Article 30
+  purpose: "Every system-to-system interface and recurring transfer that moves [Organisation] data between systems or organisations, with its classification, protocol, encryption and authentication. It supports GOV-PRO-23 and GOV-PRO-26, feeds the personal data flow map, and is the list reviewed at the go-live gate."
+  columns:
+    - {name: Interface ID, width: 12}
+    - {name: Interface name, width: 26}
+    - {name: From system, width: 22}
+    - {name: To system, width: 22}
+    - {name: Direction, width: 14, values: [Outbound, Inbound, Bidirectional]}
+    - {name: Internal or external, width: 14, values: [Internal, External]}
+    - {name: Data description, width: 32}
+    - {name: Data classification, width: 16, values: [Public, Internal, Confidential, Restricted]}
+    - {name: Personal data, width: 12, values: ["Yes", "No"]}
+    - {name: Protocol, width: 16, help: "For example HTTPS API, SFTP, message queue, database replication."}
+    - {name: Encryption in transit, width: 18, values: [TLS 1.2 or later, Encrypted tunnel, File level encryption, "None", Unknown]}
+    - {name: Authentication method, width: 20, help: "For example mutual TLS, signed token, API key, SSH key, federated identity."}
+    - {name: Frequency, width: 14, values: [Real time, Hourly, Daily, Weekly, Monthly, On demand]}
+    - {name: Owner (role), width: 20}
+    - {name: Review date, width: 14, date: true}
+    - {name: Status, width: 14, values: [Active, Planned, Under review, Retired]}

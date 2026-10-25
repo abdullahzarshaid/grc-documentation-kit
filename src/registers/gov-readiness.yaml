@@ -1,0 +1,194 @@
+- id: GOV-REG-07
+  key: gov-reg-07-supplier-register
+  title: Supplier register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.19
+    - ISO/IEC 27001:2022 Annex A 5.20
+    - ISO/IEC 27001:2022 Annex A 5.22
+    - ISO/IEC 27701 clause 7.2.6
+    - SOC 2 CC9.2
+    - GDPR Article 28
+  purpose: One row per supplier, contractor or cloud service that can reach the organisation's information or systems, with its tier, the data it holds, its contract and processor terms, the assurance relied on and the review dates. Maintained under GOV-PRO-06 from first contact to exit.
+  columns:
+    - {name: Supplier ID, width: 12, help: A permanent reference assigned in sequence and never reused.}
+    - {name: Supplier, width: 26}
+    - {name: Service provided, width: 30}
+    - {name: Tier, width: 14, values: [1 Critical, 2 Important, 3 Standard, 4 Low], help: The highest tier whose criteria apply under GOV-PRO-06 step 4.1.}
+    - {name: Data accessed, width: 16, values: [Restricted, Confidential, Internal, Public, None], help: The highest classification the supplier can reach.}
+    - {name: Personal data, width: 12, values: [Yes, No]}
+    - {name: Location, width: 20, help: Country or region where the service and its data are hosted, including support and backups.}
+    - {name: Contract reference, width: 18}
+    - {name: Processor terms, width: 14, values: [Yes, No, Not required], help: Yes only when terms meeting GDPR Article 28 are signed.}
+    - {name: Assurance type, width: 18, values: [Certificate, Assurance report, Questionnaire, Site assessment, Self-attestation, None]}
+    - {name: Last review, width: 12, date: true}
+    - {name: Next review, width: 12, date: true}
+    - {name: Owner (role), width: 20}
+    - {name: Status, width: 14, values: [Prospective, Approved, Conditional, Suspended, Exited]}
+    - {name: Notes, width: 30, help: Open gaps, exception references, deletion confirmation reference at exit.}
+
+- id: GOV-REG-08
+  key: gov-reg-08-incident-register
+  title: Incident register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.24
+    - ISO/IEC 27001:2022 Annex A 5.25
+    - ISO/IEC 27001:2022 Annex A 5.26
+    - ISO/IEC 27001:2022 Annex A 5.27
+    - SOC 2 CC7.3
+    - SOC 2 CC7.4
+    - SOC 2 CC7.5
+  purpose: Every reported security event and declared incident, with the times that drive the response metrics, its type and severity, whether personal data was involved, the root cause and the corrective action it produced. Kept by the first responder and the Incident Lead under GOV-PRO-07.
+  columns:
+    - {name: Incident ID, width: 14, help: Reference in the form prefix, year, sequence number.}
+    - {name: Date reported, width: 14, date: true, help: Date and time the report reached the organisation.}
+    - {name: Date detected, width: 14, date: true, help: Date and time the event was first noticed or alerted.}
+    - {name: Type, width: 22, values: [Malware, Phishing or social engineering, Unauthorised access, Data exposure, Lost or stolen device, Denial of service, Misconfiguration, Supplier incident, Insider misuse, Physical, Other]}
+    - {name: Severity, width: 12, values: [1 Critical, 2 High, 3 Medium, 4 Low], help: From the matrix in GOV-PRO-07 step 4.3.}
+    - {name: Summary, width: 40}
+    - {name: Personal data breach, width: 12, values: [Yes, No, Under assessment], help: Yes starts PIMS-PRO-04 and a PIMS-REG-03 entry.}
+    - {name: Date contained, width: 14, date: true}
+    - {name: Date resolved, width: 14, date: true}
+    - {name: Hours to contain, width: 10, formula: '=IF(OR(C{r}="",H{r}=""),"",(H{r}-C{r})*24)', number_format: '0.0', help: Detected to contained.}
+    - {name: Hours to resolve, width: 10, formula: '=IF(OR(C{r}="",I{r}=""),"",(I{r}-C{r})*24)', number_format: '0.0', help: Detected to resolved.}
+    - {name: Root cause, width: 30}
+    - {name: Corrective action reference, width: 16, help: The GOV-REG-03 entry raised from the post-incident review.}
+    - {name: Lessons learned, width: 30}
+    - {name: Status, width: 14, values: [Open, Contained, Resolved, Under review, Closed]}
+
+- id: GOV-REG-28
+  key: gov-reg-28-readiness-questionnaire
+  title: Readiness questionnaire
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 4.1
+    - ISO/IEC 27001:2022 clause 9.1
+    - SOC 2 CC4.1
+  purpose: Sixty questions in ten domains that measure how much of a security and privacy programme exists and how much of it can be proved, each scored 0 to 3 by an independent reviewer. Run as PB-08 describes, with one dated copy per assessment so that the trend is visible.
+  columns:
+    - {name: Domain, width: 18, fixed: true}
+    - {name: Question, width: 50, fixed: true}
+    - {name: Why it matters, width: 46, fixed: true}
+    - {name: Answer type, width: 12, values: [Policy, Register, Proof], help: Suggested form of answer. Change it if a better form exists.}
+    - {name: Answer, width: 36, help: The document identifier and version, the register rows, or the artefact that answers the question.}
+    - {name: Evidence reference, width: 22, help: File name in the evidence folder, named as PB-09 describes.}
+    - {name: Owner (role), width: 20}
+    - {name: Maturity, width: 10, range: [0, 3], help: Set by the reviewer. 0 nothing, 1 informal, 2 documented and done but records incomplete, 3 documented, done and verified.}
+    - {name: Status, width: 16, values: [Verified, To confirm, Not implemented, Not applicable]}
+    - {name: Due, width: 12, date: true, help: Required when Status is To confirm or Not implemented.}
+    - {name: Reviewer notes, width: 30, help: One sentence on what was seen or what is missing.}
+    - {name: Score, width: 8, formula: '=IF(OR(H{r}="",I{r}="Not applicable"),"",H{r}/3)', number_format: '0%', help: Maturity divided by three. Average by domain for the domain percentage.}
+  rows:
+    - ["Governance", "Has top management approved an information security policy and communicated it to all staff?", "The policy is the mandate for every control; without visible leadership approval controls are optional in practice.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Governance", "Is there a named role accountable for information security and a named role for privacy, each with written responsibilities?", "Clear accountability is the first thing an auditor tests and the first thing missing when incidents are mishandled.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Governance", "Does a steering group or management forum review security and privacy performance at a set frequency, with minutes?", "Regular review turns the programme from a project into a system, and the minutes prove it happens.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Governance", "Are measurable security objectives set, tracked and reported to management?", "Objectives make performance visible and give management something to steer.", "Register", null, null, null, null, null, null, null, null]
+    - ["Governance", "Has a management review covering all the required inputs been held in the last twelve months?", "Management review is a mandatory record and the point where resources and improvements are decided.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Governance", "Is there a controlled list of the policies, procedures and registers in use, with owners, versions and review dates?", "Document control proves that staff work from current versions and lets auditors trace changes.", "Register", null, null, null, null, null, null, null, null]
+    - ["Scope and context", "Is the scope of the management system written down, naming locations, services, systems and exclusions with reasons?", "Scope decides what the certificate or attestation covers and what the auditor will test.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Scope and context", "Have the internal and external issues that affect security and privacy been analysed and recorded?", "Context analysis explains why controls were chosen and shows the system fits the organisation.", "Register", null, null, null, null, null, null, null, null]
+    - ["Scope and context", "Are interested parties and their security and privacy requirements identified and kept current?", "Clients, regulators and staff impose requirements the control set must meet.", "Register", null, null, null, null, null, null, null, null]
+    - ["Scope and context", "Are legal, regulatory and contractual obligations recorded with an owner and mapped to controls?", "Unknown obligations are the commonest source of compliance failures and contract breaches.", "Register", null, null, null, null, null, null, null, null]
+    - ["Scope and context", "Are the boundaries between the organisation and its cloud and service providers documented as shared responsibilities?", "Controls that each side assumes the other operates are the gap attackers find.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Scope and context", "Is scope reviewed when services, systems, suppliers or locations change?", "Scope drift leaves new systems outside the controls that protect the old ones.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Risk", "Is there an approved risk assessment methodology with defined likelihood and impact scales and acceptance criteria?", "A consistent method makes risk ratings comparable and acceptance decisions defensible.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Risk", "Has a risk assessment covering the whole scope been completed within the last twelve months?", "Risk assessment drives which controls are applied; a stale one means controls address last year's threats.", "Register", null, null, null, null, null, null, null, null]
+    - ["Risk", "Does every risk above the acceptance threshold have a treatment plan with an owner and a date?", "Untreated high risks are the finding auditors grade most severely.", "Register", null, null, null, null, null, null, null, null]
+    - ["Risk", "Is there a Statement of Applicability or control matrix linking controls to risks and showing implementation status?", "It is the bridge between risk and controls and a mandatory record for certification.", "Register", null, null, null, null, null, null, null, null]
+    - ["Risk", "Are risk acceptances and exceptions approved at the right level, time-limited and reviewed at expiry?", "Open-ended exceptions become permanent gaps that nobody owns.", "Register", null, null, null, null, null, null, null, null]
+    - ["Risk", "Is the risk assessment repeated when a significant change occurs, such as a new system, supplier or incident?", "Event-driven reassessment keeps the register true between annual cycles.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Policies and documents", "Does the set of topic policies cover access, acceptable use, authentication, classification, remote working, suppliers and incidents?", "Topic policies translate the top-level commitment into rules staff can follow.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Policies and documents", "Are procedures written for the operational processes the policies require, with numbered steps and named actors?", "A policy without a procedure is an intention; auditors test whether the procedure is followed.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Policies and documents", "Have all documents been reviewed within their stated review period, with the outcome recorded?", "Overdue reviews signal a system nobody maintains.", "Register", null, null, null, null, null, null, null, null]
+    - ["Policies and documents", "Have staff acknowledged the policies that apply to them, with a dated record naming the version?", "Acknowledgement makes rules enforceable and proves they were communicated.", "Register", null, null, null, null, null, null, null, null]
+    - ["Policies and documents", "Are records retained for the period the retention schedule states and protected against alteration?", "Records are the evidence; lost or editable records cannot prove anything.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Policies and documents", "Are withdrawn documents removed from use and archived with a withdrawn marking?", "Staff following a superseded procedure is a nonconformity even when they act in good faith.", "Proof", null, null, null, null, null, null, null, null]
+    - ["People", "Are background checks performed before employment, proportional to the role and permitted by law?", "Screening is the control that stops the wrong person getting trusted access.", "Policy", null, null, null, null, null, null, null, null]
+    - ["People", "Do employment contracts and contractor agreements contain confidentiality and security obligations?", "Obligations that are not contractual cannot be enforced after someone leaves.", "Proof", null, null, null, null, null, null, null, null]
+    - ["People", "Do new starters complete security and privacy induction within the set number of days of joining?", "People are most likely to make mistakes before they know the rules.", "Register", null, null, null, null, null, null, null, null]
+    - ["People", "Do all staff complete refresher training at least annually, with completion recorded?", "Annual training is expected by every framework and is a frequent sample request.", "Register", null, null, null, null, null, null, null, null]
+    - ["People", "Do roles with elevated responsibility, such as developers, administrators and privacy handlers, receive role-based training?", "Generic awareness does not teach a developer secure coding or an administrator safe privilege use.", "Register", null, null, null, null, null, null, null, null]
+    - ["People", "Is there a disciplinary process for security violations and a leaver process that recovers assets and access?", "Consequences and clean exits are tested together as the end of the people lifecycle.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Access", "Is every access grant based on a documented request and approval, applying least privilege?", "Access without an approval trail cannot be shown to be authorised.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Access", "Is access removed within one working day when a person leaves or changes role?", "Orphaned accounts are the most common way former staff and attackers regain entry.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Access", "Is multi-factor authentication enforced for all remote access, all administrative access and all cloud consoles?", "Passwords alone no longer stop account takeover.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Access", "Are privileged accounts separate from everyday accounts, inventoried and individually assigned?", "Shared or everyday-use administrator accounts remove accountability and widen the damage from one compromise.", "Register", null, null, null, null, null, null, null, null]
+    - ["Access", "Are access rights reviewed at least quarterly for critical systems, with removals recorded?", "Reviews catch the accumulation that joiners, movers and projects create.", "Register", null, null, null, null, null, null, null, null]
+    - ["Access", "Are service accounts, keys and tokens inventoried, owned, rotated and kept out of code and chat?", "Non-human credentials are rarely reviewed and often over-privileged.", "Register", null, null, null, null, null, null, null, null]
+    - ["Assets and data", "Is there an information asset inventory with an owner for every asset?", "You cannot protect, classify or recover what you have not listed.", "Register", null, null, null, null, null, null, null, null]
+    - ["Assets and data", "Is a classification scheme defined and applied, with handling rules for each level?", "Classification tells staff how carefully to treat each piece of information.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Assets and data", "Is there an inventory of personal data processing activities with purposes, lawful bases and recipients?", "It is required by law for most organisations and is the starting point for every privacy control.", "Register", null, null, null, null, null, null, null, null]
+    - ["Assets and data", "Are data flows to external parties mapped, including transfers outside the region and their safeguards?", "Unmapped flows are where data leaves without a contract or a safeguard.", "Register", null, null, null, null, null, null, null, null]
+    - ["Assets and data", "Is a retention schedule defined, and is deletion configured and checked in systems and backups?", "Keeping data longer than needed increases breach impact and breaches the law.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Assets and data", "Are media and equipment wiped or destroyed before disposal or reuse, with a record?", "Discarded devices are a quiet source of data exposure.", "Register", null, null, null, null, null, null, null, null]
+    - ["Technology and cloud", "Are secure configuration baselines defined for servers, endpoints and cloud accounts, and checked against?", "Default configurations are insecure; baselines make hardening repeatable.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Technology and cloud", "Are vulnerabilities identified at a set cadence and remediated within severity-based timescales?", "Unpatched known vulnerabilities are the leading cause of compromise.", "Register", null, null, null, null, null, null, null, null]
+    - ["Technology and cloud", "Are changes to production assessed, approved, tested and recorded, with a rollback plan?", "Uncontrolled change causes outages and silent security regressions.", "Register", null, null, null, null, null, null, null, null]
+    - ["Technology and cloud", "Are security-relevant events logged centrally, protected from alteration, retained for a set period and reviewed?", "Without logs incidents cannot be detected, scoped or proved.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Technology and cloud", "Is data encrypted in transit and at rest using current algorithms, with keys managed and rotated?", "Encryption limits the impact of interception and storage compromise.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Technology and cloud", "Are backups taken at the set frequency, stored separately from production and restore-tested at least quarterly?", "A backup that has never been restored is a hope, not a control.", "Register", null, null, null, null, null, null, null, null]
+    - ["Suppliers", "Are all suppliers with access to information or systems listed and tiered by data access and criticality?", "The register is the starting point for proportionate due diligence.", "Register", null, null, null, null, null, null, null, null]
+    - ["Suppliers", "Is due diligence completed before a supplier is given information or access, in proportion to its tier?", "Assessing after onboarding cannot prevent the exposure it is meant to find.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Suppliers", "Do supplier contracts contain security, confidentiality, incident notification and exit clauses?", "Without contractual obligations there is no remedy when a supplier fails.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Suppliers", "Are processor terms in place with every supplier that processes personal data on the organisation's behalf?", "Processor terms are a legal requirement and define who answers for a breach.", "Register", null, null, null, null, null, null, null, null]
+    - ["Suppliers", "Are suppliers reviewed at least annually, including current certificates or assurance reports?", "Supplier posture changes; last year's assurance does not cover this year's service.", "Register", null, null, null, null, null, null, null, null]
+    - ["Suppliers", "Is there an exit process that recovers data and confirms deletion when a supplier relationship ends?", "Data left with former suppliers is unmanaged and unprotected.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Incidents and continuity", "Do staff know how to report a security event, and is every report logged and triaged within a set time?", "Fast reporting is the difference between an event and a breach.", "Proof", null, null, null, null, null, null, null, null]
+    - ["Incidents and continuity", "Is there an incident procedure with severity levels, roles and escalation that has been exercised in the last twelve months?", "Procedures that have never been rehearsed fail under pressure.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Incidents and continuity", "Is there a personal data breach process that assesses the risk to individuals and meets the 72 hour notification duty?", "Late or missed breach notification attracts regulatory action regardless of the breach itself.", "Policy", null, null, null, null, null, null, null, null]
+    - ["Incidents and continuity", "Is a post-incident review held for significant incidents, with actions tracked to closure?", "Learning is the only way incidents reduce over time.", "Register", null, null, null, null, null, null, null, null]
+    - ["Incidents and continuity", "Has a business impact analysis identified the critical processes with recovery time and recovery point objectives?", "Recovery plans without objectives cannot be tested or resourced.", "Register", null, null, null, null, null, null, null, null]
+    - ["Incidents and continuity", "Are continuity and recovery plans documented and tested at least annually, with results recorded?", "An untested plan gives false confidence to management and clients.", "Register", null, null, null, null, null, null, null, null]
+
+- id: GOV-REG-29
+  key: gov-reg-29-go-live-gate-checklist
+  title: Go-live gate checklist
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 8.1
+    - ISO/IEC 27001:2022 Annex A 5.8
+    - ISO/IEC 27001:2022 Annex A 8.32
+    - SOC 2 CC8.1
+    - GDPR Article 25
+  purpose: The thirty checks a system must pass before it carries production data, in ten must-prove areas, with the blocking checks marked. One copy per system or major release, completed by the project team and verified by an independent reviewer as PB-07 describes.
+  columns:
+    - {name: Area, width: 18, fixed: true}
+    - {name: Check, width: 60, fixed: true}
+    - {name: Blocker, width: 10, values: [Yes, No], help: Yes means production use may not begin until the check is Verified.}
+    - {name: Status, width: 16, values: [Verified, To confirm, Not implemented, Not applicable], help: Verified is set by the reviewer only.}
+    - {name: Evidence reference, width: 24, help: File name in the evidence folder, named as PB-09 describes.}
+    - {name: Owner (role), width: 20}
+    - {name: Due, width: 12, date: true, help: Required when Status is To confirm or Not implemented.}
+    - {name: Notes, width: 30, help: Reason for Not applicable, ticket reference for a gap, reviewer agreement on a blocker.}
+  rows:
+    - ["Scope and residency", "The production accounts, subscriptions or tenants that make up the system are listed with their identifiers, and no in-scope workload runs outside that list.", "Yes", null, null, null, null, null]
+    - ["Scope and residency", "The regions or locations where data is stored and processed are listed and match the residency commitments made to clients and in privacy notices.", "Yes", null, null, null, null, null]
+    - ["Scope and residency", "The system is recorded in the information asset register with an owner and a classification, and the scope statement covers it.", "No", null, null, null, null, null]
+    - ["External processing", "Every third party that receives data from the system, including analytics, email, error reporting, support, payment and AI services, is listed with the data it receives.", "Yes", null, null, null, null, null]
+    - ["External processing", "Each listed third party is Approved in the supplier register with due diligence complete for its tier.", "Yes", null, null, null, null, null]
+    - ["External processing", "No client or personal data is used to train or improve an external service unless the contract permits it and the privacy notice says so.", "Yes", null, null, null, null, null]
+    - ["Data flow", "A current data flow diagram shows every data store, interface and external endpoint, with a classification for each flow.", "Yes", null, null, null, null, null]
+    - ["Data flow", "Each interface is recorded in the data flow and interface inventory with its protocol, encryption and authentication method.", "No", null, null, null, null, null]
+    - ["Data flow", "Test and development environments hold no production personal data, or hold it only under an approved exception with equivalent controls.", "Yes", null, null, null, null, null]
+    - ["Access", "All human access uses named accounts through the central identity provider, with multi-factor authentication enforced on every administrative path.", "Yes", null, null, null, null, null]
+    - ["Access", "The role model is documented, the administrator membership is listed, and each member is approved by the system owner.", "Yes", null, null, null, null, null]
+    - ["Access", "Access to the system is linked to the leaver process, and the first access review is scheduled within 90 days of go-live.", "No", null, null, null, null, null]
+    - ["Network", "The complete list of internet-facing endpoints is documented, and each one is intended, authenticated and reviewed.", "Yes", null, null, null, null, null]
+    - ["Network", "Management interfaces, databases and internal services are not reachable from the internet and are segmented from the public-facing tier.", "Yes", null, null, null, null, null]
+    - ["Network", "Protections such as rate limiting and request filtering are configured on the public endpoints.", "No", null, null, null, null, null]
+    - ["Encryption", "All data in transit uses current protocol versions and certificates from an approved authority, with obsolete versions disabled.", "Yes", null, null, null, null, null]
+    - ["Encryption", "All data stores, backups and snapshots are encrypted at rest.", "Yes", null, null, null, null, null]
+    - ["Encryption", "Keys and secrets are held in a managed vault, inventoried, rotated on a schedule, and absent from code, configuration files and repository history.", "Yes", null, null, null, null, null]
+    - ["Logging", "Authentication, privilege use, administrative actions, configuration changes and access to restricted data are logged.", "Yes", null, null, null, null, null]
+    - ["Logging", "Logs are sent to a central store that the system's administrators cannot alter, with retention set to the required period and clocks synchronised.", "Yes", null, null, null, null, null]
+    - ["Logging", "Alerts are defined for the events that indicate compromise, routed to a monitored channel, and tested end to end.", "No", null, null, null, null, null]
+    - ["Backups", "Backups are configured at the agreed frequency and retention and are stored in a separate account or location from production.", "Yes", null, null, null, null, null]
+    - ["Backups", "A full restore has been performed in the last 90 days and the result is recorded in the backup and restore test log.", "Yes", null, null, null, null, null]
+    - ["Backups", "Recovery time and recovery point objectives are documented in the business impact analysis and the backup configuration meets them.", "No", null, null, null, null, null]
+    - ["Contractual", "The security and availability commitments made to clients for this system are listed, and each one maps to an implemented control.", "Yes", null, null, null, null, null]
+    - ["Contractual", "Software licences and open source components are inventoried and used within their terms.", "No", null, null, null, null, null]
+    - ["Contractual", "Service levels and support obligations owed by third parties that support the system are agreed in contract.", "No", null, null, null, null, null]
+    - ["Privacy", "A data protection impact assessment has been completed, or the screening record shows one is not required, and the residual risk is signed off.", "Yes", null, null, null, null, null]
+    - ["Privacy", "The privacy notice, the lawful bases and the processing inventory entry reflect the processing this system performs.", "Yes", null, null, null, null, null]
+    - ["Privacy", "Retention periods are configured, and deletion, export and access requests can be fulfilled for this system's data.", "Yes", null, null, null, null, null]

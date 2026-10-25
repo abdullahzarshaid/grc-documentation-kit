@@ -1,0 +1,188 @@
+- id: GOV-REG-02
+  key: gov-reg-02-audit-programme-and-findings
+  title: Audit programme and findings
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 9.2
+    - ISO/IEC 27001:2022 clause 9.2.1
+    - SOC 2 CC4.1
+  purpose: The internal audit programme for the whole cycle, one row per audit, from planning to closure. It shows what was audited, by whom, when, and how many findings of each grade the report raised, so that coverage of every clause and applicable control can be demonstrated.
+  columns:
+    - {name: Audit ID, width: 12, help: 'One per audit, for example IA followed by year and sequence number.'}
+    - {name: Period, width: 12, help: 'The quarter or month in which the audit is planned.'}
+    - {name: Scope, width: 36, help: 'Areas, processes and systems covered.'}
+    - {name: Criteria, width: 34, help: 'Clauses, Annex A controls, SOC 2 criteria and kit documents audited.'}
+    - {name: Auditor (role), width: 20, help: 'Must be independent of the area audited.'}
+    - {name: Auditee (role), width: 20}
+    - {name: Start date, width: 13, date: true}
+    - {name: End date, width: 13, date: true}
+    - {name: Status, width: 14, values: [Planned, In progress, Reported, Closed, Postponed, Cancelled]}
+    - {name: Major, width: 9, range: [0, 999], help: 'Count of major nonconformities in the report.'}
+    - {name: Minor, width: 9, range: [0, 999]}
+    - {name: Observation, width: 12, range: [0, 999]}
+    - {name: Opportunity, width: 12, range: [0, 999]}
+    - {name: Total findings, width: 12, formula: '=IF(COUNT(J{r}:M{r})=0,"",SUM(J{r}:M{r}))', number_format: '0'}
+    - {name: Report reference, width: 26, help: 'Reference of the GOV-TPL-01 report and where it is stored.'}
+    - {name: Notes, width: 30, help: 'Postponement approvals, independence arrangements, follow-up dates.'}
+
+- id: GOV-REG-03
+  key: gov-reg-03-corrective-action-log
+  title: Corrective action log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 10.1
+    - ISO/IEC 27001:2022 clause 10.2
+    - SOC 2 CC4.2
+    - SOC 2 CC5.3
+  purpose: Every nonconformity, observation and opportunity from any source, followed from raising to verified closure under GOV-PRO-04. One row per GOV-TPL-02 form, so that overdue actions, repeated root causes and the effectiveness of corrections can be reported.
+  columns:
+    - {name: CAR ID, width: 12, help: 'Assigned by the Information Security Manager; matches the GOV-TPL-02 form.'}
+    - {name: Source, width: 18, values: [Internal audit, External audit, Incident, Management review, Complaint, Monitoring, Supplier review, Readiness assessment, Staff report, Other]}
+    - {name: Source reference, width: 18, help: 'Audit ID, incident ID, review date or complaint reference.'}
+    - {name: Raised date, width: 13, date: true}
+    - {name: Raised by (role), width: 20}
+    - {name: Description, width: 40, help: 'The statement of nonconformity: what was observed against which requirement.'}
+    - {name: Grade, width: 13, values: [Major, Minor, Observation, Opportunity]}
+    - {name: Root cause, width: 36, help: 'The cause the organisation can act on, from the five whys or fishbone analysis.'}
+    - {name: Corrective action, width: 40, help: 'Summary of the plan on the form.'}
+    - {name: Owner (role), width: 20}
+    - {name: Due date, width: 13, date: true, help: 'Within 30 days of raising for a major, 90 for a minor, unless an extension is recorded in Notes.'}
+    - {name: Status, width: 13, values: [Open, In progress, Verified, Closed]}
+    - {name: Effectiveness check date, width: 14, date: true, help: 'At least 90 days after implementation, by someone other than the owner.'}
+    - {name: Effectiveness result, width: 14, values: [Effective, Not effective, Pending]}
+    - {name: Closed by (role), width: 20, help: 'Information Security Manager for a minor; executive sponsor for a major.'}
+    - {name: Closed date, width: 13, date: true}
+
+- id: GOV-REG-04
+  key: gov-reg-04-legal-regulatory-and-contractual-register
+  title: Legal, regulatory and contractual register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.31
+    - ISO/IEC 27001:2022 Annex A 5.34
+    - SOC 2 CC2.3
+    - GDPR Article 24
+  purpose: The list of obligations that apply to the organisation's information, privacy and records, one row per distinct requirement, maintained under GOV-PRO-25. Each row ties the obligation to the controls and documents that satisfy it, the evidence that proves it, and a status that shows where gaps remain.
+  columns:
+    - {name: Reference, width: 12, help: 'Sequential reference used in ISMS-REG-01 justifications and risk entries.'}
+    - {name: Obligation, width: 44, help: 'What is required, in plain words. One requirement per row.'}
+    - {name: Source, width: 24, help: 'The law, regulation, contract, scheme rule or guidance, with article or clause.'}
+    - {name: Jurisdiction, width: 16}
+    - {name: Applies as, width: 12, values: [Controller, Processor, Both, N/A]}
+    - {name: Owner (role), width: 20}
+    - {name: Controls and documents, width: 32, help: 'Kit document IDs and Annex A controls that satisfy the obligation.'}
+    - {name: Evidence, width: 32, help: 'The record or export that proves compliance and where it is kept.'}
+    - {name: Status, width: 13, values: [Compliant, Partial, Gap, Not assessed]}
+    - {name: Review frequency, width: 14, values: [Quarterly, Semi-annual, Annual, On change]}
+    - {name: Last review, width: 13, date: true}
+    - {name: Next review, width: 13, formula: '=IF(OR(K{r}="",J{r}=""),"",IF(J{r}="Quarterly",EDATE(K{r},3),IF(J{r}="Semi-annual",EDATE(K{r},6),IF(J{r}="Annual",EDATE(K{r},12),"On change"))))', number_format: 'dd mmm yyyy'}
+    - {name: Linked risk or action, width: 18, help: 'GOV-REG-05 or GOV-REG-03 reference raised for a Gap or Partial status.'}
+    - {name: Notes, width: 30}
+
+- id: GOV-REG-05
+  key: gov-reg-05-information-security-risk-register
+  title: Information security risk register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 6.1.2
+    - ISO/IEC 27001:2022 clause 6.1.3
+    - ISO/IEC 27001:2022 clause 8.2
+    - ISO/IEC 27001:2022 clause 8.3
+    - ISO/IEC 27701 clause 5.4.1.2
+    - SOC 2 CC3.1
+    - SOC 2 CC3.2
+    - GDPR Article 32
+  purpose: Every information security and privacy risk scenario identified under GOV-PRO-05, with its raw and residual ratings, treatment decision, owner and review dates. The score and band columns calculate from the 1 to 5 scales so that two assessors produce the same result and acceptance goes to the right authority.
+  columns:
+    - {name: Risk ID, width: 10, help: 'Permanent reference, never reused.'}
+    - {name: Asset or process, width: 22, help: 'The asset from GOV-REG-10 or the process at risk.'}
+    - {name: Risk scenario, width: 44, help: 'A named threat exploits a named vulnerability on the asset, with the consequence.'}
+    - {name: Threat, width: 22, help: 'Environmental, technical failure, human error, insider misuse, external attack, supplier failure, legal change.'}
+    - {name: Vulnerability, width: 22, help: 'Technical weakness, missing or weak control, process gap, skill gap, physical exposure, contractual gap.'}
+    - {name: Existing controls, width: 32, help: 'Controls in place and operating today.'}
+    - {name: Likelihood (1 to 5), width: 11, range: [1, 5], help: 'Per the GOV-PRO-05 scale, with existing controls.'}
+    - {name: Impact (1 to 5), width: 11, range: [1, 5], help: 'Worst credible consequence per the GOV-PRO-05 scale.'}
+    - {name: Score, width: 9, formula: '=IF(OR(G{r}="",H{r}=""),"",G{r}*H{r})', number_format: '0'}
+    - {name: Band, width: 11, formula: '=IF(I{r}="","",IF(I{r}>=16,"Critical",IF(I{r}>=10,"High",IF(I{r}>=5,"Medium","Low"))))'}
+    - {name: Treatment option, width: 13, values: [Modify, Retain, Avoid, Share]}
+    - {name: Treatment plan and SoA references, width: 40, help: 'Actions, the Annex A controls applied and the kit documents that implement them, and the target band.'}
+    - {name: Risk owner (role), width: 20}
+    - {name: Due date, width: 13, date: true, help: 'Date by which the treatment is to be implemented.'}
+    - {name: Residual likelihood (1 to 5), width: 11, range: [1, 5], help: 'Expected once the treatment is implemented and verified.'}
+    - {name: Residual impact (1 to 5), width: 11, range: [1, 5]}
+    - {name: Residual score, width: 10, formula: '=IF(OR(O{r}="",P{r}=""),"",O{r}*P{r})', number_format: '0'}
+    - {name: Status, width: 12, values: [Open, Treating, Accepted, Closed]}
+    - {name: Last review, width: 13, date: true}
+    - {name: Next review, width: 13, date: true, help: 'Monthly for Critical, quarterly for High, twice a year for Medium, annually for Low.'}
+
+- id: GOV-REG-06
+  key: gov-reg-06-risk-acceptance-and-exception-register
+  title: Risk acceptance and exception register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 6.1.3
+    - ISO/IEC 27001:2022 clause 8.3
+    - SOC 2 CC3.2
+    - SOC 2 CC5.1
+  purpose: Every approved deviation from a policy or control and every acceptance of a risk above appetite, recorded under GOV-PRO-24 with its approver, duration and expiry. The expiry and days-to-expiry columns calculate from the approval date and duration so that nothing runs past its limit unnoticed.
+  columns:
+    - {name: Reference, width: 12, help: 'Matches the GOV-TPL-06 form.'}
+    - {name: Type, width: 16, values: [Exception, Risk acceptance]}
+    - {name: Linked risk ID, width: 12, help: 'The GOV-REG-05 entry.'}
+    - {name: Description, width: 40, help: 'What is being deviated from or accepted, and why.'}
+    - {name: Requirement deviated from, width: 26, help: 'Document ID and statement, or Annex A control.'}
+    - {name: Compensating controls, width: 36}
+    - {name: Band before, width: 12, values: [Low, Medium, High, Critical], help: 'Without compensating controls.'}
+    - {name: Band after, width: 12, values: [Low, Medium, High, Critical], help: 'With compensating controls; determines the approver.'}
+    - {name: Requested by (role), width: 20}
+    - {name: Approver (role), width: 22, help: 'Low: Information Security Manager. Medium: plus head of function. High: executive sponsor. Critical: Chief Executive Officer.'}
+    - {name: Approval date, width: 13, date: true}
+    - {name: Duration (months), width: 11, range: [1, 12], help: 'Maximum 12. Maximum 3 for a Critical band.'}
+    - {name: Expiry date, width: 13, formula: '=IF(OR(K{r}="",L{r}=""),"",EDATE(K{r},L{r}))', number_format: 'dd mmm yyyy'}
+    - {name: Days to expiry, width: 11, formula: '=IF(M{r}="","",M{r}-TODAY())', number_format: '0'}
+    - {name: Status, width: 13, values: [Requested, Approved, Active, Expired, Closed, Refused]}
+    - {name: Review outcome, width: 30, help: 'Closed with evidence, renewed under a new reference, escalated, or expired.'}
+
+- id: GOV-REG-21
+  key: gov-reg-21-security-objectives-and-measures-tracker
+  title: Security objectives and measures tracker
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 6.2
+    - ISO/IEC 27001:2022 clause 9.1
+    - SOC 2 CC1.2
+  purpose: The information security and privacy objectives approved under ISMS-PLN-01, each with its measure, target, owner and latest value. It is updated at the frequency set for each measure and reported to the steering committee and management review.
+  columns:
+    - {name: Objective ID, width: 12}
+    - {name: Objective, width: 40, help: 'Measurable, consistent with GOV-POL-03, resourced.'}
+    - {name: Measure, width: 32, help: 'What is counted or measured.'}
+    - {name: Method or formula, width: 32, help: 'How the value is calculated and from which source.'}
+    - {name: Target, width: 14, help: 'The value and direction that means the objective is met.'}
+    - {name: Frequency, width: 13, values: [Monthly, Quarterly, Semi-annual, Annual]}
+    - {name: Owner (role), width: 20}
+    - {name: Latest value, width: 13}
+    - {name: Measured on, width: 13, date: true}
+    - {name: Status, width: 10, values: [Green, Amber, Red], help: 'Green on target; Amber within the tolerance set in ISMS-PLN-01; Red outside it.'}
+    - {name: Linked risk, width: 12, help: 'GOV-REG-05 ID the objective addresses, if any.'}
+    - {name: Notes, width: 30, help: 'Reason for Amber or Red and the action taken.'}
+
+- id: GOV-REG-22
+  key: gov-reg-22-management-review-action-tracker
+  title: Management review action tracker
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 9.3
+    - ISO/IEC 27001:2022 clause 9.3.3
+    - SOC 2 CC1.2
+  purpose: Every decision and action from management review under GOV-PRO-03, with its owner, due date and evidence of completion. It is the first input to the next review and the record that shows leadership decisions were carried out.
+  columns:
+    - {name: Action ID, width: 12}
+    - {name: Review date, width: 13, date: true, help: 'The management review that raised the action.'}
+    - {name: Input or output area, width: 24, values: [Previous actions, Context and interested parties, Nonconformities and corrective actions, Measurement results, Audit results, Objectives, Interested party feedback, Risk assessment and treatment, Incidents and breaches, Suppliers and obligations, Improvement opportunity, Change to the system, Resources]}
+    - {name: Decision or action, width: 44}
+    - {name: Owner (role), width: 20}
+    - {name: Due date, width: 13, date: true}
+    - {name: Status, width: 14, values: [Open, In progress, Completed, Carried forward, Cancelled]}
+    - {name: Completed date, width: 13, date: true}
+    - {name: Evidence of completion, width: 32, help: 'Reference to the record that shows the action was done.'}
+    - {name: Notes, width: 30, help: 'Escalations, reasons for carrying forward.'}

@@ -1,0 +1,340 @@
+- id: ISMS-REG-01
+  key: isms-reg-01-statement-of-applicability
+  title: Statement of Applicability
+  framework: iso27001
+  maps:
+    - ISO/IEC 27001:2022 clause 6.1.3
+    - ISO/IEC 27001:2022 Annex A
+  purpose: One row per Annex A control of ISO/IEC 27001:2022, recording whether it applies, why, how far it is implemented, which kit documents implement it and where the evidence is. Reviewed with every risk assessment and whenever the scope or the context changes, and version controlled because its version appears in the certificate scope wording.
+  columns:
+    - {name: Control, width: 10, fixed: true, help: Annex A control number.}
+    - {name: Theme, width: 30, fixed: true, help: A reminder in plain words. Read the standard for the authoritative text.}
+    - {name: Applicable, width: 12, values: [Yes, No]}
+    - {name: Justification, width: 44, help: The risk or requirement that makes the control apply, or the scope fact that means it does not.}
+    - {name: Status, width: 16, values: [Not started, Planned, Partial, Implemented, Not applicable], help: Implementation status. Implemented requires operating evidence.}
+    - {name: Implementing documents, width: 32, help: Kit document IDs separated by semicolons. Replace with your own where you have changed them.}
+    - {name: Evidence reference, width: 30, help: Folder, ticket or register row that shows the control operating.}
+    - {name: Owner, width: 24, help: Role that owns the control.}
+    - {name: Last reviewed, width: 14, date: true}
+    - {name: Notes, width: 30}
+  rows:
+    - ["5.1", "Policy framework and approval", null, null, null, "GOV-POL-03; GOV-PRO-01", null, null, null, null]
+    - ["5.2", "Assigned security roles", null, null, null, "GOV-POL-01", null, null, null, null]
+    - ["5.3", "Conflicting duties separated", null, null, null, "GOV-POL-01; GOV-PRO-10", null, null, null, null]
+    - ["5.4", "Leadership enforcement of rules", null, null, null, "GOV-STM-01; GOV-POL-01; GOV-PRO-18", null, null, null, null]
+    - ["5.5", "Regulator and authority liaison", null, null, null, "GOV-PRO-25; GOV-PRO-07; ISMS-PLN-02", null, null, null, null]
+    - ["5.6", "Specialist community contacts", null, null, null, "GOV-PRO-27; ISMS-PLN-02", null, null, null, null]
+    - ["5.7", "Threat information gathering", null, null, null, "GOV-PRO-27", null, null, null, null]
+    - ["5.8", "Security built into projects", null, null, null, "PB-07; GOV-PRO-15; ISMS-PRO-03", null, null, null, null]
+    - ["5.9", "Asset and owner inventory", null, null, null, "GOV-PRO-16; GOV-REG-10; GOV-REG-24", null, null, null, null]
+    - ["5.10", "Rules for using assets", null, null, null, "GOV-POL-02; GOV-PRO-16", null, null, null, null]
+    - ["5.11", "Returning assets on exit", null, null, null, "GOV-PRO-16; GOV-CHK-01", null, null, null, null]
+    - ["5.12", "Sensitivity grading scheme", null, null, null, "GOV-PRO-16", null, null, null, null]
+    - ["5.13", "Marking by sensitivity", null, null, null, "GOV-PRO-16", null, null, null, null]
+    - ["5.14", "Safe information movement", null, null, null, "GOV-PRO-23; GOV-REG-25", null, null, null, null]
+    - ["5.15", "Access rules by need", null, null, null, "GOV-PRO-10", null, null, null, null]
+    - ["5.16", "Identity lifecycle control", null, null, null, "GOV-PRO-10", null, null, null, null]
+    - ["5.17", "Credential issue and care", null, null, null, "GOV-POL-06; GOV-PRO-10", null, null, null, null]
+    - ["5.18", "Access grant and review", null, null, null, "GOV-PRO-10; GOV-TPL-09; GOV-REG-12", null, null, null, null]
+    - ["5.19", "Supplier security governance", null, null, null, "GOV-PRO-06; GOV-REG-07", null, null, null, null]
+    - ["5.20", "Security terms in contracts", null, null, null, "GOV-PRO-06; PIMS-TPL-02", null, null, null, null]
+    - ["5.21", "Technology supply chain depth", null, null, null, "GOV-PRO-06; GOV-PRO-15", null, null, null, null]
+    - ["5.22", "Supplier performance monitoring", null, null, null, "GOV-PRO-06; GOV-REG-07; SOC-PRO-02", null, null, null, null]
+    - ["5.23", "Cloud service lifecycle", null, null, null, "GOV-PRO-26", null, null, null, null]
+    - ["5.24", "Incident response readiness", null, null, null, "GOV-PRO-07", null, null, null, null]
+    - ["5.25", "Event triage decisions", null, null, null, "GOV-PRO-07; GOV-TPL-05", null, null, null, null]
+    - ["5.26", "Incident handling execution", null, null, null, "GOV-PRO-07; GOV-REG-08", null, null, null, null]
+    - ["5.27", "Lessons from incidents", null, null, null, "GOV-PRO-07; GOV-TPL-11", null, null, null, null]
+    - ["5.28", "Evidence preservation", null, null, null, "GOV-PRO-07; PB-09", null, null, null, null]
+    - ["5.29", "Controls kept through disruption", null, null, null, "GOV-PRO-13", null, null, null, null]
+    - ["5.30", "Technology continuity readiness", null, null, null, "GOV-PRO-13; GOV-TPL-07; GOV-REG-16", null, null, null, null]
+    - ["5.31", "Legal duties identified", null, null, null, "GOV-PRO-25; GOV-REG-04", null, null, null, null]
+    - ["5.32", "Respecting licences and copyright", null, null, null, "GOV-PRO-25; GOV-PRO-15", null, null, null, null]
+    - ["5.33", "Records kept safe", null, null, null, "GOV-PRO-25; GOV-PRO-01; PIMS-POL-02", null, null, null, null]
+    - ["5.34", "Personal data safeguards", null, null, null, "PIMS-POL-01; GDPR-POL-01; GOV-PRO-25", null, null, null, null]
+    - ["5.35", "Impartial programme review", null, null, null, "GOV-PRO-02; GOV-PRO-25", null, null, null, null]
+    - ["5.36", "Policy compliance checks", null, null, null, "ISMS-PRO-04; GOV-PRO-02", null, null, null, null]
+    - ["5.37", "Operating steps written down", null, null, null, "GOV-PRO-01; ISMS-PRO-03", null, null, null, null]
+    - ["6.1", "Pre-employment checks", null, null, null, "GOV-PRO-18", null, null, null, null]
+    - ["6.2", "Employment security clauses", null, null, null, "GOV-PRO-18", null, null, null, null]
+    - ["6.3", "Staff awareness and skills", null, null, null, "GOV-PRO-08; ISMS-PRO-02; GOV-REG-09", null, null, null, null]
+    - ["6.4", "Consequences for breaches", null, null, null, "GOV-PRO-18; GOV-POL-03", null, null, null, null]
+    - ["6.5", "Duties after leaving", null, null, null, "GOV-PRO-18; GOV-CHK-01", null, null, null, null]
+    - ["6.6", "Secrecy undertakings signed", null, null, null, "GOV-PRO-18; GOV-PRO-06", null, null, null, null]
+    - ["6.7", "Working away from office", null, null, null, "GOV-POL-05; GOV-PRO-22", null, null, null, null]
+    - ["6.8", "Staff event reporting", null, null, null, "GOV-PRO-07; GOV-POL-02", null, null, null, null]
+    - ["7.1", "Protected area boundaries", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.2", "Entry control and visitors", null, null, null, "GOV-PRO-17; GOV-REG-19", null, null, null, null]
+    - ["7.3", "Room and facility protection", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.4", "Premises surveillance", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.5", "Protection from hazards", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.6", "Conduct in secure areas", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.7", "Tidy desks and locked screens", null, null, null, "GOV-POL-04", null, null, null, null]
+    - ["7.8", "Placing equipment safely", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.9", "Assets taken off site", null, null, null, "GOV-PRO-17; GOV-POL-05", null, null, null, null]
+    - ["7.10", "Media handling lifecycle", null, null, null, "GOV-PRO-16; GOV-REG-20", null, null, null, null]
+    - ["7.11", "Power and support services", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.12", "Cable protection", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.13", "Equipment upkeep", null, null, null, "GOV-PRO-17", null, null, null, null]
+    - ["7.14", "Wiping before disposal", null, null, null, "GOV-PRO-16; GOV-REG-20", null, null, null, null]
+    - ["8.1", "User device protection", null, null, null, "GOV-PRO-22", null, null, null, null]
+    - ["8.2", "Elevated privileges limited", null, null, null, "GOV-PRO-10; GOV-REG-13", null, null, null, null]
+    - ["8.3", "Information access limits", null, null, null, "GOV-PRO-10; GOV-PRO-16", null, null, null, null]
+    - ["8.4", "Source code safeguarding", null, null, null, "GOV-PRO-15; GOV-PRO-10", null, null, null, null]
+    - ["8.5", "Strong authentication methods", null, null, null, "GOV-POL-06", null, null, null, null]
+    - ["8.6", "Capacity forecasting", null, null, null, "GOV-PRO-19; GOV-REG-17", null, null, null, null]
+    - ["8.7", "Malicious code defence", null, null, null, "GOV-PRO-22", null, null, null, null]
+    - ["8.8", "Vulnerability handling", null, null, null, "GOV-PRO-11; GOV-REG-14", null, null, null, null]
+    - ["8.9", "Hardened configuration baselines", null, null, null, "GOV-CHK-02; GOV-PRO-22; GOV-PRO-26", null, null, null, null]
+    - ["8.10", "Deleting unneeded information", null, null, null, "PIMS-POL-02; GOV-PRO-16", null, null, null, null]
+    - ["8.11", "Masking sensitive values", null, null, null, "GOV-PRO-15; PIMS-PRO-06", null, null, null, null]
+    - ["8.12", "Stopping data exfiltration", null, null, null, "GOV-PRO-23", null, null, null, null]
+    - ["8.13", "Backup copies and tests", null, null, null, "GOV-PRO-12; GOV-REG-15", null, null, null, null]
+    - ["8.14", "Resilience through redundancy", null, null, null, "GOV-PRO-19; GOV-PRO-13", null, null, null, null]
+    - ["8.15", "Event log capture", null, null, null, "GOV-PRO-14", null, null, null, null]
+    - ["8.16", "Anomaly monitoring", null, null, null, "GOV-PRO-14", null, null, null, null]
+    - ["8.17", "Synchronised clocks", null, null, null, "GOV-PRO-14", null, null, null, null]
+    - ["8.18", "Powerful utilities controlled", null, null, null, "GOV-PRO-10; GOV-CHK-02", null, null, null, null]
+    - ["8.19", "Controlled software installs", null, null, null, "GOV-PRO-22; GOV-PRO-09", null, null, null, null]
+    - ["8.20", "Network protection", null, null, null, "GOV-PRO-21", null, null, null, null]
+    - ["8.21", "Network service assurance", null, null, null, "GOV-PRO-21; GOV-PRO-06", null, null, null, null]
+    - ["8.22", "Network segmentation", null, null, null, "GOV-PRO-21", null, null, null, null]
+    - ["8.23", "Filtering web destinations", null, null, null, "GOV-PRO-21", null, null, null, null]
+    - ["8.24", "Cryptography and keys", null, null, null, "GOV-PRO-20; GOV-REG-18", null, null, null, null]
+    - ["8.25", "Security across development", null, null, null, "GOV-PRO-15", null, null, null, null]
+    - ["8.26", "Security needs of applications", null, null, null, "GOV-PRO-15; PB-07", null, null, null, null]
+    - ["8.27", "Secure design principles", null, null, null, "GOV-PRO-15", null, null, null, null]
+    - ["8.28", "Safe coding rules", null, null, null, "GOV-PRO-15", null, null, null, null]
+    - ["8.29", "Security testing before release", null, null, null, "GOV-PRO-15; PB-07", null, null, null, null]
+    - ["8.30", "Overseeing external developers", null, null, null, "GOV-PRO-15; GOV-PRO-06", null, null, null, null]
+    - ["8.31", "Environment separation", null, null, null, "GOV-PRO-15", null, null, null, null]
+    - ["8.32", "Controlled changes", null, null, null, "GOV-PRO-09; GOV-TPL-08; GOV-REG-11", null, null, null, null]
+    - ["8.33", "Test data protection", null, null, null, "GOV-PRO-15", null, null, null, null]
+    - ["8.34", "Audit test safeguards", null, null, null, "GOV-PRO-02; GOV-PRO-09", null, null, null, null]
+
+- id: ISMS-REG-02
+  key: isms-reg-02-control-implementation-tracker
+  title: Control implementation tracker
+  framework: iso27001
+  maps:
+    - ISO/IEC 27001:2022 clause 6.1.3
+    - ISO/IEC 27001:2022 clause 8.1
+    - ISO/IEC 27001:2022 clause 9.1
+    - ISO/IEC 27001:2022 Annex A
+  purpose: One row per Annex A control, tracking who owns it, how far implementation has got, where the operating evidence is, how and when it was last tested and with what result. It is the working companion of the Statement of Applicability and the source of the control test results reported under the monitoring procedure.
+  columns:
+    - {name: Control, width: 10, fixed: true, help: Annex A control number.}
+    - {name: Theme, width: 30, fixed: true, help: A reminder in plain words. Read the standard for the authoritative text.}
+    - {name: Owner, width: 24, help: Role that owns the control.}
+    - {name: Status, width: 16, values: [Not started, In progress, Implemented, Not applicable]}
+    - {name: Evidence, width: 34, help: Folder, ticket or register row showing the control operating.}
+    - {name: Test method, width: 18, values: [Inspection, Record sample, Re-performance, Interview, Observation]}
+    - {name: Last tested, width: 14, date: true}
+    - {name: Result, width: 12, values: [Pass, Fail, Not tested]}
+    - {name: Next test due, width: 14, date: true, help: Within twelve months of the last test.}
+    - {name: Notes, width: 30, help: Sample size, tester, nonconformity reference for a Fail.}
+  rows:
+    - ["5.1", "Policy framework and approval", null, null, null, null, null, null, null, null]
+    - ["5.2", "Assigned security roles", null, null, null, null, null, null, null, null]
+    - ["5.3", "Conflicting duties separated", null, null, null, null, null, null, null, null]
+    - ["5.4", "Leadership enforcement of rules", null, null, null, null, null, null, null, null]
+    - ["5.5", "Regulator and authority liaison", null, null, null, null, null, null, null, null]
+    - ["5.6", "Specialist community contacts", null, null, null, null, null, null, null, null]
+    - ["5.7", "Threat information gathering", null, null, null, null, null, null, null, null]
+    - ["5.8", "Security built into projects", null, null, null, null, null, null, null, null]
+    - ["5.9", "Asset and owner inventory", null, null, null, null, null, null, null, null]
+    - ["5.10", "Rules for using assets", null, null, null, null, null, null, null, null]
+    - ["5.11", "Returning assets on exit", null, null, null, null, null, null, null, null]
+    - ["5.12", "Sensitivity grading scheme", null, null, null, null, null, null, null, null]
+    - ["5.13", "Marking by sensitivity", null, null, null, null, null, null, null, null]
+    - ["5.14", "Safe information movement", null, null, null, null, null, null, null, null]
+    - ["5.15", "Access rules by need", null, null, null, null, null, null, null, null]
+    - ["5.16", "Identity lifecycle control", null, null, null, null, null, null, null, null]
+    - ["5.17", "Credential issue and care", null, null, null, null, null, null, null, null]
+    - ["5.18", "Access grant and review", null, null, null, null, null, null, null, null]
+    - ["5.19", "Supplier security governance", null, null, null, null, null, null, null, null]
+    - ["5.20", "Security terms in contracts", null, null, null, null, null, null, null, null]
+    - ["5.21", "Technology supply chain depth", null, null, null, null, null, null, null, null]
+    - ["5.22", "Supplier performance monitoring", null, null, null, null, null, null, null, null]
+    - ["5.23", "Cloud service lifecycle", null, null, null, null, null, null, null, null]
+    - ["5.24", "Incident response readiness", null, null, null, null, null, null, null, null]
+    - ["5.25", "Event triage decisions", null, null, null, null, null, null, null, null]
+    - ["5.26", "Incident handling execution", null, null, null, null, null, null, null, null]
+    - ["5.27", "Lessons from incidents", null, null, null, null, null, null, null, null]
+    - ["5.28", "Evidence preservation", null, null, null, null, null, null, null, null]
+    - ["5.29", "Controls kept through disruption", null, null, null, null, null, null, null, null]
+    - ["5.30", "Technology continuity readiness", null, null, null, null, null, null, null, null]
+    - ["5.31", "Legal duties identified", null, null, null, null, null, null, null, null]
+    - ["5.32", "Respecting licences and copyright", null, null, null, null, null, null, null, null]
+    - ["5.33", "Records kept safe", null, null, null, null, null, null, null, null]
+    - ["5.34", "Personal data safeguards", null, null, null, null, null, null, null, null]
+    - ["5.35", "Impartial programme review", null, null, null, null, null, null, null, null]
+    - ["5.36", "Policy compliance checks", null, null, null, null, null, null, null, null]
+    - ["5.37", "Operating steps written down", null, null, null, null, null, null, null, null]
+    - ["6.1", "Pre-employment checks", null, null, null, null, null, null, null, null]
+    - ["6.2", "Employment security clauses", null, null, null, null, null, null, null, null]
+    - ["6.3", "Staff awareness and skills", null, null, null, null, null, null, null, null]
+    - ["6.4", "Consequences for breaches", null, null, null, null, null, null, null, null]
+    - ["6.5", "Duties after leaving", null, null, null, null, null, null, null, null]
+    - ["6.6", "Secrecy undertakings signed", null, null, null, null, null, null, null, null]
+    - ["6.7", "Working away from office", null, null, null, null, null, null, null, null]
+    - ["6.8", "Staff event reporting", null, null, null, null, null, null, null, null]
+    - ["7.1", "Protected area boundaries", null, null, null, null, null, null, null, null]
+    - ["7.2", "Entry control and visitors", null, null, null, null, null, null, null, null]
+    - ["7.3", "Room and facility protection", null, null, null, null, null, null, null, null]
+    - ["7.4", "Premises surveillance", null, null, null, null, null, null, null, null]
+    - ["7.5", "Protection from hazards", null, null, null, null, null, null, null, null]
+    - ["7.6", "Conduct in secure areas", null, null, null, null, null, null, null, null]
+    - ["7.7", "Tidy desks and locked screens", null, null, null, null, null, null, null, null]
+    - ["7.8", "Placing equipment safely", null, null, null, null, null, null, null, null]
+    - ["7.9", "Assets taken off site", null, null, null, null, null, null, null, null]
+    - ["7.10", "Media handling lifecycle", null, null, null, null, null, null, null, null]
+    - ["7.11", "Power and support services", null, null, null, null, null, null, null, null]
+    - ["7.12", "Cable protection", null, null, null, null, null, null, null, null]
+    - ["7.13", "Equipment upkeep", null, null, null, null, null, null, null, null]
+    - ["7.14", "Wiping before disposal", null, null, null, null, null, null, null, null]
+    - ["8.1", "User device protection", null, null, null, null, null, null, null, null]
+    - ["8.2", "Elevated privileges limited", null, null, null, null, null, null, null, null]
+    - ["8.3", "Information access limits", null, null, null, null, null, null, null, null]
+    - ["8.4", "Source code safeguarding", null, null, null, null, null, null, null, null]
+    - ["8.5", "Strong authentication methods", null, null, null, null, null, null, null, null]
+    - ["8.6", "Capacity forecasting", null, null, null, null, null, null, null, null]
+    - ["8.7", "Malicious code defence", null, null, null, null, null, null, null, null]
+    - ["8.8", "Vulnerability handling", null, null, null, null, null, null, null, null]
+    - ["8.9", "Hardened configuration baselines", null, null, null, null, null, null, null, null]
+    - ["8.10", "Deleting unneeded information", null, null, null, null, null, null, null, null]
+    - ["8.11", "Masking sensitive values", null, null, null, null, null, null, null, null]
+    - ["8.12", "Stopping data exfiltration", null, null, null, null, null, null, null, null]
+    - ["8.13", "Backup copies and tests", null, null, null, null, null, null, null, null]
+    - ["8.14", "Resilience through redundancy", null, null, null, null, null, null, null, null]
+    - ["8.15", "Event log capture", null, null, null, null, null, null, null, null]
+    - ["8.16", "Anomaly monitoring", null, null, null, null, null, null, null, null]
+    - ["8.17", "Synchronised clocks", null, null, null, null, null, null, null, null]
+    - ["8.18", "Powerful utilities controlled", null, null, null, null, null, null, null, null]
+    - ["8.19", "Controlled software installs", null, null, null, null, null, null, null, null]
+    - ["8.20", "Network protection", null, null, null, null, null, null, null, null]
+    - ["8.21", "Network service assurance", null, null, null, null, null, null, null, null]
+    - ["8.22", "Network segmentation", null, null, null, null, null, null, null, null]
+    - ["8.23", "Filtering web destinations", null, null, null, null, null, null, null, null]
+    - ["8.24", "Cryptography and keys", null, null, null, null, null, null, null, null]
+    - ["8.25", "Security across development", null, null, null, null, null, null, null, null]
+    - ["8.26", "Security needs of applications", null, null, null, null, null, null, null, null]
+    - ["8.27", "Secure design principles", null, null, null, null, null, null, null, null]
+    - ["8.28", "Safe coding rules", null, null, null, null, null, null, null, null]
+    - ["8.29", "Security testing before release", null, null, null, null, null, null, null, null]
+    - ["8.30", "Overseeing external developers", null, null, null, null, null, null, null, null]
+    - ["8.31", "Environment separation", null, null, null, null, null, null, null, null]
+    - ["8.32", "Controlled changes", null, null, null, null, null, null, null, null]
+    - ["8.33", "Test data protection", null, null, null, null, null, null, null, null]
+    - ["8.34", "Audit test safeguards", null, null, null, null, null, null, null, null]
+
+- id: ISMS-REG-03
+  key: isms-reg-03-interested-parties-and-requirements
+  title: Interested parties and requirements register
+  framework: iso27001
+  maps:
+    - ISO/IEC 27001:2022 clause 4.2
+    - ISO/IEC 27001:2022 clause 4.1
+    - ISO/IEC 27701 clause 5.2.2
+  purpose: One row per requirement of each party with an interest in the organisation's security and privacy performance, stating the requirement in plain words, its type and source, whether it is met through the management system, how, and who owns it. Produced and reviewed under the context procedure and used to set the scope, the risks and the objectives.
+  columns:
+    - {name: Party ID, width: 10, help: Sequential reference, for example P-01.}
+    - {name: Interested party, width: 26, help: The party or category, for example enterprise customers, supervisory authority, staff.}
+    - {name: Internal or external, width: 12, values: [Internal, External]}
+    - {name: Relationship, width: 28, help: Why this party cares about the organisation's security or privacy performance.}
+    - {name: Requirement, width: 44, help: One requirement per row, in plain words.}
+    - {name: Requirement type, width: 18, values: [Legal, Contractual, Voluntary commitment, Expectation]}
+    - {name: Source, width: 26, help: Law, contract clause, standard, policy or correspondence that states the requirement.}
+    - {name: Addressed through ISMS, width: 12, values: [Yes, No]}
+    - {name: How addressed, width: 32, help: Kit document IDs, controls or the function that handles it outside the ISMS.}
+    - {name: Owner, width: 22, help: Role accountable for meeting the requirement.}
+    - {name: Priority, width: 10, values: [High, Medium, Low]}
+    - {name: Status, width: 14, values: [Current, Under review, Superseded]}
+    - {name: Last reviewed, width: 14, date: true}
+    - {name: Notes, width: 30}
+
+- id: ISMS-REG-05
+  key: isms-reg-05-implementation-project-plan
+  title: Implementation project plan
+  framework: iso27001
+  maps:
+    - ISO/IEC 27001:2022 clause 5.1
+    - ISO/IEC 27001:2022 clause 6.2
+    - ISO/IEC 27001:2022 clause 8.1
+  purpose: The task list for implementing the management system, organised by the twelve steps of the implementation playbook with the kit deliverable, owner role and planned weeks for each task. Prefilled with a typical 26 week plan for an organisation of up to about one hundred people; adjust the weeks and owners before use and add rows for the gaps found in the gap analysis.
+  columns:
+    - {name: Step, width: 30, help: One of the twelve steps in PB-02.}
+    - {name: Task, width: 52}
+    - {name: Deliverable, width: 30, help: Kit document or register IDs produced or updated by the task.}
+    - {name: Owner role, width: 26}
+    - {name: Planned start week, width: 12, range: [1, 104]}
+    - {name: Planned end week, width: 12, range: [1, 104]}
+    - {name: Duration (weeks), width: 12, formula: "=IF(OR(E{r}=\"\",F{r}=\"\"),\"\",F{r}-E{r}+1)"}
+    - {name: Status, width: 14, values: [Not started, In progress, Done, Blocked, Not applicable]}
+    - {name: Actual end week, width: 12, range: [1, 104]}
+    - {name: Notes, width: 32}
+  rows:
+    - ["1. Management support and charter", "Write the one page business case with costs, savings and the earliest realistic date", "GOV-STM-01", "Information Security Manager", 1, 1, null, null, null, null]
+    - ["1. Management support and charter", "Appoint the Information Security Manager and agree the share of their time for the programme", "GOV-POL-01", "Chief Executive Officer", 1, 1, null, null, null, null]
+    - ["1. Management support and charter", "Form the steering committee with charter, quorum and monthly cadence", "GOV-POL-01", "Chief Executive Officer", 1, 2, null, null, null, null]
+    - ["1. Management support and charter", "Sign the top management commitment statement", "GOV-STM-01", "Chief Executive Officer", 2, 2, null, null, null, null]
+    - ["1. Management support and charter", "Hold the first steering committee meeting and minute the target date and budget", "GOV-TPL-03", "Information Security Manager", 2, 2, null, null, null, null]
+    - ["2. Scope and context", "Circulate the context preparation pack to workshop participants", "ISMS-PRO-01", "Information Security Manager", 2, 2, null, null, null, null]
+    - ["2. Scope and context", "Hold the context workshop covering internal and external issues", "ISMS-PRO-01", "Information Security Manager", 3, 3, null, null, null, null]
+    - ["2. Scope and context", "Populate the interested parties and requirements register", "ISMS-REG-03", "Information Security Manager", 3, 4, null, null, null, null]
+    - ["2. Scope and context", "Draft the scope statement with the shared responsibility split and justified exclusions", "ISMS-STM-01", "Information Security Manager", 3, 4, null, null, null, null]
+    - ["2. Scope and context", "Approve the scope statement at the steering committee", "ISMS-STM-01", "Chief Executive Officer", 4, 4, null, null, null, null]
+    - ["3. Gap analysis", "Complete the readiness questionnaire with the owner of each domain", "GOV-REG-28", "Information Security Manager", 4, 5, null, null, null, null]
+    - ["3. Gap analysis", "Walk the Annex A tables control by control and record the state of each", "ISMS-GDE-01", "Information Security Manager", 5, 6, null, null, null, null]
+    - ["3. Gap analysis", "Load every gap into this plan as a task with owner and planned weeks", "ISMS-REG-05", "Information Security Manager", 6, 6, null, null, null, null]
+    - ["3. Gap analysis", "Report the gap summary and the three largest visible risks to the steering committee", "GOV-TPL-03", "Information Security Manager", 6, 6, null, null, null, null]
+    - ["4. Policy and governance", "Issue the document control procedure and create the master list with every planned item as Draft", "GOV-PRO-01; GOV-REG-01", "Information Security Manager", 5, 6, null, null, null, null]
+    - ["4. Policy and governance", "Adapt and approve the information security policy", "GOV-POL-03", "Chief Executive Officer", 6, 8, null, null, null, null]
+    - ["4. Policy and governance", "Approve the governance framework with roles table and decision rights", "GOV-POL-01", "Chief Executive Officer", 6, 8, null, null, null, null]
+    - ["4. Policy and governance", "Issue the topic policies: acceptable use, clear desk, remote working, authentication", "GOV-POL-02; GOV-POL-04; GOV-POL-05; GOV-POL-06", "Information Security Manager", 7, 9, null, null, null, null]
+    - ["4. Policy and governance", "Issue the internal audit, management review, corrective action and exception procedures", "GOV-PRO-02; GOV-PRO-03; GOV-PRO-04; GOV-PRO-24", "Information Security Manager", 7, 9, null, null, null, null]
+    - ["4. Policy and governance", "Issue the communication plan and start collecting policy acknowledgements", "ISMS-PLN-02; GOV-REG-23", "Information Security Manager", 8, 9, null, null, null, null]
+    - ["5. Competence and awareness", "Complete the competence matrix and assess the people in security roles against it", "ISMS-PRO-02", "Information Security Manager", 7, 8, null, null, null, null]
+    - ["5. Competence and awareness", "Set up the training register and plan the gap closing actions with due dates", "GOV-REG-09", "Head of People", 8, 10, null, null, null, null]
+    - ["5. Competence and awareness", "Name the internal auditor and arrange training, or engage an external auditor", "ISMS-PRO-02", "Information Security Manager", 7, 8, null, null, null, null]
+    - ["5. Competence and awareness", "Deliver the all staff awareness session and record attendance and acknowledgements", "GOV-PRO-08; GOV-TPL-10", "Information Security Manager", 9, 10, null, null, null, null]
+    - ["6. Assets", "Export the identity, device management, cloud account and finance asset lists", "GOV-PRO-16", "Head of Engineering", 7, 7, null, null, null, null]
+    - ["6. Assets", "Build the information asset register with an owner and a classification for every asset", "GOV-REG-10", "Information Security Manager", 7, 9, null, null, null, null]
+    - ["6. Assets", "Build the software and hardware inventory with patch cycle and end of support dates", "GOV-REG-24", "Head of Engineering", 8, 9, null, null, null, null]
+    - ["6. Assets", "Build the supplier register with a provisional tier for every supplier", "GOV-REG-07", "Head of Operations", 8, 10, null, null, null, null]
+    - ["6. Assets", "Build the data flow and interface inventory for flows across the scope boundary", "GOV-REG-25", "Head of Engineering", 9, 10, null, null, null, null]
+    - ["7. Risk method", "Adapt the risk methodology (scales, bands, acceptance authority, triggers) and approve it at the steering committee", "GOV-PRO-05", "Information Security Manager", 9, 10, null, null, null, null]
+    - ["7. Risk method", "Set up the risk register and the risk acceptance register", "GOV-REG-05; GOV-REG-06", "Information Security Manager", 10, 10, null, null, null, null]
+    - ["7. Risk method", "Brief the risk owners on the scenario method before the workshops", "GOV-PRO-05", "Information Security Manager", 10, 10, null, null, null, null]
+    - ["8. Risk assessment", "Run the product and infrastructure risk workshop", "GOV-REG-05", "Head of Engineering", 11, 11, null, null, null, null]
+    - ["8. Risk assessment", "Run the people, access and corporate systems risk workshop", "GOV-REG-05", "Head of People", 11, 12, null, null, null, null]
+    - ["8. Risk assessment", "Run the suppliers, cloud, offices and devices risk workshop", "GOV-REG-05", "Head of Operations", 12, 12, null, null, null, null]
+    - ["8. Risk assessment", "Risk owners confirm their rows with raw scores and treatment options", "GOV-REG-05", "Risk owner", 12, 13, null, null, null, null]
+    - ["8. Risk assessment", "Present the heat map and the risks above appetite to the steering committee", "GOV-TPL-03", "Information Security Manager", 13, 13, null, null, null, null]
+    - ["9. Treatment and Statement of Applicability", "Define treatment actions with owner and due date for every risk above appetite", "GOV-REG-05", "Risk owner", 13, 14, null, null, null, null]
+    - ["9. Treatment and Statement of Applicability", "Complete the Statement of Applicability for all 93 controls and approve version 1.0", "ISMS-REG-01", "Information Security Manager", 14, 16, null, null, null, null]
+    - ["9. Treatment and Statement of Applicability", "Load treatment actions and Planned or Partial controls into the control tracker as tasks", "ISMS-REG-02", "Information Security Manager", 15, 15, null, null, null, null]
+    - ["9. Treatment and Statement of Applicability", "Issue the operational procedures that the applicable controls need", "GOV-PRO-06 to GOV-PRO-27 as applicable", "Information Security Manager", 14, 16, null, null, null, null]
+    - ["9. Treatment and Statement of Applicability", "Issue the operational planning and control procedure with the process inventory", "ISMS-PRO-03", "Information Security Manager", 15, 16, null, null, null, null]
+    - ["9. Treatment and Statement of Applicability", "Set the objectives and the measurement set and approve them at the steering committee", "ISMS-PLN-01; ISMS-PRO-04; GOV-REG-21", "Information Security Manager", 15, 16, null, null, null, null]
+    - ["10. Operate and measure", "Implement treatment actions and attach operating evidence to each control", "ISMS-REG-02", "Control owner", 14, 24, null, null, null, null]
+    - ["10. Operate and measure", "Select and book the certification body for stage 1 and stage 2", "ISMS-GDE-03", "Information Security Manager", 14, 16, null, null, null, null]
+    - ["10. Operate and measure", "Perform the first access review on every in-scope system and record it", "GOV-REG-12", "System Owner", 17, 18, null, null, null, null]
+    - ["10. Operate and measure", "Run a vulnerability cycle with closures inside the severity windows", "GOV-REG-14", "Head of Engineering", 15, 22, null, null, null, null]
+    - ["10. Operate and measure", "Route every production change through change management and keep the log", "GOV-REG-11", "Head of Engineering", 14, 26, null, null, null, null]
+    - ["10. Operate and measure", "Perform and record a restore test for each critical system", "GOV-REG-15", "Head of Engineering", 18, 20, null, null, null, null]
+    - ["10. Operate and measure", "Review every Tier 1 supplier and record the result and next review date", "GOV-REG-07", "Head of Operations", 17, 21, null, null, null, null]
+    - ["10. Operate and measure", "Run an incident exercise and record the lessons and actions", "GOV-REG-16; GOV-REG-08", "Incident Lead", 19, 20, null, null, null, null]
+    - ["10. Operate and measure", "Hold the monthly operations review and file the notes", "ISMS-PRO-03", "Information Security Manager", 15, 26, null, null, null, null]
+    - ["10. Operate and measure", "Produce the first quarterly performance report and present it to the steering committee", "ISMS-PRO-04", "Information Security Manager", 21, 22, null, null, null, null]
+    - ["10. Operate and measure", "Organise the evidence folders by numbered area with the naming convention", "PB-09", "Information Security Manager", 16, 24, null, null, null, null]
+    - ["11. Internal audit and management review", "Issue the annual internal audit plan covering every clause and applicable control", "ISMS-PLN-03", "Internal Auditor", 20, 21, null, null, null, null]
+    - ["11. Internal audit and management review", "Perform the full system internal audit using the checklist and issue the report", "ISMS-REG-04; GOV-TPL-01", "Internal Auditor", 21, 22, null, null, null, null]
+    - ["11. Internal audit and management review", "Raise a corrective action for every finding and close or plan each one", "GOV-REG-03; GOV-TPL-02", "Information Security Manager", 22, 24, null, null, null, null]
+    - ["11. Internal audit and management review", "Hold the management review with every mandatory input and minute the decisions", "GOV-TPL-03; GOV-REG-22", "Chief Executive Officer", 23, 24, null, null, null, null]
+    - ["11. Internal audit and management review", "Run the pre-audit readiness checklist and fix what it shows", "GOV-CHK-03", "Information Security Manager", 23, 24, null, null, null, null]
+    - ["12. Certification", "Stage 1 audit: present the documented system and receive the concerns list", "ISMS-GDE-03", "Information Security Manager", 25, 26, null, null, null, null]
+    - ["12. Certification", "Address every stage 1 concern and confirm closure to the certification body", "GOV-REG-03", "Information Security Manager", 26, 28, null, null, null, null]
+    - ["12. Certification", "Stage 2 audit: make people and records available and log findings as they are raised", "GOV-REG-03", "Information Security Manager", 30, 31, null, null, null, null]
+    - ["12. Certification", "Submit corrective action plans for stage 2 findings and obtain the certificate", "GOV-REG-03", "Information Security Manager", 32, 36, null, null, null, null]
+    - ["12. Certification", "Update external communications with the certified scope wording and set the surveillance calendar", "ISMS-PLN-02; ISMS-STM-01", "Information Security Manager", 36, 37, null, null, null, null]

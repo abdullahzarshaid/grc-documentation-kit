@@ -1,0 +1,182 @@
+- id: GDPR-REG-01
+  key: gdpr-reg-01-gap-assessment
+  title: GDPR gap assessment
+  framework: gdpr
+  maps:
+    - GDPR Article 5
+    - GDPR Article 24
+  purpose: One row per operational GDPR obligation, grouped by chapter and article, with the requirement stated in plain words so that a small team can judge whether it is met. Run it to find the gaps, record the status and evidence, and turn each gap into an action in GDPR-REG-01 and the corrective action log.
+  columns:
+    - {name: Chapter, width: 26, fixed: true}
+    - {name: Article, width: 12, fixed: true, help: GDPR article. Read the regulation for the authoritative text.}
+    - {name: Requirement, width: 56, fixed: true, help: The obligation in plain words.}
+    - {name: Applies, width: 12, values: [Yes, No]}
+    - {name: Status, width: 16, values: [Compliant, Partial, Gap, Not assessed]}
+    - {name: Evidence, width: 26, help: Document, register row or artefact that shows it is met.}
+    - {name: Owner (role), width: 20}
+    - {name: Action, width: 30, help: What will close the gap.}
+    - {name: Due, width: 14, date: true}
+  rows:
+    - ["Principles", "Art 5(1)(a)", "Personal data is processed lawfully, fairly and transparently to the people it concerns.", null, null, null, null, null]
+    - ["Principles", "Art 5(1)(b)", "Data is collected for specified, explicit purposes and not used in ways incompatible with them.", null, null, null, null, null]
+    - ["Principles", "Art 5(1)(c)", "Only the data needed for the purpose is collected and kept.", null, null, null, null, null]
+    - ["Principles", "Art 5(1)(d)", "Data is kept accurate and corrected or erased when it is wrong.", null, null, null, null, null]
+    - ["Principles", "Art 5(1)(e)", "Data is kept no longer than needed, with a retention schedule.", null, null, null, null, null]
+    - ["Principles", "Art 5(1)(f)", "Data is protected by appropriate security against loss and unauthorised access.", null, null, null, null, null]
+    - ["Principles", "Art 5(2)", "The organisation can demonstrate compliance with these principles.", null, null, null, null, null]
+    - ["Lawfulness", "Art 6", "Every processing activity has a recorded lawful basis.", null, null, null, null, null]
+    - ["Lawfulness", "Art 7", "Where consent is the basis, it is freely given, recorded and as easy to withdraw as to give.", null, null, null, null, null]
+    - ["Lawfulness", "Art 8", "Where services are offered to children, parental consent and age checks are handled.", null, null, null, null, null]
+    - ["Lawfulness", "Art 9", "Special category data is processed only under a recorded Article 9 condition.", null, null, null, null, null]
+    - ["Lawfulness", "Art 10", "Criminal offence data is processed only where law allows and under official authority.", null, null, null, null, null]
+    - ["Rights", "Art 12", "Requests from individuals are handled within one month, free of charge, in plain language.", null, null, null, null, null]
+    - ["Rights", "Art 13", "People are told how their data is used at the point it is collected from them.", null, null, null, null, null]
+    - ["Rights", "Art 14", "People are told how their data is used when it is obtained from another source.", null, null, null, null, null]
+    - ["Rights", "Art 15", "People can obtain a copy of their data and information about its processing.", null, null, null, null, null]
+    - ["Rights", "Art 16", "People can have inaccurate data corrected and incomplete data completed.", null, null, null, null, null]
+    - ["Rights", "Art 17", "People can have data erased where a ground applies and no exemption prevents it.", null, null, null, null, null]
+    - ["Rights", "Art 18", "People can have processing restricted while a dispute is resolved.", null, null, null, null, null]
+    - ["Rights", "Art 19", "Corrections, erasures and restrictions are passed on to recipients of the data.", null, null, null, null, null]
+    - ["Rights", "Art 20", "People can receive their data in a portable format and have it sent to another controller.", null, null, null, null, null]
+    - ["Rights", "Art 21", "People can object to processing based on legitimate interests or direct marketing.", null, null, null, null, null]
+    - ["Rights", "Art 22", "Solely automated decisions with legal or similar effect are governed, with human review available.", null, null, null, null, null]
+    - ["Controller duties", "Art 24", "The organisation implements and reviews measures that put the principles into practice.", null, null, null, null, null]
+    - ["Controller duties", "Art 25", "Privacy is built into new systems by design, and defaults are the most protective.", null, null, null, null, null]
+    - ["Controller duties", "Art 26", "Joint controller arrangements set out who is responsible for what, in writing.", null, null, null, null, null]
+    - ["Controller duties", "Art 27", "A representative is appointed where required for organisations outside the region.", null, null, null, null, null]
+    - ["Processors", "Art 28", "Processors are engaged only under a written contract with the required terms.", null, null, null, null, null]
+    - ["Processors", "Art 28(2)", "Sub-processors are used only with authorisation and under equivalent terms.", null, null, null, null, null]
+    - ["Processors", "Art 29", "People acting under the controller process personal data only on instructions.", null, null, null, null, null]
+    - ["Records", "Art 30", "A record of processing activities is kept and maintained.", null, null, null, null, null]
+    - ["Cooperation", "Art 31", "The organisation cooperates with the supervisory authority on request.", null, null, null, null, null]
+    - ["Security", "Art 32", "Security of processing is appropriate to the risk, tested and reviewed.", null, null, null, null, null]
+    - ["Breach", "Art 33", "Notifiable breaches are reported to the authority within seventy-two hours of awareness.", null, null, null, null, null]
+    - ["Breach", "Art 33(5)", "All breaches are documented, whether or not they were notified.", null, null, null, null, null]
+    - ["Breach", "Art 34", "High-risk breaches are communicated to the affected individuals without undue delay.", null, null, null, null, null]
+    - ["Assessments", "Art 35", "A data protection impact assessment is carried out for high-risk processing.", null, null, null, null, null]
+    - ["Assessments", "Art 36", "The authority is consulted where an assessment shows high residual risk.", null, null, null, null, null]
+    - ["Governance", "Art 37", "A data protection officer is appointed where the criteria are met.", null, null, null, null, null]
+    - ["Governance", "Art 38", "The data protection officer is resourced, independent and involved in good time.", null, null, null, null, null]
+    - ["Governance", "Art 39", "The data protection officer's tasks are defined and carried out.", null, null, null, null, null]
+    - ["Codes", "Art 40", "Any adopted code of conduct is followed and monitored.", null, null, null, null, null]
+    - ["Codes", "Art 42", "Any certification held is maintained within its scope.", null, null, null, null, null]
+    - ["Transfers", "Art 44", "Transfers outside the region happen only under a lawful transfer mechanism.", null, null, null, null, null]
+    - ["Transfers", "Art 45", "Transfers to adequate countries are identified and recorded.", null, null, null, null, null]
+    - ["Transfers", "Art 46", "Transfers without adequacy use appropriate safeguards such as standard contractual clauses.", null, null, null, null, null]
+    - ["Transfers", "Art 46", "A transfer impact assessment supports each safeguarded transfer.", null, null, null, null, null]
+    - ["Transfers", "Art 47", "Any binding corporate rules in use are approved and followed.", null, null, null, null, null]
+    - ["Transfers", "Art 49", "Any reliance on a derogation is occasional, necessary and recorded.", null, null, null, null, null]
+    - ["Notices", "Art 13-14", "Privacy notices are current, complete and written in clear language.", null, null, null, null, null]
+    - ["Notices", "Art 7", "Consent notices and cookie banners record and respect the choices made.", null, null, null, null, null]
+    - ["People", "Art 39", "Staff who handle personal data are trained and know how to report a breach.", null, null, null, null, null]
+    - ["People", "Art 29", "Confidentiality obligations bind everyone who handles personal data.", null, null, null, null, null]
+    - ["Vendors", "Art 28", "A processor and sub-processor register is kept and reviewed.", null, null, null, null, null]
+    - ["Vendors", "Art 28(3)(h)", "Processors are subject to audit or evidence of their controls.", null, null, null, null, null]
+    - ["Retention", "Art 5(1)(e)", "Each data category has a retention period that is applied and checked.", null, null, null, null, null]
+    - ["Retention", "Art 17", "Data is deleted across primary storage, backups and logs when retention ends.", null, null, null, null, null]
+    - ["Minimisation", "Art 25(2)", "Access to personal data is limited to those who need it for their role.", null, null, null, null, null]
+    - ["Accuracy", "Art 16", "There is a route for individuals and staff to correct inaccurate data.", null, null, null, null, null]
+    - ["Lawfulness", "Art 6(1)(f)", "Legitimate interests used as a basis are supported by a balancing assessment.", null, null, null, null, null]
+    - ["Marketing", "Art 21(2)", "Direct marketing offers an easy, honoured opt-out at every contact.", null, null, null, null, null]
+    - ["Children", "Art 8", "Where children's data is processed, information is written for them to understand.", null, null, null, null, null]
+    - ["Special category", "Art 9(2)", "The specific Article 9 condition for each special category activity is recorded.", null, null, null, null, null]
+    - ["Design", "Art 25", "New features and suppliers pass a privacy review before they go live.", null, null, null, null, null]
+    - ["Security", "Art 32(1)(a)", "Personal data is encrypted or pseudonymised where appropriate.", null, null, null, null, null]
+    - ["Security", "Art 32(1)(c)", "Personal data can be restored in good time after an incident.", null, null, null, null, null]
+    - ["Security", "Art 32(1)(d)", "Security measures are tested and their effectiveness reviewed.", null, null, null, null, null]
+    - ["Breach", "Art 33(3)", "The breach notification captures the required facts, numbers and measures.", null, null, null, null, null]
+    - ["Rights", "Art 12(3)", "A process tracks the one-month deadline and any extension with a reason.", null, null, null, null, null]
+    - ["Rights", "Art 15(3)", "Copies provided to individuals do not disclose other people's data.", null, null, null, null, null]
+    - ["Rights", "Art 11", "Where the organisation cannot identify a person, it is not forced to collect more data.", null, null, null, null, null]
+    - ["Records", "Art 30(1)", "The record of processing covers purposes, categories, recipients, transfers and retention.", null, null, null, null, null]
+    - ["Transfers", "Art 44", "Onward transfers by processors are known and governed.", null, null, null, null, null]
+    - ["Governance", "Art 24(2)", "Data protection policies are proportionate, approved and reviewed.", null, null, null, null, null]
+    - ["Cooperation", "Art 30(4)", "The record of processing can be made available to the authority on request.", null, null, null, null, null]
+    - ["People", "Art 32(4)", "Access to personal data by staff is on instructions and under authorisation.", null, null, null, null, null]
+    - ["Assessments", "Art 35(7)", "Each impact assessment describes the processing, necessity, risks and measures.", null, null, null, null, null]
+    - ["Marketing", "Art 7(3)", "Consent records show how and when consent was given and can prove it.", null, null, null, null, null]
+    - ["Design", "Art 25(1)", "The amount of data, extent of processing and accessibility are minimised by default.", null, null, null, null, null]
+    - ["Breach", "Art 34(1)", "A decision process judges when individuals must be told about a breach.", null, null, null, null, null]
+
+- id: GDPR-REG-02
+  key: gdpr-reg-02-data-flow-and-transfer-map
+  title: Data flow and transfer map
+  framework: gdpr
+  maps:
+    - GDPR Article 30
+  purpose: One row per flow of personal data between systems, functions or organisations. The operational companion to the record of processing, showing where personal data moves, how it is protected in transit and which crossings leave the region.
+  columns:
+    - {name: Flow ID, width: 12}
+    - {name: Data items, width: 26}
+    - {name: From, width: 22}
+    - {name: To, width: 22}
+    - {name: Internal or external, width: 16, values: [Internal, External]}
+    - {name: Country, width: 16}
+    - {name: Transfer method, width: 20}
+    - {name: Safeguard, width: 22, help: PIMS-REG-05 mechanism where the flow leaves the region.}
+    - {name: Controls, width: 24}
+    - {name: Owner (role), width: 18}
+    - {name: Status, width: 14, values: [Active, Under review, Ended]}
+    - {name: Notes, width: 26}
+
+- id: GDPR-REG-03
+  key: gdpr-reg-03-legitimate-interests-assessment-register
+  title: Legitimate interests assessment register
+  framework: gdpr
+  maps:
+    - GDPR Article 6
+  purpose: One row per processing activity that relies on legitimate interests, recording the three-part balancing test behind it. The index to the assessments held as GDPR-TPL-07, kept because legitimate interests must be justified, not assumed.
+  columns:
+    - {name: Assessment ID, width: 12}
+    - {name: Processing, width: 26, help: PIMS-REG-01 activity.}
+    - {name: Interest pursued, width: 28}
+    - {name: Necessity, width: 26, help: Why the processing is needed to pursue the interest.}
+    - {name: Balancing outcome, width: 20, values: [Interest prevails, Interest prevails with measures, Interest does not prevail]}
+    - {name: Measures, width: 24, help: Safeguards that tip the balance, such as opt-out or minimisation.}
+    - {name: Owner (role), width: 18}
+    - {name: Review date, width: 14, date: true}
+    - {name: Status, width: 14, values: [Draft, Approved, Superseded]}
+    - {name: Notes, width: 26}
+
+- id: GDPR-REG-04
+  key: gdpr-reg-04-cookie-and-tracker-inventory
+  title: Cookie and tracker inventory
+  framework: gdpr
+  maps:
+    - GDPR Article 6
+    - GDPR Article 7
+  purpose: One row per cookie and tracking technology used on the organisation's sites and apps, recording its purpose, whether it needs consent and how long it lasts. The source for the cookie notice and for honouring consent choices.
+  columns:
+    - {name: Cookie ID, width: 12}
+    - {name: Name, width: 22}
+    - {name: Provider, width: 20}
+    - {name: Category, width: 18, values: [Strictly necessary, Functional, Analytics, Marketing]}
+    - {name: Purpose, width: 28}
+    - {name: Consent required, width: 14, values: [Yes, No]}
+    - {name: Duration, width: 16}
+    - {name: Personal data, width: 12, values: [Yes, No]}
+    - {name: Owner (role), width: 18}
+    - {name: Last review, width: 14, date: true}
+    - {name: Status, width: 14, values: [Active, Removed]}
+    - {name: Notes, width: 26}
+
+- id: GDPR-REG-05
+  key: gdpr-reg-05-privacy-training-register
+  title: Privacy training register
+  framework: gdpr
+  maps:
+    - GDPR Article 39
+  purpose: One row per person per privacy training, recording what was delivered, when and the result. Proof that staff who handle personal data know their obligations, and the companion to the security awareness register.
+  columns:
+    - {name: Record ID, width: 12}
+    - {name: Person, width: 22}
+    - {name: Role, width: 20}
+    - {name: Training, width: 24}
+    - {name: Type, width: 16, values: [Induction, Annual, Role-based]}
+    - {name: Assigned, width: 14, date: true}
+    - {name: Due, width: 14, date: true}
+    - {name: Completed, width: 14, date: true}
+    - {name: Result, width: 14, help: Pass, fail or score.}
+    - {name: Owner (role), width: 18}
+    - {name: Status, width: 14, values: [Assigned, Completed, Overdue]}
+    - {name: Notes, width: 26}

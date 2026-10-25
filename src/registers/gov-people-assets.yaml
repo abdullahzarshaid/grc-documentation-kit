@@ -1,0 +1,211 @@
+- id: GOV-REG-09
+  key: gov-reg-09-training-and-awareness-register
+  title: Training and awareness register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 clause 7.2
+    - ISO/IEC 27001:2022 Annex A 6.3
+    - SOC 2 CC1.4
+  purpose: One row per person per training item, covering induction, annual refreshers, role-based modules, phishing simulations and exercises, with due and completion dates and the result. Maintained under GOV-PRO-08 so that completion rates and overdue training can be reported by module and role group.
+  columns:
+    - {name: Record ID, width: 12}
+    - {name: Person, width: 24, help: "Name or staff identifier."}
+    - {name: Role group, width: 20, values: [All staff, Developer, System administrator, Personal data handler, Manager, Incident responder, Other]}
+    - {name: Module, width: 30, help: "The module name from the annual training plan."}
+    - {name: Training type, width: 18, values: [Induction, Annual refresher, Role-based, Phishing simulation, Awareness message, Exercise]}
+    - {name: Delivery method, width: 16, values: [Online module, Live session, Self-study, Exercise]}
+    - {name: Assigned date, width: 14, date: true}
+    - {name: Due date, width: 14, date: true}
+    - {name: Completed date, width: 14, date: true}
+    - {name: Result, width: 14, values: [Pass, Fail, Attended, Reported, Clicked, Not completed]}
+    - {name: Score (per cent), width: 12, number_format: "0"}
+    - {name: Session record reference, width: 22, help: "The GOV-TPL-10 reference or the platform report name."}
+    - {name: Trainer, width: 18}
+    - {name: Status, width: 14, values: [Assigned, In progress, Completed, Overdue, Exempt]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-10
+  key: gov-reg-10-information-asset-register
+  title: Information asset register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.9
+    - ISO/IEC 27001:2022 Annex A 5.12
+    - SOC 2 CC6.1
+  purpose: One row per information asset with its owner, custodian, location, classification and the confidentiality, integrity and availability ratings from which the asset value is calculated. Maintained under GOV-PRO-16 and used as the asset list for the risk assessment in GOV-REG-05.
+  columns:
+    - {name: Asset ID, width: 12}
+    - {name: Asset name, width: 30}
+    - {name: Asset type, width: 16, values: [Data set, Database, Application, Document set, Service, Repository, Backup, Media, Other]}
+    - {name: Owner (role), width: 22}
+    - {name: Custodian, width: 22}
+    - {name: Location or system, width: 28}
+    - {name: Classification, width: 14, values: [Public, Internal, Confidential, Restricted]}
+    - {name: Personal data, width: 12, values: [Yes, No]}
+    - {name: Confidentiality (1 to 3), width: 12, range: [1, 3]}
+    - {name: Integrity (1 to 3), width: 12, range: [1, 3]}
+    - {name: Availability (1 to 3), width: 12, range: [1, 3]}
+    - {name: Asset value, width: 12, formula: "=IF(COUNT(I{r}:K{r})=0,\"\",MAX(I{r}:K{r}))", number_format: "0", help: "The highest of the three ratings. Calculated."}
+    - {name: Linked risks, width: 20, help: "Risk IDs from GOV-REG-05."}
+    - {name: Last review, width: 14, date: true}
+    - {name: Next review, width: 14, date: true}
+    - {name: Status, width: 14, values: [Active, Under review, Retired]}
+
+- id: GOV-REG-12
+  key: gov-reg-12-access-review-log
+  title: Access review log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.18
+    - SOC 2 CC6.2
+    - SOC 2 CC6.3
+  purpose: One row per access review of a system, including privileged account reviews and physical badge reviews, with the counts of accounts reviewed, removed and changed and the location of the export used as evidence. Maintained under GOV-PRO-10 so that every system can be shown to have been reviewed on its cycle.
+  columns:
+    - {name: Review ID, width: 12}
+    - {name: System, width: 28}
+    - {name: Review period, width: 16, help: "For example the quarter or year covered."}
+    - {name: Review type, width: 16, values: [Quarterly, Annual, Privileged accounts, Physical access, Ad hoc]}
+    - {name: Reviewer (role), width: 22}
+    - {name: Accounts reviewed, width: 12, number_format: "0"}
+    - {name: Accounts removed, width: 12, number_format: "0"}
+    - {name: Accounts changed, width: 12, number_format: "0"}
+    - {name: Privileged accounts reviewed, width: 12, number_format: "0"}
+    - {name: Evidence reference, width: 30, help: "Where the account export taken on the review date is stored."}
+    - {name: Export date, width: 14, date: true}
+    - {name: Completed date, width: 14, date: true}
+    - {name: Changes applied date, width: 14, date: true}
+    - {name: Status, width: 16, values: [Planned, In progress, Changes pending, Completed, Overdue]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-13
+  key: gov-reg-13-privileged-account-register
+  title: Privileged account register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 8.2
+    - ISO/IEC 27001:2022 Annex A 5.16
+    - SOC 2 CC6.1
+  purpose: One row per administrative, service, built-in, supplier and break-glass account with its holder or owner, justification, approval, multi-factor status, credential storage and rotation and review dates. Maintained under GOV-PRO-10 and reviewed quarterly.
+  columns:
+    - {name: Account ID, width: 12}
+    - {name: Account name, width: 24}
+    - {name: Account type, width: 16, values: [Personal administrator, Service, Break-glass, Built-in, Supplier]}
+    - {name: System, width: 26}
+    - {name: Holder or owner (role), width: 22}
+    - {name: Privilege level, width: 20, values: [Global administrator, System administrator, Database administrator, Network administrator, Security administrator, Application administrator, Other]}
+    - {name: Justification, width: 30}
+    - {name: Approved by (role), width: 20}
+    - {name: Approval date, width: 14, date: true}
+    - {name: Multi-factor, width: 12, values: [Yes, No, Not supported]}
+    - {name: Credential storage, width: 18, values: [Password vault, Secrets store, Hardware token, Sealed envelope, Other]}
+    - {name: Last rotation, width: 14, date: true}
+    - {name: Last review, width: 14, date: true}
+    - {name: Next review, width: 14, date: true}
+    - {name: Status, width: 16, values: [Active, Suspended, Disabled, Pending removal]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-19
+  key: gov-reg-19-physical-access-and-visitor-log
+  title: Physical access and visitor log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 7.2
+    - ISO/IEC 27001:2022 Annex A 7.6
+    - SOC 2 CC6.4
+  purpose: One row per visitor, contractor, delivery or unbadged person entering [Organisation] premises, with the host, purpose, zone, badge and times in and out. Maintained at reception under GOV-PRO-17 and reviewed monthly by the Information Security Manager.
+  columns:
+    - {name: Entry ID, width: 12}
+    - {name: Date, width: 14, date: true}
+    - {name: Name of person, width: 24}
+    - {name: Organisation, width: 22}
+    - {name: Entry type, width: 16, values: [Visitor, Contractor, Delivery, Interview candidate, Staff without badge, Other]}
+    - {name: Host (role), width: 20}
+    - {name: Purpose, width: 26}
+    - {name: Zone accessed, width: 14, values: [Public, Office, Secure, Service]}
+    - {name: Time in, width: 10}
+    - {name: Time out, width: 10}
+    - {name: Badge number, width: 12}
+    - {name: Identity checked, width: 12, values: [Yes, No, Not required]}
+    - {name: Escorted, width: 10, values: [Yes, No]}
+    - {name: Status, width: 16, values: [On site, Signed out, Badge not returned]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-20
+  key: gov-reg-20-media-and-equipment-disposal-log
+  title: Media and equipment disposal log
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 7.10
+    - ISO/IEC 27001:2022 Annex A 7.14
+    - ISO/IEC 27001:2022 Annex A 8.10
+    - SOC 2 CC6.5
+  purpose: One row per device, storage medium or batch of paper that held Confidential or Restricted information and was wiped, destroyed or returned, with the method, the people involved and the certificate reference. Maintained under GOV-PRO-16 as the proof that information did not leave with the hardware.
+  columns:
+    - {name: Disposal ID, width: 12}
+    - {name: Asset ID, width: 12, help: "The GOV-REG-24 reference where one exists."}
+    - {name: Item description, width: 28}
+    - {name: Media type, width: 18, values: [Laptop, Desktop, Server, Phone or tablet, Hard disk drive, Solid state drive, Removable media, Backup tape, Network device, Paper, Other]}
+    - {name: Highest classification held, width: 16, values: [Public, Internal, Confidential, Restricted]}
+    - {name: Serial number, width: 18}
+    - {name: Method, width: 20, values: [Cryptographic erase, Overwrite, Degauss, Physical destruction, Shredding, Return to supplier, Provider deletion]}
+    - {name: Performed by, width: 20}
+    - {name: Witnessed by, width: 20}
+    - {name: Date, width: 14, date: true}
+    - {name: Certificate reference, width: 22}
+    - {name: Verification, width: 14, values: [Verified, Not verified, Not applicable]}
+    - {name: Status, width: 16, values: [Awaiting disposal, Wiped, Destroyed, Returned, Completed]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-23
+  key: gov-reg-23-policy-acknowledgement-register
+  title: Policy acknowledgement register
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 6.2
+    - ISO/IEC 27001:2022 Annex A 6.6
+    - ISO/IEC 27001:2022 clause 7.3
+    - SOC 2 CC1.1
+  purpose: One row per person per document acknowledged, including policies at induction, re-acknowledgements after changes and yearly, and signed confidentiality agreements. Maintained by Human Resources under GOV-PRO-18 so that a current acknowledgement can be shown for every person with access.
+  columns:
+    - {name: Record ID, width: 12}
+    - {name: Person, width: 24}
+    - {name: Employment type, width: 16, values: [Employee, Contractor, Agency, Temporary, Intern, Supplier personnel]}
+    - {name: Document ID, width: 16, help: "The policy or agreement acknowledged, for example GOV-POL-02."}
+    - {name: Document version, width: 10}
+    - {name: Acknowledgement type, width: 20, values: [Induction, Annual, Policy change, Confidentiality agreement, Remote working, Role-specific]}
+    - {name: Method, width: 16, values: [Signed form, Electronic signature, Learning platform, Email confirmation]}
+    - {name: Due date, width: 14, date: true}
+    - {name: Date acknowledged, width: 14, date: true}
+    - {name: Evidence location, width: 28}
+    - {name: Recorded by (role), width: 20}
+    - {name: Status, width: 14, values: [Pending, Acknowledged, Overdue, Declined, Not required]}
+    - {name: Notes, width: 28}
+
+- id: GOV-REG-24
+  key: gov-reg-24-software-and-hardware-inventory
+  title: Software and hardware inventory
+  framework: cross
+  maps:
+    - ISO/IEC 27001:2022 Annex A 5.9
+    - ISO/IEC 27001:2022 Annex A 8.8
+    - ISO/IEC 27001:2022 Annex A 8.19
+    - SOC 2 CC6.1
+    - SOC 2 CC7.1
+  purpose: One row per device, software product, component and cloud service with its assignment, owner, patch cycle, end-of-support date and encryption status. Maintained by the IT Manager under GOV-PRO-16 and reconciled yearly against device management and discovery exports.
+  columns:
+    - {name: Asset ID, width: 12}
+    - {name: Asset name, width: 26}
+    - {name: Category, width: 18, values: [Laptop, Desktop, Mobile device, Server, Network device, Peripheral, Removable media, Operating system, Application, Library or component, Cloud service, Other]}
+    - {name: Vendor or publisher, width: 20}
+    - {name: Model or version, width: 18}
+    - {name: Serial or licence reference, width: 20}
+    - {name: Assigned to (role or system), width: 22}
+    - {name: Owner (role), width: 20}
+    - {name: Location, width: 18}
+    - {name: Classification of data held, width: 14, values: [Public, Internal, Confidential, Restricted]}
+    - {name: Patch cycle, width: 14, values: [Automatic, Weekly, Monthly, Quarterly, On release, Unsupported]}
+    - {name: End of support date, width: 14, date: true}
+    - {name: Encrypted, width: 10, values: [Yes, No, Not applicable]}
+    - {name: Last verified, width: 14, date: true}
+    - {name: Status, width: 16, values: [In use, In stock, On loan, Awaiting disposal, Disposed, Lost]}
+    - {name: Notes, width: 28}

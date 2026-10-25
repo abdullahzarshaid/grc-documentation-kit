@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GRC Documentation Kit: read every document online</title>
+<meta name="description" content="Every policy, procedure, playbook and register of the open GRC Documentation Kit for ISO/IEC 27001, ISO/IEC 27701, SOC 2, GDPR and AI governance, readable online with search.">
+<style>
+:root{--bg:#0b1220;--card:#121c2e;--ink:#e6edf3;--muted:#acbace;--acc:#59ddbe;--line:#26344a;--nav:300px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:center;padding:10px 18px}
+header b{color:var(--acc);letter-spacing:2px;font-size:12px}header a{color:var(--muted);text-decoration:none;font-size:14px}header a:hover{color:var(--acc)}
+#q{margin-left:auto;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:8px 12px;border-radius:8px;width:min(360px,40vw);font-size:14px}
+.layout{display:grid;grid-template-columns:var(--nav) 1fr;min-height:calc(100vh - 54px)}
+nav{border-right:1px solid var(--line);padding:16px 10px 40px;position:sticky;top:54px;height:calc(100vh - 54px);overflow:auto;font-size:13px}
+nav .g{margin-bottom:14px}nav .g b{display:block;color:var(--acc);font-size:11px;letter-spacing:2px;margin:0 8px 6px;text-transform:uppercase}
+nav a{display:block;color:var(--muted);text-decoration:none;padding:4px 8px;border-radius:6px;line-height:1.35}nav a:hover,nav a.on{background:var(--card);color:var(--ink)}
+main{padding:24px 40px 80px;max-width:980px}
+section h1{font-size:30px;margin:40px 0 4px;color:var(--ink)}p.lead{color:var(--muted);margin:0 0 20px;font-size:17px}
+article{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 28px;margin:0 0 22px}
+article h2{margin:6px 0 4px;font-size:22px}article h3{margin:22px 0 6px;font-size:16px;color:var(--acc)}article h4{margin:16px 0 4px;font-size:15px}
+.meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:12px}.id{color:var(--acc);letter-spacing:1px;font-weight:700}.type{color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.dl{color:var(--ink);border:1px solid var(--line);padding:3px 10px;border-radius:999px;text-decoration:none}.dl:hover{border-color:var(--acc);color:var(--acc)}
+p.sum{color:var(--muted);font-style:italic;margin:4px 0 8px}p.maps{font-size:13px;color:var(--muted)}
+article table{border-collapse:collapse;width:100%;font-size:14px;margin:10px 0}article th,article td{border:1px solid var(--line);padding:6px 9px;vertical-align:top}article th{background:#0f1a2c;color:var(--acc);text-align:left}
+article code{background:#0f1a2c;padding:1px 5px;border-radius:4px;font-size:13px}article pre{background:#0f1a2c;padding:12px;border-radius:10px;overflow:auto}
+article blockquote{border-left:3px solid var(--acc);margin:10px 0;padding:2px 14px;color:var(--muted)}
+.hide{display:none}.hit{outline:2px solid var(--acc)}
+.top{position:fixed;right:18px;bottom:18px;background:var(--acc);color:#07111a;border-radius:999px;padding:8px 14px;text-decoration:none;font-weight:700;font-size:13px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}main{padding:16px}}
+</style></head><body>
+<header><b>GRC DOCUMENTATION KIT</b><a href="index.html">Overview</a><a href="https://github.com/abdullahzarshaid/grc-documentation-kit">Source</a><a href="https://github.com/abdullahzarshaid/grc-documentation-kit/releases/latest">Download all</a><input id="q" type="search" placeholder="Search documents (press /)" aria-label="Search"></header>
+<div class="layout"><nav id="nav"><!--NAV--></nav>
+<main id="main"><p class="lead" style="margin-top:8px"><!--COUNTS-->. Every document is an original template: replace the items in square brackets, remove what does not apply, and have the approver sign before use. A template is not evidence of compliance.</p>
+<!--BODY-->
+</main></div>
+<a class="top" href="#top">Top</a>
+<script>
+const q=document.getElementById('q'),arts=[...document.querySelectorAll('article')],links=[...document.querySelectorAll('nav a')];
+function filter(){const v=q.value.trim().toLowerCase();arts.forEach(a=>{const on=!v||a.textContent.toLowerCase().includes(v);a.classList.toggle('hide',!on)});links.forEach(l=>{const t=document.querySelector(l.getAttribute('href'));l.classList.toggle('hide',!!v&&t&&t.classList.contains('hide'))});document.querySelectorAll('section').forEach(s=>{s.querySelector('h1').classList.toggle('hide',!![...s.querySelectorAll('article')].length&&[...s.querySelectorAll('article')].every(a=>a.classList.contains('hide')))})}
+q.addEventListener('input',filter);document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus()}if(e.key==='Escape'){q.value='';filter();q.blur()}});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-20% 0px -70% 0px'});arts.forEach(a=>io.observe(a));
+</script></body></html>
