@@ -485,6 +485,48 @@
   "framework": "gdpr",
   "file": "src/gdpr/gdpr-tpl-10-breach-notification-form.md"
  },
+ "HIPAA-GDE-01": {
+  "title": "Guide: HIPAA in plain words",
+  "type": "guide",
+  "framework": "hipaa",
+  "file": "src/hipaa/hipaa-gde-01-hipaa-in-plain-words.md"
+ },
+ "HIPAA-GDE-02": {
+  "title": "Guide: the HIPAA Security Rule mapped to the kit",
+  "type": "guide",
+  "framework": "hipaa",
+  "file": "src/hipaa/hipaa-gde-02-security-rule-mapped-to-the-kit.md"
+ },
+ "HIPAA-POL-01": {
+  "title": "HIPAA privacy policy",
+  "type": "policy",
+  "framework": "hipaa",
+  "file": "src/hipaa/hipaa-pol-01-hipaa-privacy-policy.md"
+ },
+ "HIPAA-POL-02": {
+  "title": "HIPAA security policy",
+  "type": "policy",
+  "framework": "hipaa",
+  "file": "src/hipaa/hipaa-pol-02-hipaa-security-policy.md"
+ },
+ "HIPAA-PRO-01": {
+  "title": "Security risk analysis procedure",
+  "type": "procedure",
+  "framework": "hipaa",
+  "file": "src/hipaa/hipaa-pro-01-security-risk-analysis-procedure.md"
+ },
+ "HIPAA-PRO-02": {
+  "title": "HIPAA breach notification procedure",
+  "type": "procedure",
+  "framework": "hipaa",
+  "file": "src/hipaa/hipaa-pro-02-hipaa-breach-notification-procedure.md"
+ },
+ "HIPAA-TPL-01": {
+  "title": "Business associate agreement template",
+  "type": "template",
+  "framework": "hipaa",
+  "file": "src/hipaa/hipaa-tpl-01-business-associate-agreement.md"
+ },
  "ISMS-GDE-01": {
   "title": "Guide: the 93 Annex A controls and where the kit covers each",
   "type": "guide",
@@ -904,6 +946,24 @@
   "type": "register",
   "framework": "cross",
   "file": "kit/cross/gov-reg-25-data-flow-and-interface-inventory.xlsx"
+ },
+ "HIPAA-REG-01": {
+  "title": "HIPAA Security Rule safeguard matrix",
+  "type": "register",
+  "framework": "hipaa",
+  "file": "kit/hipaa/hipaa-reg-01-security-rule-safeguard-matrix.xlsx"
+ },
+ "HIPAA-REG-02": {
+  "title": "Business associate register",
+  "type": "register",
+  "framework": "hipaa",
+  "file": "kit/hipaa/hipaa-reg-02-business-associate-register.xlsx"
+ },
+ "HIPAA-REG-03": {
+  "title": "HIPAA breach register",
+  "type": "register",
+  "framework": "hipaa",
+  "file": "kit/hipaa/hipaa-reg-03-hipaa-breach-register.xlsx"
  },
  "ISMS-REG-04": {
   "title": "Internal audit checklist",

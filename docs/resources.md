@@ -31,7 +31,7 @@ These are third-party projects you may use under their own licences. Read each l
 
 ## A note on HIPAA
 
-The kit does not yet include a HIPAA template set. For United States healthcare, the authoritative source is the HHS Office for Civil Rights (hhs.gov/hipaa), which publishes the Privacy, Security and Breach Notification Rules and small-provider guidance. The kit's access, encryption, logging, incident, risk and vendor documents map closely to the HIPAA Security Rule safeguards, and a dedicated HIPAA mapping is a planned addition.
+The kit includes a HIPAA set covering the Security, Privacy and Breach Notification Rules, with the Security Rule safeguard matrix mapped to the kit's own documents. For the authoritative requirements, the source is the HHS Office for Civil Rights (hhs.gov/hipaa), which publishes the rules and small-provider guidance, and the regulatory text in 45 CFR Part 164. Read the rules for the authoritative wording; the kit cites the section numbers only.
 
 ## How to use these with the kit
 

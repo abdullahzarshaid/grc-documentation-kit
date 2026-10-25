@@ -9,11 +9,11 @@
 </p>
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Documents](https://img.shields.io/badge/documents-114-blue.svg)
-![Registers](https://img.shields.io/badge/registers-53-blue.svg)
+![Documents](https://img.shields.io/badge/documents-121-blue.svg)
+![Registers](https://img.shields.io/badge/registers-56-blue.svg)
 ![Original](https://img.shields.io/badge/standard%20text%20copied-none-brightgreen.svg)
 
-**An open documentation kit for running an information security, privacy and AI governance programme.** Policies, procedures, plans, forms, playbooks and Excel registers, written once and mapped to ISO/IEC 27001:2022, ISO/IEC 27701, SOC 2, GDPR and AI governance frameworks. Every document is an original template: it cites clause, control, criterion and article numbers and reproduces none of the standards' text.
+**An open documentation kit for running an information security, privacy and AI governance programme.** Policies, procedures, plans, forms, playbooks and Excel registers, written once and mapped to ISO/IEC 27001:2022, ISO/IEC 27701, SOC 2, GDPR, HIPAA and AI governance frameworks. Every document is an original template: it cites clause, control, criterion and article numbers and reproduces none of the standards' text.
 
 <p align="center"><img src="docs/flow.svg" alt="Scope, risk, SoA, policies, procedures, registers, evidence, audit, review" width="900"></p>
 
@@ -161,6 +161,23 @@ Operational privacy for a product or service that processes personal data.
 | GDPR-REG-03 | Legitimate interests assessment register | register | GDPR Article 6 | [.xlsx](kit/gdpr/gdpr-reg-03-legitimate-interests-assessment-register.xlsx) |
 | GDPR-REG-04 | Cookie and tracker inventory | register | GDPR Article 6; GDPR Article 7 | [.xlsx](kit/gdpr/gdpr-reg-04-cookie-and-tracker-inventory.xlsx) |
 | GDPR-REG-05 | Privacy training register | register | GDPR Article 39 | [.xlsx](kit/gdpr/gdpr-reg-05-privacy-training-register.xlsx) |
+
+### HIPAA
+
+Safeguards and privacy for United States protected health information, mapped to the HIPAA Security, Privacy and Breach Notification Rules.
+
+| ID | Document | Type | Serves | Download |
+|---|---|---|---|---|
+| HIPAA-GDE-01 | [Guide: HIPAA in plain words](src/hipaa/hipaa-gde-01-hipaa-in-plain-words.md) | guide | HIPAA 45 CFR 160; HIPAA 45 CFR 164 | [.docx](kit/hipaa/hipaa-gde-01-hipaa-in-plain-words.docx) |
+| HIPAA-GDE-02 | [Guide: the HIPAA Security Rule mapped to the kit](src/hipaa/hipaa-gde-02-security-rule-mapped-to-the-kit.md) | guide | HIPAA 45 CFR 164.308; HIPAA 45 CFR 164.310; HIPAA 45 CFR 164.312; HIPAA 45 CFR 164.314; HIPAA 45 CFR 164.316 | [.docx](kit/hipaa/hipaa-gde-02-security-rule-mapped-to-the-kit.docx) |
+| HIPAA-POL-01 | [HIPAA privacy policy](src/hipaa/hipaa-pol-01-hipaa-privacy-policy.md) | policy | HIPAA 45 CFR 164.502; HIPAA 45 CFR 164.514; HIPAA 45 CFR 164.520; HIPAA 45 CFR 164.524; HIPAA 45 CFR 164.526; HIPAA 45 CFR 164.528 | [.docx](kit/hipaa/hipaa-pol-01-hipaa-privacy-policy.docx) |
+| HIPAA-POL-02 | [HIPAA security policy](src/hipaa/hipaa-pol-02-hipaa-security-policy.md) | policy | HIPAA 45 CFR 164.306; HIPAA 45 CFR 164.308; HIPAA 45 CFR 164.310; HIPAA 45 CFR 164.312; HIPAA 45 CFR 164.316 | [.docx](kit/hipaa/hipaa-pol-02-hipaa-security-policy.docx) |
+| HIPAA-PRO-01 | [Security risk analysis procedure](src/hipaa/hipaa-pro-01-security-risk-analysis-procedure.md) | procedure | HIPAA 45 CFR 164.308; HIPAA 45 CFR 164.306 | [.docx](kit/hipaa/hipaa-pro-01-security-risk-analysis-procedure.docx) |
+| HIPAA-PRO-02 | [HIPAA breach notification procedure](src/hipaa/hipaa-pro-02-hipaa-breach-notification-procedure.md) | procedure | HIPAA 45 CFR 164.400; HIPAA 45 CFR 164.404; HIPAA 45 CFR 164.406; HIPAA 45 CFR 164.408; HIPAA 45 CFR 164.410 | [.docx](kit/hipaa/hipaa-pro-02-hipaa-breach-notification-procedure.docx) |
+| HIPAA-TPL-01 | [Business associate agreement template](src/hipaa/hipaa-tpl-01-business-associate-agreement.md) | template | HIPAA 45 CFR 164.504; HIPAA 45 CFR 164.314 | [.docx](kit/hipaa/hipaa-tpl-01-business-associate-agreement.docx) |
+| HIPAA-REG-01 | HIPAA Security Rule safeguard matrix | register | HIPAA 45 CFR 164.308; HIPAA 45 CFR 164.310; HIPAA 45 CFR 164.312; HIPAA 45 CFR 164.314; HIPAA 45 CFR 164.316 | [.xlsx](kit/hipaa/hipaa-reg-01-security-rule-safeguard-matrix.xlsx) |
+| HIPAA-REG-02 | Business associate register | register | HIPAA 45 CFR 164.308; HIPAA 45 CFR 164.504 | [.xlsx](kit/hipaa/hipaa-reg-02-business-associate-register.xlsx) |
+| HIPAA-REG-03 | HIPAA breach register | register | HIPAA 45 CFR 164.408; HIPAA 45 CFR 164.404 | [.xlsx](kit/hipaa/hipaa-reg-03-hipaa-breach-register.xlsx) |
 
 ### AI governance
 

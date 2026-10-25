@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC, KIT, DOCS = ROOT / "src", ROOT / "kit", ROOT / "docs"
 REQUIRED = ["id", "title", "type", "framework", "maps", "owner", "summary"]
 TYPES = {"policy", "procedure", "plan", "statement", "record", "template", "checklist", "playbook", "guide"}
-FW = {"iso27001", "iso27701", "soc2", "gdpr", "ai", "cross"}
+FW = {"iso27001", "iso27701", "soc2", "gdpr", "hipaa", "ai", "cross"}
 HEADINGS = ["## 1. Purpose", "## 2. Scope", "## 3. Roles and responsibilities", "## 5. Records and evidence", "## 7. Review and maintenance", "## 8. Related documents"]
 DASHES = re.compile("[–—‒―]")
 banned = [l.strip() for l in (ROOT / "tools" / "denylist.txt").read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]

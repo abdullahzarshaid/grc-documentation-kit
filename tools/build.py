@@ -28,6 +28,7 @@ FRAMEWORKS = {
     "iso27701": ("ISO/IEC 27701", "Privacy information management, the PIMS extension"),
     "soc2": ("SOC 2", "AICPA Trust Services Criteria: Security, Availability, Confidentiality, Processing Integrity, Privacy"),
     "gdpr": ("GDPR", "Operational privacy for a product or service that processes personal data"),
+    "hipaa": ("HIPAA", "Safeguards and privacy for United States protected health information, mapped to the HIPAA Security, Privacy and Breach Notification Rules"),
     "ai": ("AI governance", "Policies and registers for the use and development of AI systems"),
     "cross": ("Cross-framework", "Playbooks, crosswalks, audit tools and governance documents that serve every framework"),
 }

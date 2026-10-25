@@ -1,0 +1,117 @@
+- id: HIPAA-REG-01
+  key: hipaa-reg-01-security-rule-safeguard-matrix
+  title: HIPAA Security Rule safeguard matrix
+  framework: hipaa
+  maps:
+    - HIPAA 45 CFR 164.308
+    - HIPAA 45 CFR 164.310
+    - HIPAA 45 CFR 164.312
+    - HIPAA 45 CFR 164.314
+    - HIPAA 45 CFR 164.316
+  purpose: One row per HIPAA Security Rule standard and implementation specification, with whether it is required or addressable, a plain-words theme and the kit documents that implement it. For each addressable specification, record whether it is reasonable and appropriate and what you implemented or the equivalent alternative. Read 45 CFR Part 164 for the authoritative text.
+  columns:
+    - {name: Section, width: 16, fixed: true, help: 45 CFR citation.}
+    - {name: Standard, width: 26, fixed: true}
+    - {name: Implementation specification, width: 30, fixed: true}
+    - {name: Required or addressable, width: 14, fixed: true, values: [Required, Addressable]}
+    - {name: Theme, width: 34, fixed: true, help: A reminder in plain words.}
+    - {name: Implementing documents, width: 28, help: Kit document IDs, separated by semicolons.}
+    - {name: Status, width: 16, values: [Not started, Planned, Partial, Implemented, Alternative measure, Not reasonable]}
+    - {name: Owner (role), width: 20}
+    - {name: Evidence, width: 24}
+    - {name: Notes, width: 30, help: For an addressable specification, the reasonable-and-appropriate decision and any alternative.}
+  rows:
+    - ["164.308(a)(1)", "Security management process", "Risk analysis", "Required", "Identify risks to electronic protected health information", "HIPAA-PRO-01; GOV-PRO-05", null, null, null, null]
+    - ["164.308(a)(1)", "Security management process", "Risk management", "Required", "Reduce risks to a reasonable and appropriate level", "GOV-PRO-05; GOV-REG-05", null, null, null, null]
+    - ["164.308(a)(1)", "Security management process", "Sanction policy", "Required", "Penalise workforce members who violate the rules", "GOV-POL-01; GOV-PRO-18", null, null, null, null]
+    - ["164.308(a)(1)", "Security management process", "Information system activity review", "Required", "Review logs and access reports regularly", "GOV-PRO-14", null, null, null, null]
+    - ["164.308(a)(2)", "Assigned security responsibility", "Standard requirement", "Required", "Name a single security official", "HIPAA-POL-02; GOV-POL-01", null, null, null, null]
+    - ["164.308(a)(3)", "Workforce security", "Authorization and supervision", "Addressable", "Authorise or supervise access to protected health information", "GOV-PRO-10", null, null, null, null]
+    - ["164.308(a)(3)", "Workforce security", "Workforce clearance procedure", "Addressable", "Confirm a person's access is appropriate", "GOV-PRO-18; GOV-PRO-10", null, null, null, null]
+    - ["164.308(a)(3)", "Workforce security", "Termination procedures", "Addressable", "Remove access when a role ends", "GOV-PRO-10; GOV-CHK-01", null, null, null, null]
+    - ["164.308(a)(4)", "Information access management", "Isolating clearinghouse functions", "Required", "Separate clearinghouse functions where they exist", "GOV-PRO-10", null, null, null, null]
+    - ["164.308(a)(4)", "Information access management", "Access authorization", "Addressable", "Authorise access to protected health information", "GOV-PRO-10; GOV-TPL-09", null, null, null, null]
+    - ["164.308(a)(4)", "Information access management", "Access establishment and modification", "Addressable", "Grant and adjust access to the role", "GOV-PRO-10; GOV-REG-12", null, null, null, null]
+    - ["164.308(a)(5)", "Security awareness and training", "Security reminders", "Addressable", "Periodic security updates to the workforce", "GOV-PRO-08", null, null, null, null]
+    - ["164.308(a)(5)", "Security awareness and training", "Protection from malicious software", "Addressable", "Guard against and detect malware", "GOV-PRO-22", null, null, null, null]
+    - ["164.308(a)(5)", "Security awareness and training", "Log-in monitoring", "Addressable", "Monitor log-in attempts and report discrepancies", "GOV-PRO-14; GOV-PRO-10", null, null, null, null]
+    - ["164.308(a)(5)", "Security awareness and training", "Password management", "Addressable", "Create, change and safeguard passwords", "GOV-POL-06", null, null, null, null]
+    - ["164.308(a)(6)", "Security incident procedures", "Response and reporting", "Required", "Respond to, mitigate and report incidents", "GOV-PRO-07; GOV-REG-08", null, null, null, null]
+    - ["164.308(a)(7)", "Contingency plan", "Data backup plan", "Required", "Keep retrievable copies of protected health information", "GOV-PRO-12; GOV-REG-15", null, null, null, null]
+    - ["164.308(a)(7)", "Contingency plan", "Disaster recovery plan", "Required", "Restore lost data", "GOV-PRO-13; GOV-REG-16", null, null, null, null]
+    - ["164.308(a)(7)", "Contingency plan", "Emergency mode operation plan", "Required", "Keep critical processes running during an emergency", "GOV-PRO-13", null, null, null, null]
+    - ["164.308(a)(7)", "Contingency plan", "Testing and revision procedures", "Addressable", "Test and revise the contingency plans", "GOV-PRO-13; GOV-REG-16", null, null, null, null]
+    - ["164.308(a)(7)", "Contingency plan", "Applications and data criticality analysis", "Addressable", "Rank applications and data for recovery", "GOV-TPL-07", null, null, null, null]
+    - ["164.308(a)(8)", "Evaluation", "Standard requirement", "Required", "Periodically evaluate safeguards against the rule", "GOV-PRO-02; HIPAA-REG-01", null, null, null, null]
+    - ["164.308(b)(1)", "Business associate contracts", "Written contract or arrangement", "Required", "Obtain written assurances from business associates", "HIPAA-TPL-01; HIPAA-REG-02", null, null, null, null]
+    - ["164.310(a)(1)", "Facility access controls", "Contingency operations", "Addressable", "Allow facility access to restore data in an emergency", "GOV-PRO-13; GOV-PRO-17", null, null, null, null]
+    - ["164.310(a)(1)", "Facility access controls", "Facility security plan", "Addressable", "Protect facilities and equipment from unauthorised access", "GOV-PRO-17", null, null, null, null]
+    - ["164.310(a)(1)", "Facility access controls", "Access control and validation", "Addressable", "Control and validate who enters", "GOV-PRO-17; GOV-REG-19", null, null, null, null]
+    - ["164.310(a)(1)", "Facility access controls", "Maintenance records", "Addressable", "Record repairs to physical security components", "GOV-PRO-17", null, null, null, null]
+    - ["164.310(b)", "Workstation use", "Standard requirement", "Required", "Define proper workstation use and surroundings", "GOV-POL-04; GOV-POL-02", null, null, null, null]
+    - ["164.310(c)", "Workstation security", "Standard requirement", "Required", "Physically protect workstations with access to protected health information", "GOV-PRO-17; GOV-PRO-22", null, null, null, null]
+    - ["164.310(d)(1)", "Device and media controls", "Disposal", "Required", "Dispose of media holding protected health information securely", "GOV-PRO-16; GOV-REG-20", null, null, null, null]
+    - ["164.310(d)(1)", "Device and media controls", "Media re-use", "Required", "Remove protected health information before media is re-used", "GOV-PRO-16; GOV-REG-20", null, null, null, null]
+    - ["164.310(d)(1)", "Device and media controls", "Accountability", "Addressable", "Track the movement of hardware and media", "GOV-PRO-16; GOV-REG-24", null, null, null, null]
+    - ["164.310(d)(1)", "Device and media controls", "Data backup and storage", "Addressable", "Copy protected health information before moving equipment", "GOV-PRO-12", null, null, null, null]
+    - ["164.312(a)(1)", "Access control", "Unique user identification", "Required", "Assign a unique identifier to each user", "GOV-PRO-10; GOV-POL-06", null, null, null, null]
+    - ["164.312(a)(1)", "Access control", "Emergency access procedure", "Required", "Obtain protected health information during an emergency", "GOV-PRO-10; GOV-PRO-13", null, null, null, null]
+    - ["164.312(a)(1)", "Access control", "Automatic logoff", "Addressable", "End sessions after a period of inactivity", "GOV-POL-04; GOV-PRO-22", null, null, null, null]
+    - ["164.312(a)(1)", "Access control", "Encryption and decryption", "Addressable", "Encrypt protected health information at rest", "GOV-PRO-20", null, null, null, null]
+    - ["164.312(b)", "Audit controls", "Standard requirement", "Required", "Record and examine activity in systems with protected health information", "GOV-PRO-14", null, null, null, null]
+    - ["164.312(c)(1)", "Integrity", "Mechanism to authenticate information", "Addressable", "Detect improper alteration or destruction", "GOV-PRO-20; GOV-PRO-14", null, null, null, null]
+    - ["164.312(d)", "Person or entity authentication", "Standard requirement", "Required", "Verify identity before granting access", "GOV-POL-06; GOV-PRO-10", null, null, null, null]
+    - ["164.312(e)(1)", "Transmission security", "Integrity controls", "Addressable", "Protect transmitted information from undetected alteration", "GOV-PRO-23; GOV-PRO-21", null, null, null, null]
+    - ["164.312(e)(1)", "Transmission security", "Encryption", "Addressable", "Encrypt protected health information in transit", "GOV-PRO-20; GOV-PRO-23", null, null, null, null]
+    - ["164.314(a)", "Business associate arrangements", "Required contract terms", "Required", "Terms that bind business associates to safeguards", "HIPAA-TPL-01; GOV-PRO-06", null, null, null, null]
+    - ["164.314(b)", "Group health plan requirements", "Standard requirement", "Required", "Plan sponsor safeguards where applicable", "HIPAA-POL-02", null, null, null, null]
+    - ["164.316(a)", "Policies and procedures", "Standard requirement", "Required", "Maintain reasonable and appropriate policies", "HIPAA-POL-02; GOV-PRO-01", null, null, null, null]
+    - ["164.316(b)(1)", "Documentation", "Maintain records", "Required", "Keep required actions and decisions in writing", "GOV-PRO-01; GOV-REG-01", null, null, null, null]
+    - ["164.316(b)(2)", "Documentation", "Time limit", "Required", "Retain documentation for six years", "GOV-PRO-01", null, null, null, null]
+    - ["164.316(b)(2)", "Documentation", "Availability", "Required", "Make documentation available to those who need it", "GOV-PRO-01", null, null, null, null]
+    - ["164.316(b)(2)", "Documentation", "Updates", "Required", "Review and update documentation as conditions change", "GOV-PRO-01", null, null, null, null]
+
+- id: HIPAA-REG-02
+  key: hipaa-reg-02-business-associate-register
+  title: Business associate register
+  framework: hipaa
+  maps:
+    - HIPAA 45 CFR 164.308
+    - HIPAA 45 CFR 164.504
+  purpose: One row per business associate and subcontractor that handles protected health information on the organisation's behalf, recording the protected health information they touch, whether an agreement is in place and the assurance held. The evidence that disclosures are made only under satisfactory assurances.
+  columns:
+    - {name: Business associate ID, width: 14}
+    - {name: Name, width: 24}
+    - {name: Service, width: 26}
+    - {name: Protected health information accessed, width: 26}
+    - {name: Agreement in place, width: 14, values: [Yes, No, Pending]}
+    - {name: Agreement date, width: 14, date: true}
+    - {name: Subcontractors, width: 22, help: Whether subcontractors handle the information and are bound.}
+    - {name: Assurance, width: 20, help: Certification, report or assessment held.}
+    - {name: Owner (role), width: 18}
+    - {name: Last review, width: 14, date: true}
+    - {name: Status, width: 14, values: [Active, Under review, Exited]}
+    - {name: Notes, width: 26}
+
+- id: HIPAA-REG-03
+  key: hipaa-reg-03-hipaa-breach-register
+  title: HIPAA breach register
+  framework: hipaa
+  maps:
+    - HIPAA 45 CFR 164.408
+    - HIPAA 45 CFR 164.404
+  purpose: One row per incident assessed under the Breach Notification Rule, whether or not it was a breach. Records the discovery date that starts the sixty-day clock, the four-factor assessment, and the notifications to individuals, HHS and the media.
+  columns:
+    - {name: Breach ID, width: 12}
+    - {name: Discovered, width: 14, date: true, help: Starts the sixty-day clock.}
+    - {name: Summary, width: 28}
+    - {name: Information involved, width: 24}
+    - {name: Individuals affected, width: 14}
+    - {name: Unsecured, width: 12, values: [Yes, No], help: No means it was encrypted or destroyed to the standard.}
+    - {name: Assessment outcome, width: 16, values: [Breach, Not a breach]}
+    - {name: Individuals notified, width: 16, date: true}
+    - {name: HHS notified, width: 14, date: true}
+    - {name: Media notified, width: 14, values: [Yes, No, Not required]}
+    - {name: Owner (role), width: 16}
+    - {name: Status, width: 14, values: [Open, Assessing, Notifying, Closed]}
+    - {name: Notes, width: 26}
