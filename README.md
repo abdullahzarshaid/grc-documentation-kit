@@ -28,7 +28,7 @@
 | **Crosswalk** | One workbook mapping the 93 Annex A controls to SOC 2 criteria, GDPR articles, NIST CSF 2.0 categories and the kit documents that address each. |
 | **A site** | [Read every document online](https://abdullahzarshaid.github.io/grc-documentation-kit/kit.html) with search, or start at the [overview](https://abdullahzarshaid.github.io/grc-documentation-kit/). |
 
-<p align="center"><img src="docs/framework-map.png" alt="One control set, several outcomes" width="900"></p>
+<p align="center"><img src="docs/framework-map.svg" alt="One control set, several outcomes" width="900"></p>
 
 ## Start here
 
