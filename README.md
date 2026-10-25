@@ -8,7 +8,6 @@
   <a href="https://abdullahzarshaid.com/"><img src="https://img.shields.io/badge/Author-abdullahzarshaid.com-3f8f5b?style=for-the-badge" alt="Author site"></a>
 </p>
 
-[![Verify kit](https://github.com/abdullahzarshaid/grc-documentation-kit/actions/workflows/verify.yml/badge.svg)](https://github.com/abdullahzarshaid/grc-documentation-kit/actions/workflows/verify.yml)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Documents](https://img.shields.io/badge/documents-114-blue.svg)
 ![Registers](https://img.shields.io/badge/registers-53-blue.svg)
