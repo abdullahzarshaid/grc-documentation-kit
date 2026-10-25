@@ -54,4 +54,5 @@ Most of what the Security Rule asks for is general good security practice that t
 - HIPAA-PRO-02 HIPAA breach notification procedure
 - HIPAA-TPL-01 Business associate agreement
 - HIPAA-GDE-02 HIPAA Security Rule mapped to the kit
+- PB-11 HIPAA readiness playbook
 - HIPAA-REG-01 HIPAA Security Rule safeguard matrix

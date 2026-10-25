@@ -9,7 +9,7 @@
 </p>
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Documents](https://img.shields.io/badge/documents-121-blue.svg)
+![Documents](https://img.shields.io/badge/documents-122-blue.svg)
 ![Registers](https://img.shields.io/badge/registers-56-blue.svg)
 ![Original](https://img.shields.io/badge/standard%20text%20copied-none-brightgreen.svg)
 
@@ -262,6 +262,7 @@ Playbooks, crosswalks, audit tools and governance documents that serve every fra
 | PB-08 | [Playbook: Running a Readiness Assessment with the Questionnaire](src/cross/pb-08-readiness-questionnaire-guide.md) | playbook | ISO/IEC 27001:2022 clause 4.1; ISO/IEC 27001:2022 clause 9.1; SOC 2 CC4.1 | [.docx](kit/cross/pb-08-readiness-questionnaire-guide.docx) |
 | PB-09 | [Playbook: Evidence Management That Survives an Audit](src/cross/pb-09-evidence-management.md) | playbook | ISO/IEC 27001:2022 clause 7.5.3; ISO/IEC 27001:2022 clause 9.2; SOC 2 CC4.1 | [.docx](kit/cross/pb-09-evidence-management.docx) |
 | PB-10 | [Playbook: one control set, several certifications](src/cross/pb-10-combining-frameworks.md) | playbook | ISO/IEC 27001:2022 clause 4.2; ISO/IEC 27001:2022 clause 6.1.3; ISO/IEC 27701 clause 5.4.1.3; SOC 2 CC4.1; GDPR Article 24; GDPR Article 32; NIST CSF 2.0 GV.OC | [.docx](kit/cross/pb-10-combining-frameworks.docx) |
+| PB-11 | [Playbook: HIPAA readiness for a small team](src/cross/pb-11-hipaa-readiness.md) | playbook | HIPAA 45 CFR 164.308; HIPAA 45 CFR 164.404 | [.docx](kit/cross/pb-11-hipaa-readiness.docx) |
 | GOV-REG-01 | Master list of documents and records | register | ISO/IEC 27001:2022 clause 7.5; SOC 2 CC2.2 | [.xlsx](kit/cross/gov-reg-01-master-list-of-documents.xlsx) |
 | GOV-REG-27 | Framework crosswalk | register | ISO/IEC 27001:2022 Annex A; ISO/IEC 27001:2022 clause 6.1.3; SOC 2 CC4.1; GDPR Article 24; GDPR Article 32; NIST CSF 2.0 GV.OC | [.xlsx](kit/cross/gov-reg-27-framework-crosswalk.xlsx) |
 | GOV-REG-02 | Audit programme and findings | register | ISO/IEC 27001:2022 clause 9.2; ISO/IEC 27001:2022 clause 9.2.1; SOC 2 CC4.1 | [.xlsx](kit/cross/gov-reg-02-audit-programme-and-findings.xlsx) |

@@ -189,6 +189,7 @@ article blockquote{border-left:3px solid var(--acc);margin:10px 0;padding:2px 14
 <a href="#pb-08">PB-08 Playbook: Running a Readiness Assessment with the Questionnaire</a>
 <a href="#pb-09">PB-09 Playbook: Evidence Management That Survives an Audit</a>
 <a href="#pb-10">PB-10 Playbook: one control set, several certifications</a>
+<a href="#pb-11">PB-11 Playbook: HIPAA readiness for a small team</a>
 <a href="#gov-reg-01">GOV-REG-01 Master list of documents and records (Excel)</a>
 <a href="#gov-reg-27">GOV-REG-27 Framework crosswalk (Excel)</a>
 <a href="#gov-reg-02">GOV-REG-02 Audit programme and findings (Excel)</a>
@@ -218,7 +219,7 @@ article blockquote{border-left:3px solid var(--acc);margin:10px 0;padding:2px 14
 <a href="#gov-reg-18">GOV-REG-18 Cryptographic key and certificate inventory (Excel)</a>
 <a href="#gov-reg-25">GOV-REG-25 Data flow and interface inventory (Excel)</a>
 </div></nav>
-<main id="main"><p class="lead" style="margin-top:8px">121 documents and 56 registers. Every document is an original template: replace the items in square brackets, remove what does not apply, and have the approver sign before use. A template is not evidence of compliance.</p>
+<main id="main"><p class="lead" style="margin-top:8px">122 documents and 56 registers. Every document is an original template: replace the items in square brackets, remove what does not apply, and have the approver sign before use. A template is not evidence of compliance.</p>
 <section id="iso27001"><h1>ISO/IEC 27001:2022</h1><p class="lead">Information security management system</p>
 <article id="isms-gde-01"><div class="meta"><span class="id">ISMS-GDE-01</span> <span class="type">guide</span> <a class="dl" href="../kit/iso27001/isms-gde-01-annex-a-control-guide.docx">Download .docx</a> <a class="dl" href="../src/iso27001/isms-gde-01-annex-a-control-guide.md">Markdown</a></div><h2>Guide: the 93 Annex A controls and where the kit covers each</h2><p class="sum">A reading aid that lists every Annex A control number of ISO/IEC 27001:2022 with a short theme in plain words and the kit documents that implement it, for use when building the Statement of Applicability and the control tracker.</p><p class="maps">Serves: ISO/IEC 27001:2022 Annex A; ISO/IEC 27001:2022 clause 6.1.3. Owner: Information Security Manager.</p><h2>1. How to use this guide</h2>
 <p>Annex A of ISO/IEC 27001:2022 lists 93 reference controls in four groups: organisational (5.1 to 5.37), people (6.1 to 6.8), physical (7.1 to 7.14) and technological (8.1 to 8.34). The standard requires you to compare the controls you chose from your risk treatment with this list, confirm that nothing necessary was missed, and record in a Statement of Applicability which controls apply, why, and whether they are implemented.</p>
@@ -9423,6 +9424,7 @@ article blockquote{border-left:3px solid var(--acc);margin:10px 0;padding:2px 14
 <li>HIPAA-PRO-02 HIPAA breach notification procedure</li>
 <li>HIPAA-TPL-01 Business associate agreement</li>
 <li>HIPAA-GDE-02 HIPAA Security Rule mapped to the kit</li>
+<li>PB-11 HIPAA readiness playbook</li>
 <li>HIPAA-REG-01 HIPAA Security Rule safeguard matrix</li>
 </ul>
 </article>
@@ -19426,7 +19428,7 @@ article blockquote{border-left:3px solid var(--acc);margin:10px 0;padding:2px 14
 <h2>3. Who it is for</h2>
 <p>It is for the person who has been asked to stand up or tidy up a security or privacy programme in a small or growing organisation, and who wants a complete, consistent starting point rather than a folder of unrelated templates. You do not need to be a specialist. The playbooks assume you will learn as you go.</p>
 <h2>4. How to adopt it</h2>
-<p>4.1 <strong>Choose your path.</strong> If you are heading for ISO/IEC 27001, start with PB-02. For SOC 2, start with PB-03. For GDPR, start with PB-04. To add privacy management to an existing information security management system, use PB-05. You can run more than one; PB-10 explains how the frameworks share one control set.</p>
+<p>4.1 <strong>Choose your path.</strong> If you are heading for ISO/IEC 27001, start with PB-02. For SOC 2, start with PB-03. For GDPR, start with PB-04. To add privacy management to an existing information security management system, use PB-05. For United States health data, use PB-11. You can run more than one; PB-10 explains how the frameworks share one control set.</p>
 <p>4.2 <strong>Measure where you are.</strong> Fill the readiness questionnaire (GOV-REG-28) honestly, as PB-08 describes. It gives you a score by domain and a list of gaps. Every unknown becomes a line with an owner and a due date.</p>
 <p>4.3 <strong>Put the backbone in place.</strong> Issue the governance framework (GOV-POL-01), the information security policy (GOV-POL-03) and the document control procedure (GOV-PRO-01), and open the master list of documents (GOV-REG-01). These set who decides, what the rules are and how documents are kept.</p>
 <p>4.4 <strong>Know what you have.</strong> Build the asset register (GOV-REG-10), then run the risk method (GOV-PRO-05) on your most important systems and complete the Statement of Applicability (ISMS-REG-01) or the control matrix (SOC-REG-01).</p>
@@ -19451,6 +19453,7 @@ article blockquote{border-left:3px solid var(--acc);margin:10px 0;padding:2px 14
 <li>PB-08 Running a readiness assessment</li>
 <li>PB-09 Evidence management</li>
 <li>PB-10 Combining frameworks</li>
+<li>PB-11 HIPAA readiness</li>
 </ul>
 </article>
 <article id="pb-02"><div class="meta"><span class="id">PB-02</span> <span class="type">playbook</span> <a class="dl" href="../kit/cross/pb-02-iso-27001-in-twelve-steps.docx">Download .docx</a> <a class="dl" href="../src/cross/pb-02-iso-27001-in-twelve-steps.md">Markdown</a></div><h2>Playbook: ISO/IEC 27001:2022 implementation in twelve steps</h2><p class="sum">A twelve step route from the decision to certify to the certification audit, with inputs, activities, outputs, kit documents and typical duration for each step, and a 26 week timeline for an organisation of up to about one hundred people.</p><p class="maps">Serves: ISO/IEC 27001:2022 clause 4.1; ISO/IEC 27001:2022 clause 5.1; ISO/IEC 27001:2022 clause 6.1.2; ISO/IEC 27001:2022 clause 6.1.3; ISO/IEC 27001:2022 clause 8.1; ISO/IEC 27001:2022 clause 9.2; ISO/IEC 27001:2022 clause 9.3. Owner: Information Security Manager.</p><h2>1. Before you start</h2>
@@ -21201,6 +21204,33 @@ Owner: [the role that holds this artefact and will update it]
 <li>PB-03 Playbook: SOC 2 Type 2 readiness in 90 days</li>
 <li>PB-04 Playbook: GDPR operations for a product team in ten steps</li>
 <li>PB-05 Playbook: adding ISO/IEC 27701 privacy management to an existing ISMS</li>
+</ul>
+</article>
+<article id="pb-11"><div class="meta"><span class="id">PB-11</span> <span class="type">playbook</span> <a class="dl" href="../kit/cross/pb-11-hipaa-readiness.docx">Download .docx</a> <a class="dl" href="../src/cross/pb-11-hipaa-readiness.md">Markdown</a></div><h2>Playbook: HIPAA readiness for a small team</h2><p class="sum">The order of work for a covered entity or business associate to meet the HIPAA Security, Privacy and Breach Notification Rules, built on the kit&#x27;s existing controls.</p><p class="maps">Serves: HIPAA 45 CFR 164.308; HIPAA 45 CFR 164.404. Owner: Information Security Manager.</p><h2>1. Purpose</h2>
+<p>This playbook takes a small team that handles protected health information to the point where it can show it meets HIPAA. Most of the work is the kit's ordinary security and privacy controls applied to health data; the HIPAA set adds the pieces that are specific to the law.</p>
+<h2>2. First, know your role</h2>
+<p>Decide whether you are a covered entity, a business associate, or both. A covered entity is a health plan, clearinghouse or provider that transmits health data electronically. A business associate handles protected health information on behalf of a covered entity. The duties overlap heavily, but the Privacy Rule obligations are heavier for a covered entity, and a business associate works under a business associate agreement. HIPAA-GDE-01 explains the distinction.</p>
+<h2>3. The steps</h2>
+<p>3.1 <strong>Appoint the officials.</strong> Name the security official and the privacy official (one person may hold both in a small team). This is a required Security Rule standard.</p>
+<p>3.2 <strong>Find the health data.</strong> List every place electronic protected health information is created, received, maintained or transmitted, in the asset register (GOV-REG-10). You cannot protect or assess what you have not located.</p>
+<p>3.3 <strong>Run the security risk analysis.</strong> Perform the analysis required by the Security Rule (HIPAA-PRO-01), feeding the risk register (GOV-REG-05). This is the foundation; everything else flows from it, and no other step substitutes for it.</p>
+<p>3.4 <strong>Work the safeguard matrix.</strong> Open HIPAA-REG-01. For each required specification, confirm the kit control that implements it is in place. For each addressable specification, record whether it is reasonable and appropriate, and implement it or an equivalent alternative, or document why neither is required. Encryption of health data at rest and in transit is almost always the reasonable measure.</p>
+<p>3.5 <strong>Adopt the policies.</strong> Issue the HIPAA security policy (HIPAA-POL-02) and, if you are a covered entity, the privacy policy (HIPAA-POL-01) and a notice of privacy practices.</p>
+<p>3.6 <strong>Govern business associates.</strong> Put a business associate agreement (HIPAA-TPL-01) in place with every vendor that handles protected health information, and record them in HIPAA-REG-02. If you are a business associate, make sure your own subcontractors are bound.</p>
+<p>3.7 <strong>Prepare for a breach.</strong> Adopt the breach notification procedure (HIPAA-PRO-02). Know the sixty-day clock, the four-factor risk assessment, and when HHS and the media must be told. Open the breach register (HIPAA-REG-03).</p>
+<p>3.8 <strong>Honour individual rights.</strong> Where you are a covered entity, stand up the process for access, amendment, accounting of disclosures, restrictions and confidential communications (HIPAA-POL-01), reusing the rights process in PIMS-PRO-03.</p>
+<p>3.9 <strong>Train and document.</strong> Train the workforce, keep the documentation for six years, and review it as things change. The Documentation standard is required.</p>
+<p>3.10 <strong>Evaluate.</strong> Periodically evaluate your safeguards against the rule through internal audit (GOV-PRO-02), and update the risk analysis after any significant change or incident.</p>
+<h2>4. What HIPAA does not change</h2>
+<p>HIPAA does not ask for a different security programme. Access control, encryption, logging, incident response, backups, continuity, training, vendor management and risk management are the kit's existing controls. Point them at protected health information, add the business associate agreement, the breach rule and the required-versus-addressable judgement, and keep the documentation. That is HIPAA readiness.</p>
+<h2>5. Related documents</h2>
+<ul>
+<li>HIPAA-GDE-01 HIPAA in plain words</li>
+<li>HIPAA-GDE-02 HIPAA Security Rule mapped to the kit</li>
+<li>HIPAA-PRO-01 Security risk analysis procedure</li>
+<li>HIPAA-REG-01 HIPAA Security Rule safeguard matrix</li>
+<li>HIPAA-TPL-01 Business associate agreement</li>
+<li>PB-09 Evidence management</li>
 </ul>
 </article>
 <article id="gov-reg-01"><div class="meta"><span class="id">GOV-REG-01</span> <span class="type">register</span> <a class="dl" href="../kit/cross/gov-reg-01-master-list-of-documents.xlsx">Download .xlsx</a></div><h2>Master list of documents and records</h2><p class="sum">The index of every controlled document and record in the management system. One row per document, with its current version, owner, approver, location and review dates. Updated whenever a document is issued, changed or withdrawn.</p><p class="maps">Serves: ISO/IEC 27001:2022 clause 7.5; SOC 2 CC2.2.</p><p>Columns:</p><ul><li><b>Document ID</b>: The permanent identifier</li><li><b>Title</b></li><li><b>Type</b></li><li><b>Framework</b></li><li><b>Owner (role)</b></li><li><b>Approver (role)</b></li><li><b>Version</b></li><li><b>Status</b></li><li><b>Effective date</b></li><li><b>Next review</b></li><li><b>Location</b>: The single approved location of the current version.</li><li><b>Notes</b></li></ul></article>

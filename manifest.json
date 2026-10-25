@@ -395,6 +395,12 @@
   "framework": "cross",
   "file": "src/cross/pb-10-combining-frameworks.md"
  },
+ "PB-11": {
+  "title": "Playbook: HIPAA readiness for a small team",
+  "type": "playbook",
+  "framework": "cross",
+  "file": "src/cross/pb-11-hipaa-readiness.md"
+ },
  "GDPR-GDE-01": {
   "title": "Guide: a GDPR operating model for a product or service team",
   "type": "guide",

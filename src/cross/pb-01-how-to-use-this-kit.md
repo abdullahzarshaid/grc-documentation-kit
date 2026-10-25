@@ -26,7 +26,7 @@ It is for the person who has been asked to stand up or tidy up a security or pri
 
 ## 4. How to adopt it
 
-4.1 **Choose your path.** If you are heading for ISO/IEC 27001, start with PB-02. For SOC 2, start with PB-03. For GDPR, start with PB-04. To add privacy management to an existing information security management system, use PB-05. You can run more than one; PB-10 explains how the frameworks share one control set.
+4.1 **Choose your path.** If you are heading for ISO/IEC 27001, start with PB-02. For SOC 2, start with PB-03. For GDPR, start with PB-04. To add privacy management to an existing information security management system, use PB-05. For United States health data, use PB-11. You can run more than one; PB-10 explains how the frameworks share one control set.
 
 4.2 **Measure where you are.** Fill the readiness questionnaire (GOV-REG-28) honestly, as PB-08 describes. It gives you a score by domain and a list of gaps. Every unknown becomes a line with an owner and a due date.
 
@@ -61,3 +61,4 @@ When you change a document, change it in your own copy and record the change in 
 - PB-08 Running a readiness assessment
 - PB-09 Evidence management
 - PB-10 Combining frameworks
+- PB-11 HIPAA readiness
