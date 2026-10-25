@@ -37,7 +37,7 @@
 3. Download the [latest release](https://github.com/abdullahzarshaid/grc-documentation-kit/releases/latest) for the Word and Excel files, or clone the repository and build them yourself.
 4. Replace every item in square brackets, remove what does not apply, have the approver sign, and keep the filled copies in your own storage.
 
-<p align="center"><img src="docs/document-hierarchy.png" alt="Policy, procedure, register and template, record and evidence" width="900"></p>
+<p align="center"><img src="docs/document-hierarchy.svg" alt="Policy, procedure, register and template, record and evidence" width="900"></p>
 
 ## What it is not
 
