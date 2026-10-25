@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 520" width="1240" height="520" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="SOC 2 Type 2 readiness in 90 days then the observation period">
+<style>.bg{fill:#0b1220}.grid{stroke:#0e1830;stroke-width:1}.card{fill:#121c2e}.ttl{fill:#e6edf3;font-weight:700}.sub{fill:#9fb0c6}
+.ln{stroke-width:2.5;fill:none;stroke-dasharray:9 8;animation:flow 1.6s linear infinite}@keyframes flow{to{stroke-dashoffset:-34}}
+.dot{animation:pulse 2.6s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.nb{animation:edge 4s ease-in-out infinite}@keyframes edge{0%,100%{opacity:.75}50%{opacity:1}}
+.play{animation:sweep 7s ease-in-out infinite}@keyframes sweep{0%{transform:translateX(0)}100%{transform:translateX(var(--span))}}
+</style>
+<rect class="bg" width="1240" height="520"/>
+<line class="grid" x1="0" y1="0" x2="0" y2="520"/>
+<line class="grid" x1="40" y1="0" x2="40" y2="520"/>
+<line class="grid" x1="80" y1="0" x2="80" y2="520"/>
+<line class="grid" x1="120" y1="0" x2="120" y2="520"/>
+<line class="grid" x1="160" y1="0" x2="160" y2="520"/>
+<line class="grid" x1="200" y1="0" x2="200" y2="520"/>
+<line class="grid" x1="240" y1="0" x2="240" y2="520"/>
+<line class="grid" x1="280" y1="0" x2="280" y2="520"/>
+<line class="grid" x1="320" y1="0" x2="320" y2="520"/>
+<line class="grid" x1="360" y1="0" x2="360" y2="520"/>
+<line class="grid" x1="400" y1="0" x2="400" y2="520"/>
+<line class="grid" x1="440" y1="0" x2="440" y2="520"/>
+<line class="grid" x1="480" y1="0" x2="480" y2="520"/>
+<line class="grid" x1="520" y1="0" x2="520" y2="520"/>
+<line class="grid" x1="560" y1="0" x2="560" y2="520"/>
+<line class="grid" x1="600" y1="0" x2="600" y2="520"/>
+<line class="grid" x1="640" y1="0" x2="640" y2="520"/>
+<line class="grid" x1="680" y1="0" x2="680" y2="520"/>
+<line class="grid" x1="720" y1="0" x2="720" y2="520"/>
+<line class="grid" x1="760" y1="0" x2="760" y2="520"/>
+<line class="grid" x1="800" y1="0" x2="800" y2="520"/>
+<line class="grid" x1="840" y1="0" x2="840" y2="520"/>
+<line class="grid" x1="880" y1="0" x2="880" y2="520"/>
+<line class="grid" x1="920" y1="0" x2="920" y2="520"/>
+<line class="grid" x1="960" y1="0" x2="960" y2="520"/>
+<line class="grid" x1="1000" y1="0" x2="1000" y2="520"/>
+<line class="grid" x1="1040" y1="0" x2="1040" y2="520"/>
+<line class="grid" x1="1080" y1="0" x2="1080" y2="520"/>
+<line class="grid" x1="1120" y1="0" x2="1120" y2="520"/>
+<line class="grid" x1="1160" y1="0" x2="1160" y2="520"/>
+<line class="grid" x1="1200" y1="0" x2="1200" y2="520"/>
+<line class="grid" x1="0" y1="0" x2="1240" y2="0"/>
+<line class="grid" x1="0" y1="40" x2="1240" y2="40"/>
+<line class="grid" x1="0" y1="80" x2="1240" y2="80"/>
+<line class="grid" x1="0" y1="120" x2="1240" y2="120"/>
+<line class="grid" x1="0" y1="160" x2="1240" y2="160"/>
+<line class="grid" x1="0" y1="200" x2="1240" y2="200"/>
+<line class="grid" x1="0" y1="240" x2="1240" y2="240"/>
+<line class="grid" x1="0" y1="280" x2="1240" y2="280"/>
+<line class="grid" x1="0" y1="320" x2="1240" y2="320"/>
+<line class="grid" x1="0" y1="360" x2="1240" y2="360"/>
+<line class="grid" x1="0" y1="400" x2="1240" y2="400"/>
+<line class="grid" x1="0" y1="440" x2="1240" y2="440"/>
+<line class="grid" x1="0" y1="480" x2="1240" y2="480"/>
+<text x="620" y="44" text-anchor="middle" class="ttl" font-size="26">SOC 2 Type 2: 90 days to readiness, then the observation period</text>
+<rect class="bar" x="40" y="150" width="36" height="72" rx="10" fill="#5aa9ff"/>
+<text x="58" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">Scope</text>
+<text x="58" y="198" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">and</text>
+<text x="58" y="216" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">categories</text>
+<rect class="bar" x="80" y="150" width="56" height="72" rx="10" fill="#5ac8c8"/>
+<text x="108" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">Gap</text>
+<text x="108" y="198" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">assessment</text>
+<rect class="bar" x="140" y="150" width="136" height="72" rx="10" fill="#e3b341"/>
+<text x="208" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#07111a">Remediation</text>
+<rect class="bar" x="280" y="150" width="116" height="72" rx="10" fill="#c792ea"/>
+<text x="338" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">Evidence</text>
+<text x="338" y="198" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">collection</text>
+<rect class="bar" x="400" y="150" width="596" height="72" rx="10" fill="#3b6ea8"/>
+<text x="698" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">Observation period (3 to 12 months)</text>
+<rect class="bar" x="1000" y="150" width="136" height="72" rx="10" fill="#ff7b72"/>
+<text x="1068" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">Audit fieldwork</text>
+<rect class="bar" x="1140" y="150" width="56" height="72" rx="10" fill="#59ddbe"/>
+<text x="1168" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#07111a"></text>
+<text x="1168" y="198" text-anchor="middle" font-size="15" font-weight="600" fill="#07111a">Report</text>
+<line x1="40" y1="230" x2="40" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="40" y="270" text-anchor="middle" class="sub" font-size="14">Day 0</text>
+<line x1="400" y1="230" x2="400" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="400" y="270" text-anchor="middle" class="sub" font-size="14">Day 90: Type 1 possible</text>
+<line x1="1000" y1="230" x2="1000" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="1000" y="270" text-anchor="middle" class="sub" font-size="14">Period ends</text>
+<line x1="1200" y1="230" x2="1200" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="1200" y="270" text-anchor="middle" class="sub" font-size="14">Report</text>
+<g class="play" style="--span:1160px"><line x1="40" y1="140" x2="40" y2="234" stroke="#59ddbe" stroke-width="2" opacity="0.8"/><circle cx="40" cy="140" r="5" fill="#59ddbe"/></g>
+<text x="40" y="320" class="sub" font-size="16">. Recurring events run through the whole period: access reviews, scans, change approvals, backups, training.</text>
+<text x="40" y="354" class="sub" font-size="16">. Every control needs evidence for every occurrence; the evidence calendar (SOC-REG-02) is the backbone.</text>
+<text x="40" y="388" class="sub" font-size="16">. A Type 1 report at day 90 proves design; the Type 2 report proves operation over the period.</text>
+</svg>
