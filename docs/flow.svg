@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" width="1200" height="150" font-family="Segoe UI, Helvetica, Arial, sans-serif">
-<style>.b{fill:#121c2e;stroke:#59ddbe;stroke-width:2}.t{fill:#e6edf3;font-size:20px;font-weight:600}.l{stroke:#59ddbe;stroke-width:3;stroke-dasharray:8 8;animation:dash 1.6s linear infinite}@keyframes dash{to{stroke-dashoffset:-32}}.p{fill:#59ddbe;animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}</style>
+<style>.b{fill:#121c2e;stroke:#5bd2ff;stroke-width:2}.t{fill:#e6edf3;font-size:20px;font-weight:600}.l{stroke:#5bd2ff;stroke-width:3;stroke-dasharray:8 8;animation:dash 1.6s linear infinite}@keyframes dash{to{stroke-dashoffset:-32}}.p{fill:#5bd2ff;animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}</style>
 <rect width="1200" height="150" fill="#0b1220"/>
 <rect class="b" x="20" y="45" width="112" height="60" rx="14"/><text class="t" x="76" y="82" text-anchor="middle">Scope</text>
 <line class="l" x1="136" y1="75" x2="145" y2="75"/><circle class="p" cx="147" cy="75" r="5" style="animation-delay:0.00s"/>

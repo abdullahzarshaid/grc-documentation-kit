@@ -113,5 +113,5 @@
 <text x="1135" y="319" text-anchor="middle" class="sub" font-size="13">stores, backups,</text>
 <text x="1135" y="338" text-anchor="middle" class="sub" font-size="13">logs</text>
 <text x="620" y="440" text-anchor="middle" class="sub" font-size="17">Cadence: weekly (requests, incidents, supplier changes) . monthly (exports, retention) . quarterly (DPIA refresh) . annual (review)</text>
-<text x="620" y="472" text-anchor="middle" class="ttl" font-size="18" fill="#59ddbe">Every unknown becomes: To confirm, an owner and a due date, and opens a corrective action.</text>
+<text x="620" y="472" text-anchor="middle" class="ttl" font-size="18" fill="#5bd2ff">Every unknown becomes: To confirm, an owner and a due date, and opens a corrective action.</text>
 </svg>

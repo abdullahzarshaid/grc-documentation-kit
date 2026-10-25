@@ -67,14 +67,14 @@
 <text x="698" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">Observation period (3 to 12 months)</text>
 <rect class="bar" x="1000" y="150" width="136" height="72" rx="10" fill="#ff7b72"/>
 <text x="1068" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#e6edf3">Audit fieldwork</text>
-<rect class="bar" x="1140" y="150" width="56" height="72" rx="10" fill="#59ddbe"/>
+<rect class="bar" x="1140" y="150" width="56" height="72" rx="10" fill="#5bd2ff"/>
 <text x="1168" y="180" text-anchor="middle" font-size="15" font-weight="600" fill="#07111a"></text>
 <text x="1168" y="198" text-anchor="middle" font-size="15" font-weight="600" fill="#07111a">Report</text>
 <line x1="40" y1="230" x2="40" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="40" y="270" text-anchor="middle" class="sub" font-size="14">Day 0</text>
 <line x1="400" y1="230" x2="400" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="400" y="270" text-anchor="middle" class="sub" font-size="14">Day 90: Type 1 possible</text>
 <line x1="1000" y1="230" x2="1000" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="1000" y="270" text-anchor="middle" class="sub" font-size="14">Period ends</text>
 <line x1="1200" y1="230" x2="1200" y2="250" stroke="#9fb0c6" stroke-width="2"/><text x="1200" y="270" text-anchor="middle" class="sub" font-size="14">Report</text>
-<g class="play" style="--span:1160px"><line x1="40" y1="140" x2="40" y2="234" stroke="#59ddbe" stroke-width="2" opacity="0.8"/><circle cx="40" cy="140" r="5" fill="#59ddbe"/></g>
+<g class="play" style="--span:1160px"><line x1="40" y1="140" x2="40" y2="234" stroke="#5bd2ff" stroke-width="2" opacity="0.8"/><circle cx="40" cy="140" r="5" fill="#5bd2ff"/></g>
 <text x="40" y="320" class="sub" font-size="16">. Recurring events run through the whole period: access reviews, scans, change approvals, backups, training.</text>
 <text x="40" y="354" class="sub" font-size="16">. Every control needs evidence for every occurrence; the evidence calendar (SOC-REG-02) is the backbone.</text>
 <text x="40" y="388" class="sub" font-size="16">. A Type 1 report at day 90 proves design; the Type 2 report proves operation over the period.</text>

@@ -5,12 +5,12 @@
   .card{fill:#121c2e}
   .ttl{fill:#e6edf3;font-weight:700}
   .sub{fill:#9fb0c6}
-  .ctr{fill:#59ddbe;font-weight:700;letter-spacing:1px}
+  .ctr{fill:#5bd2ff;font-weight:700;letter-spacing:1px}
   .line{stroke-width:2.5;fill:none;stroke-dasharray:9 8;animation:flow 1.6s linear infinite}
   @keyframes flow{to{stroke-dashoffset:-34}}
   .dot{animation:pulse 2.6s ease-in-out infinite}
   @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
-  .glow{fill:none;stroke:#59ddbe;stroke-width:2;opacity:.25;animation:breathe 3.4s ease-in-out infinite}
+  .glow{fill:none;stroke:#5bd2ff;stroke-width:2;opacity:.25;animation:breathe 3.4s ease-in-out infinite}
   @keyframes breathe{0%,100%{opacity:.12;stroke-width:1.5}50%{opacity:.5;stroke-width:3}}
   .nb{animation:edge 4s ease-in-out infinite}
   @keyframes edge{0%,100%{opacity:.7}50%{opacity:1}}
@@ -76,10 +76,10 @@
 <circle class="dot" cx="825" cy="229" r="4.5" fill="#e3b341" style="animation-delay:0.15s"/>
 <line class="line" x1="740" y1="360" x2="910" y2="360" stroke="#ff7b72" style="animation-delay:0.4s"/>
 <circle class="dot" cx="825" cy="360" r="4.5" fill="#ff7b72" style="animation-delay:0.4s"/>
-<line class="line" x1="740" y1="398" x2="910" y2="584" stroke="#59ddbe" style="animation-delay:0.6s"/>
-<circle class="dot" cx="825" cy="491" r="4.5" fill="#59ddbe" style="animation-delay:0.6s"/>
+<line class="line" x1="740" y1="398" x2="910" y2="584" stroke="#5bd2ff" style="animation-delay:0.6s"/>
+<circle class="dot" cx="825" cy="491" r="4.5" fill="#5bd2ff" style="animation-delay:0.6s"/>
 <rect class="glow" x="452" y="286" width="296" height="156" rx="20"/>
-<rect class="card" x="460" y="294" width="280" height="140" rx="16" stroke="#59ddbe" stroke-width="2.5"/>
+<rect class="card" x="460" y="294" width="280" height="140" rx="16" stroke="#5bd2ff" stroke-width="2.5"/>
 <text x="600" y="322" text-anchor="middle" class="ctr" font-size="16">ONE CONTROL SET</text>
 <text x="600" y="348" text-anchor="middle" class="sub" font-size="13.5">Governance framework and top policy</text>
 <text x="600" y="370" text-anchor="middle" class="sub" font-size="13.5">49 procedures, 15 policies, 30 forms</text>
@@ -105,8 +105,8 @@
 <text x="1035" y="334" text-anchor="middle" class="ttl" font-size="18" fill="#ff7b72">GDPR</text>
 <text x="1035" y="362" text-anchor="middle" class="sub" font-size="13">Accountability in law: notices,</text>
 <text x="1035" y="382" text-anchor="middle" class="sub" font-size="13">bases, breaches, transfers</text>
-<rect class="card nb" x="910" y="518" width="250" height="132" rx="14" stroke="#59ddbe" stroke-width="2.5" style="animation-delay:2.0s"/>
-<text x="1035" y="558" text-anchor="middle" class="ttl" font-size="18" fill="#59ddbe">AI governance</text>
+<rect class="card nb" x="910" y="518" width="250" height="132" rx="14" stroke="#5bd2ff" stroke-width="2.5" style="animation-delay:2.0s"/>
+<text x="1035" y="558" text-anchor="middle" class="ttl" font-size="18" fill="#5bd2ff">AI governance</text>
 <text x="1035" y="586" text-anchor="middle" class="sub" font-size="13">ISO/IEC 42001, NIST AI RMF, EU AI</text>
 <text x="1035" y="606" text-anchor="middle" class="sub" font-size="13">Act</text>
 </svg>

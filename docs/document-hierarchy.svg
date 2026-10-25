@@ -66,9 +66,9 @@
 <text x="178" y="182" class="sub" font-size="16">What must be true. Approved by leadership. Numbered, auditable statements.</text>
 <text x="178" y="208" class="ids" font-size="13">GOV-POL, PIMS-POL, SOC-POL, HIPAA-POL, AI-POL</text>
 <line class="arw" x1="190" y1="230" x2="190" y2="280"/>
-<circle class="dot" cx="190" cy="255" r="5" fill="#59ddbe" style="animation-delay:0.2s"/>
-<rect class="card nb" x="230" y="280" width="740" height="120" rx="16" stroke="#59ddbe" stroke-width="2.5" style="animation-delay:0.5s"/>
-<text x="258" y="320" class="ttl" font-size="22" fill="#59ddbe">PROCEDURE</text>
+<circle class="dot" cx="190" cy="255" r="5" fill="#5bd2ff" style="animation-delay:0.2s"/>
+<rect class="card nb" x="230" y="280" width="740" height="120" rx="16" stroke="#5bd2ff" stroke-width="2.5" style="animation-delay:0.5s"/>
+<text x="258" y="320" class="ttl" font-size="22" fill="#5bd2ff">PROCEDURE</text>
 <text x="258" y="352" class="sub" font-size="16">How it is done. Numbered steps with an actor, a frequency and a record.</text>
 <text x="258" y="378" class="ids" font-size="13">GOV-PRO, ISMS-PRO, PIMS-PRO, GDPR-PRO, HIPAA-PRO</text>
 <line class="arw" x1="270" y1="400" x2="270" y2="450"/>
