@@ -8,3 +8,9 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# private review list, never committed
+tools/denylist.txt
+tools/denylist.local.txt
+# workflow files are managed outside this clone
+.github/workflows/

@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If the kit contributes to your work, please cite it as below."
-title: "GRC Documentation Kit: original policies, procedures, registers and playbooks for ISO/IEC 27001, ISO/IEC 27701, SOC 2, GDPR and AI governance"
+title: "GRC Documentation Kit: original policies, procedures, registers and playbooks for ISO/IEC 27001, ISO/IEC 27701, SOC 2, GDPR, HIPAA and AI governance"
 type: software
-version: "1.0.0"
-date-released: "2026-10-17"
+version: "1.1.0"
+date-released: "2026-10-25"
 license: MIT
 repository-code: "https://github.com/abdullahzarshaid/grc-documentation-kit"
 url: "https://abdullahzarshaid.github.io/grc-documentation-kit/"

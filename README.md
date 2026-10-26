@@ -57,7 +57,6 @@ python tools/checksums.py      # record SHA-256 of every built file
 python tools/verify.py         # front matter, headings, banned terms, dashes, cross references, layout, checksums
 ```
 
-The continuous check on every push rebuilds everything from source and runs the same verification, so the published Word and Excel files always match the Markdown.
 
 ## Document index
 
@@ -304,4 +303,4 @@ Corrections and additions are welcome; read [AUTHORING.md](AUTHORING.md) and [CO
 
 ## Author and licence
 
-Written by [Abdullah Bin Zarshaid](https://abdullahzarshaid.com/), from experience implementing and auditing these programmes. Consultancy and training are offered under [ABZSECURE](https://abzsecure.com/); the kit itself is free. Released under the [MIT License](LICENSE). Questions: abdullahbinzarshaid@gmail.com, or open an issue with a fictional example.
+Written by [Abdullah Bin Zarshaid](https://abdullahzarshaid.com/), from experience implementing and auditing these programmes. Released under the [MIT License](LICENSE). Questions: abdullahbinzarshaid@gmail.com, or open an issue with a fictional example.
